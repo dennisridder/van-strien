@@ -10,9 +10,11 @@
 </template>
 
 <script>
+import storyblokLivePreview from "@/mixins/storyblokLivePreview"
+
 export default {
+  mixins: [storyblokLivePreview],
   asyncData(context) {
-    // Load the JSON from the API
     return context.app.$storyapi
       .get(`cdn/stories/${context.params.slug}`, {
         version: process.env.NODE_ENV == "production" ? "published" : "draft",
@@ -21,10 +23,19 @@ export default {
         return res.data
       })
       .catch((res) => {
-        context.error({
-          statusCode: res.response.status,
-          message: res.response.data,
-        })
+        if (!res.response) {
+          console.error(res)
+          context.error({
+            statusCode: 404,
+            message: "Failed to receive content form api",
+          })
+        } else {
+          console.error(res.response.data)
+          context.error({
+            statusCode: res.response.status,
+            message: res.response.data,
+          })
+        }
       })
   },
   data() {
