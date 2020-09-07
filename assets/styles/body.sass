@@ -3,11 +3,16 @@
 button
   cursor: pointer
   padding: 15px var(--spacing-one)
+  color: $black
 
-section
+.section
   max-width: 100%
+  border: $testborder
   img
     max-width: 100%
+  &-Wrapper
+    .section-Passage:nth-child(odd)
+      flex-direction: row-reverse
 
 header
   position: relative

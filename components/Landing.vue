@@ -1,0 +1,71 @@
+<template>
+  <section
+    class="section section-Landing"
+    :style="{ backgroundImage: `url(${blok.background_image})` }"
+  >
+    <div class="section-Landing_Logo">
+      <div class="section-Landing_Logo_Item"></div>
+    </div>
+    <div class="section-Landing_Text">
+      <h1 v-if="blok.title">{{ blok.title }}</h1>
+      <p v-if="blok.text">{{ blok.text }}</p>
+    </div>
+    <div v-if="blok.body[0]" class="section-Landing_Button">
+      <component
+        :is="blok.component | dashify"
+        v-for="blok in blok.columns"
+        :key="blok._uid"
+        :blok="blok"
+      ></component>
+    </div>
+  </section>
+</template>
+
+<script>
+export default {
+  props: {
+    blok: Object
+  },
+  mounted() {
+    console.log("LANDING", this.blok)
+  }
+}
+</script>
+
+<style lang="sass" scoped>
+@import '~/assets/styles/variables.sass'
+
+.section-Landing
+    position: relative
+    display: flex
+    flex-direction: column
+    width: 100%
+    min-height: 100vh
+    padding: 0 var(--spacing-sides)
+    background-size: cover
+    h1, p
+        color: $white
+        display: block
+    button
+        background: $yellow
+        color: $white
+    > div
+        display: flex
+        justify-content: space-around
+        margin-bottom: var(--spacing-two)
+    > div:first-child
+        margin-top: var(--spacing-two)
+    &_Logo
+        flex-grow: 1
+        text-align: center
+        &_Item
+            width: 220px
+            height: 220px
+            background: $black
+    &_Text
+        flex-direction: column
+        flex-shrink: 0
+        text-align: center
+        h1
+            margin-bottom: 1rem
+</style>

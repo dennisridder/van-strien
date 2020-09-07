@@ -75,6 +75,8 @@ module.exports = {
    */
   plugins: ["~/plugins/components", "~/plugins/filters"],
 
+  components: true,
+
   /*
    ** Nuxt.js modules
    */

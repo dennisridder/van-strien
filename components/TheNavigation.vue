@@ -36,6 +36,7 @@ export default {
   display: flex
   background: $lightgrey
   padding: var(--spacing-one) var(--spacing-sides)
+  z-index: 900
   > div
     display: flex
     align-items: center
