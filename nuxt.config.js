@@ -1,8 +1,6 @@
 const axios = require("axios")
 require("dotenv").config()
 
-// TODO: Add site title
-// TODO: Add .env secrets
 // TODO: Add 512px "icon.png" to static
 // TODO: Add Google Analytics env
 // TODO: Add rel="noreferrer" to all links (prevents window object access)
@@ -14,7 +12,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: "Inert Site Title", // Change in package.json files
+    title: "Anne van Strien", // Change in package.json files
     meta: [
       { charset: "utf-8" },
       {
