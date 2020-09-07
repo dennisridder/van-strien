@@ -24,7 +24,7 @@ module.exports = {
     indent: ["error", 2],
     "no-console": 1,
     "vue/max-attributes-per-line": "off",
-    "prettier/prettier": 2,
+    "prettier/prettier": ["error", { semi: false }],
     "vue/require-default-prop": "off",
     "vue/no-v-html": "off"
   }
