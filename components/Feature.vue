@@ -1,6 +1,7 @@
 <template>
   <div v-editable="blok" class="column feature">
     <p>{{ blok.name }}</p>
+    <p></p>
   </div>
 </template>
 
