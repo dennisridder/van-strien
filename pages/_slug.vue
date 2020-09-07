@@ -15,20 +15,20 @@ export default {
     // Load the JSON from the API
     return context.app.$storyapi
       .get(`cdn/stories/${context.params.slug}`, {
-        version: process.env.NODE_ENV == "production" ? "published" : "draft"
+        version: process.env.NODE_ENV == "production" ? "published" : "draft",
       })
-      .then(res => {
+      .then((res) => {
         return res.data
       })
-      .catch(res => {
+      .catch((res) => {
         context.error({
           statusCode: res.response.status,
-          message: res.response.data
+          message: res.response.data,
         })
       })
   },
   data() {
     return { story: { content: {} } }
-  }
+  },
 }
 </script>

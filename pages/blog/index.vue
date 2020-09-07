@@ -21,31 +21,31 @@ export default {
     return context.app.$storyapi
       .get("cdn/stories", {
         version: process.env.NODE_ENV == "production" ? "published" : "draft",
-        starts_with: "blog/"
+        starts_with: "blog/",
       })
-      .then(res => {
+      .then((res) => {
         return res.data
       })
-      .catch(res => {
+      .catch((res) => {
         if (!res.response) {
           console.error(res)
           context.error({
             statusCode: 404,
-            message: "Failed to receive content form api"
+            message: "Failed to receive content form api",
           })
         } else {
           console.error(res.response.data)
           context.error({
             statusCode: res.response.status,
-            message: res.response.data
+            message: res.response.data,
           })
         }
       })
   },
   data() {
     return {
-      stories: { content: {} }
+      stories: { content: {} },
     }
-  }
+  },
 }
 </script>
