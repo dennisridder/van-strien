@@ -11,7 +11,7 @@ Vue.filter("transformImage", (image, option) => {
 })
 
 Vue.use(VueLazyload, {
-  preLoad: 2,
+  preLoad: 2
 })
 
 Vue.filter("dashify", function (value) {

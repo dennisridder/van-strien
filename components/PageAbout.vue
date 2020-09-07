@@ -12,7 +12,7 @@
 <script>
 export default {
   props: {
-    blok: Object,
-  },
+    blok: Object
+  }
 }
 </script>

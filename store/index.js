@@ -1,11 +1,11 @@
 export const state = () => ({
-  cacheVersion: "",
+  cacheVersion: ""
 })
 
 export const mutations = {
   setCacheVersion(state, version) {
     state.cacheVersion = version
-  },
+  }
 }
 
 export const actions = {
@@ -13,5 +13,5 @@ export const actions = {
     return this.$storyapi.get(`cdn/spaces/me`).then((res) => {
       commit("setCacheVersion", res.data.space.version)
     })
-  },
+  }
 }

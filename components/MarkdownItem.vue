@@ -8,19 +8,19 @@ const marked = require("marked")
 // const renderer = new marked.Renderer()
 marked.setOptions({
   // renderer: new marked.Renderer(),
-  breaks: true,
+  breaks: true
 })
 
 export default {
   name: "MarkdownItem",
   props: {
-    input: String,
+    input: String
   },
   computed: {
     compiledMarkdown: function () {
       return marked(this.input)
-    },
-  },
+    }
+  }
 }
 </script>
 

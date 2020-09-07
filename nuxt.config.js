@@ -17,32 +17,32 @@ module.exports = {
       { charset: "utf-8" },
       {
         name: "viewport",
-        content: "width=device-width, initial-scale=1",
+        content: "width=device-width, initial-scale=1"
       },
       {
         hid: "description",
         name: "description",
-        content: "Insert Site Descr", // Change in package.json files
+        content: "Insert Site Descr" // Change in package.json files
       },
       {
         name: "mobile-web-app-capable",
-        content: "yes",
+        content: "yes"
       },
       {
         name: "apple-mobile-web-app-capable",
-        content: "yes",
+        content: "yes"
       },
       {
         name: "apple-mobile-web-app-status-bar-style",
-        content: "black-translucent",
+        content: "black-translucent"
       },
       {
         // Change if needed
         name: "theme-color",
-        content: "#ffffff",
-      },
+        content: "#ffffff"
+      }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
 
   /*
@@ -56,7 +56,7 @@ module.exports = {
   router: {
     scrollBehavior: function () {
       return { x: 0, y: 0 }
-    },
+    }
   },
 
   /*
@@ -67,7 +67,7 @@ module.exports = {
     "@/assets/styles/transitions.sass",
     "@/assets/styles/variables.sass",
     "@/assets/styles/typography.sass",
-    "@/assets/styles/body.sass",
+    "@/assets/styles/body.sass"
   ],
 
   /*
@@ -83,7 +83,7 @@ module.exports = {
     "vue-scrollto/nuxt",
     [
       "@bazzite/nuxt-optimized-images",
-      { optimizedImages: { optimizeImages: true, optimizeImagesInDev: true } }, // Test compression by setting to true first
+      { optimizedImages: { optimizeImages: true, optimizeImagesInDev: true } } // Test compression by setting to true first
     ],
     [
       "storyblok-nuxt",
@@ -92,9 +92,9 @@ module.exports = {
           process.env.NODE_ENV == "production"
             ? process.env.PUBLICKEY
             : process.env.PREVIEWKEY,
-        cacheProvider: "memory",
-      },
-    ],
+        cacheProvider: "memory"
+      }
+    ]
   ],
   /*
    ** Nuxt Generate
@@ -132,7 +132,7 @@ module.exports = {
               callback(null, routes)
             })
         })
-    },
+    }
   },
   /*
    ** Build configuration
@@ -148,20 +148,20 @@ module.exports = {
           enforce: "pre",
           test: /\.(js|vue)$/,
           loader: "eslint-loader",
-          exclude: /(node_modules)/,
+          exclude: /(node_modules)/
         })
       }
     },
     // Transpile GSAP for server side rendering
-    transpile: ["gsap"],
+    transpile: ["gsap"]
   },
   buildModules: [
-    "@nuxtjs/pwa",
+    "@nuxtjs/pwa"
     // [
     //   "@nuxtjs/google-analytics",
     //   {
     //     id: process.env.GA_ID
     //   }
     // ]
-  ],
+  ]
 }

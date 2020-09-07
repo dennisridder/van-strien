@@ -2,10 +2,10 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    node: true,
+    node: true
   },
   parserOptions: {
-    parser: "babel-eslint",
+    parser: "babel-eslint"
   },
   extends: [
     "eslint:recommended",
@@ -14,7 +14,7 @@ module.exports = {
     "plugin:vue/recommended",
     "plugin:prettier/recommended",
     "prettier",
-    "prettier/vue",
+    "prettier/vue"
   ],
   // required to lint *.vue files
   plugins: ["vue", "prettier"],
@@ -22,10 +22,10 @@ module.exports = {
   rules: {
     semi: [2, "never"],
     indent: ["error", 2],
-    "no-console": "off",
+    "no-console": 1,
     "vue/max-attributes-per-line": "off",
-    "prettier/prettier": ["error", { semi: false }],
+    "prettier/prettier": 2,
     "vue/require-default-prop": "off",
-    "vue/no-v-html": "off",
-  },
+    "vue/no-v-html": "off"
+  }
 }
