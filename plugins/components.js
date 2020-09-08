@@ -1,11 +1,13 @@
 import Vue from "vue"
 // PAGES
 import Page from "~/components/Page.vue"
+import PageAbout from "~/components/PageAbout.vue"
 import PagePost from "~/components/PagePost.vue"
 // SECTIONS
 import SectionLanding from "~/components/SectionLanding.vue"
 import SectionPassage from "~/components/SectionPassage.vue"
 import SectionMessage from "~/components/SectionMessage.vue"
+import SectionBlogContent from "~/components/SectionBlogContent.vue"
 import SectionBlogHorizontal from "~/components/SectionBlogHorizontal.vue"
 import SectionBlogGrid from "~/components/SectionBlogGrid.vue"
 // ITEMS
@@ -19,11 +21,13 @@ import ItemTitle from "~/components/ItemTitle.vue"
 
 // PAGES
 Vue.component("blok-page", Page)
+Vue.component("blok-page-about", PageAbout)
 Vue.component("blok-page-post", PagePost)
 // SECTIONS
 Vue.component("blok-section-landing", SectionLanding)
 Vue.component("blok-section-passage", SectionPassage)
 Vue.component("blok-section-message", SectionMessage)
+Vue.component("blok-section-blog-content", SectionBlogContent)
 Vue.component("blok-section-blog-horizontal", SectionBlogHorizontal)
 Vue.component("blok-section-blog-grid", SectionBlogGrid)
 // ITEMS
@@ -33,4 +37,4 @@ Vue.component("blok-item-door", ItemDoor)
 Vue.component("blok-item-quote", ItemQuote)
 Vue.component("blok-item-subtitle", ItemSubtitle)
 Vue.component("blok-item-text", ItemText)
-Vue.component("blok-item-Title", ItemTitle)
+Vue.component("blok-item-title", ItemTitle)

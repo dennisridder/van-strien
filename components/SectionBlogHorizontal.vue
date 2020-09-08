@@ -1,11 +1,16 @@
 <template>
   <section class="section section-BlogHorizontal">
-    <ul>
-      <li v-for="(item, i) in filteredHerinneringen" :key="i">
+    <ul class="section section-BlogHorizontal_Wrapper">
+      <nuxt-link
+        v-for="(item, i) in filteredHerinneringen"
+        :key="i"
+        :to="'/herinneringen/' + item.id"
+        class="section section-BlogHorizontal_Item"
+      >
         <blok-item-door :image="item.cover_image" :alt="item.title" />
         <h2 v-if="item.title">{{ item.title }}</h2>
         <button>Lees meer</button>
-      </li>
+      </nuxt-link>
       <li class="section-BlogHorizontal_Final"></li>
     </ul>
   </section>

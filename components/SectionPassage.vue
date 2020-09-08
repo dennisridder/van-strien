@@ -2,7 +2,7 @@
   <section class="section section-Passage">
     <div class="section-Passage_Item section-Passage_Left">
       <div v-if="blok.passage_image" class="section-Passage_Item_Door">
-        <blok-door :image="blok.passage_image" :alt="blok.title" />
+        <blok-item-door :image="blok.passage_image" :alt="blok.title" />
       </div>
     </div>
     <div class="section-Passage_Item section-Passage_Right">
