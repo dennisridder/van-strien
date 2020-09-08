@@ -29,6 +29,11 @@ export default {
       slideActive: false
     }
   },
+  watch: {
+    $route() {
+      this.slideActive = false
+    }
+  },
   methods: {
     toggleSlide() {
       this.slideActive = !this.slideActive
