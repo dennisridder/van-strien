@@ -15,3 +15,22 @@ export const actions = {
     })
   }
 }
+
+export default {
+  actions: {
+    async nuxtServerInit({ commit }, { app }) {
+      let getHerinneringen = await app.$storyapi.get("cdn/stories", {
+        version: process.env.NODE_ENV === "production" ? "published" : "draft",
+        starts_with: "herinneringen/"
+      })
+      let herinneringen = getHerinneringen.data.stories.map((bp) => {
+        return {
+          id: bp.slug,
+          title: bp.content.title,
+          cover_image: bp.content.cover_image
+        }
+      })
+      commit("herinneringen/update", herinneringen)
+    }
+  }
+}

@@ -1,5 +1,7 @@
 <template>
-  <button>{{ blok.title }}</button>
+  <div class="item-Title">
+    <h1>{{ blok.title }}</h1>
+  </div>
 </template>
 
 <script>

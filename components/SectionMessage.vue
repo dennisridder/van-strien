@@ -1,18 +1,12 @@
 <template>
   <section class="section section-Message">
     <div class="section-Message_Content">
-      <markdown v-if="blok.text" :input="blok.text" />
-      <div v-if="blok.caption" class="caption section-Message_Caption">
-        {{ blok.caption }}
-      </div>
-      <div v-if="blok.body[0]" class="section-Message_Button">
-        <component
-          :is="blok.component | dashify"
-          v-for="blok in blok.columns"
-          :key="blok._uid"
-          :blok="blok"
-        ></component>
-      </div>
+      <component
+        :is="blok.component | dashify"
+        v-for="blok in blok.body"
+        :key="blok._uid"
+        :blok="blok"
+      ></component>
     </div>
   </section>
 </template>
@@ -23,7 +17,7 @@ export default {
     blok: Object
   },
   mounted() {
-    // console.log(this.blok)
+    console.log("MESSAGE", this.blok)
   }
 }
 </script>

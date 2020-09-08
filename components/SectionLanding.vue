@@ -3,14 +3,10 @@
     class="section section-Landing"
     :style="{ backgroundImage: `url(${blok.background_image})` }"
   >
-    <div class="section-Landing_Logo">
+    <!-- <div class="section-Landing_Logo">
       <div class="section-Landing_Logo_Item"></div>
-    </div>
-    <div class="section-Landing_Text">
-      <h1 v-if="blok.title">{{ blok.title }}</h1>
-      <p v-if="blok.text">{{ blok.text }}</p>
-    </div>
-    <div v-if="blok.body[0]" class="section-Landing_Button">
+    </div> -->
+    <div class="section-Landing_Content">
       <component
         :is="blok.component | dashify"
         v-for="blok in blok.columns"
@@ -27,7 +23,7 @@ export default {
     blok: Object
   },
   mounted() {
-    console.log("LANDING", this.blok)
+    // console.log("LANDING", this.blok)
   }
 }
 </script>
@@ -62,7 +58,7 @@ export default {
             width: 220px
             height: 220px
             background: $black
-    &_Text
+    &_Content
         flex-direction: column
         flex-shrink: 0
         text-align: center

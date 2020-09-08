@@ -1,22 +1,21 @@
 <template>
   <section class="section section-Passage">
     <div class="section-Passage_Item section-Passage_Left">
-      <div v-if="blok.passage_image" class="section-Passage_Item_Door"></div>
+      <div v-if="blok.passage_image" class="section-Passage_Item_Door">
+        <blok-door :image="blok.passage_image" :alt="blok.title" />
+      </div>
     </div>
     <div class="section-Passage_Item section-Passage_Right">
-      <div class="section-Passage_Item_Text">
-        <h1 v-if="blok.title">{{ blok.title }}</h1>
-        <h2 v-if="blok.subtitle">{{ blok.subtitle }}</h2>
-        <markdown :input="blok.text" />
-        <div v-if="blok.body[0]">
-          <component
-            :is="blok.component | dashify"
-            v-for="blok in blok.columns"
-            :key="blok._uid"
-            :blok="blok"
-          ></component>
-        </div>
+      <div class="section-Passage_Item_Title">
+        <h1 v-if="blok.title_voor">{{ blok.title_voor }}</h1>
+        <h1 v-if="blok.title_na">{{ blok.title_na }}</h1>
       </div>
+      <component
+        :is="blok.component | dashify"
+        v-for="blok in blok.body"
+        :key="blok._uid"
+        :blok="blok"
+      ></component>
     </div>
   </section>
 </template>
@@ -27,7 +26,7 @@ export default {
     blok: Object
   },
   mounted() {
-    // console.log(this.blok)
+    console.log("PASSAGE", this.blok)
   }
 }
 </script>
@@ -47,11 +46,6 @@ export default {
         justify-content: flex-end
         flex-basis: 50%
         flex-shrink: 0
-        &_Door
-            width: 100%
-            height: 0
-            padding-top: 125%
-            background: $black
         &_Text
             // padding: var(--spacing-three)
             // padding-right: var(--spacing-three)
