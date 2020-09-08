@@ -2,7 +2,7 @@
   <section class="section section-BlogHorizontal">
     <ul>
       <li v-for="(item, i) in filteredHerinneringen" :key="i">
-        <blok-door :image="item.cover_image" :alt="item.title" />
+        <blok-item-door :image="item.cover_image" :alt="item.title" />
         <h2 v-if="item.title">{{ item.title }}</h2>
         <button>Lees meer</button>
       </li>

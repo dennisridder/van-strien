@@ -13,14 +13,16 @@ export default {
 <style lang="sass" scoped>
 @import '~/assets/styles/variables.sass'
 
-.section-Door
+.item-Door
     position: relative
     width: 400px
     height: 0
     padding-top: 125%
     background: $black
+    border: $testborder
     img
         position: absolute
+        border: $testborder
         left: 0
         top: 0
         width: 100%
