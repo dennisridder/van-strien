@@ -1,5 +1,5 @@
 <template>
-  <div v-if="image" class="Item-Door">
+  <div v-if="image" v-editable="blok" class="Item-Door">
     <img :src="image" :alt="alt" />
   </div>
 </template>

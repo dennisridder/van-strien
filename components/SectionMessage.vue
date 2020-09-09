@@ -1,5 +1,5 @@
 <template>
-  <section class="section section-Message">
+  <section v-editable="blok" class="section section-Message">
     <div class="section-Message_Content">
       <component
         :is="blok.component | dashify"

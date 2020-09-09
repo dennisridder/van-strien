@@ -1,5 +1,5 @@
 <template>
-  <div class="item-Title">
+  <div v-editable="blok" class="item-Title">
     <h1>{{ blok.title }}</h1>
   </div>
 </template>

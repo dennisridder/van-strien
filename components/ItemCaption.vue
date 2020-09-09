@@ -1,5 +1,5 @@
 <template>
-  <div class="item-Caption">
+  <div v-editable="blok" class="item-Caption">
     <markdown :input="blok.caption" />
   </div>
 </template>

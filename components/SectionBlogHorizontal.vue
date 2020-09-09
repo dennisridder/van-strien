@@ -1,5 +1,5 @@
 <template>
-  <section class="section section-BlogHorizontal">
+  <section v-editable="blok" class="section section-BlogHorizontal">
     <ul class="section section-BlogHorizontal_Wrapper">
       <nuxt-link
         v-for="(item, i) in filteredHerinneringen"

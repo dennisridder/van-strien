@@ -1,5 +1,5 @@
 <template>
-  <section class="section section-Passage">
+  <section v-editable="blok" class="section section-Passage">
     <div class="section-Passage_Item section-Passage_Left">
       <div v-if="blok.passage_image" class="section-Passage_Item_Door">
         <blok-item-door :image="blok.passage_image" :alt="blok.title" />
