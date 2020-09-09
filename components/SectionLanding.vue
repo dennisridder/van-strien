@@ -6,10 +6,10 @@
     <!-- <div class="section-Landing_Logo">
       <div class="section-Landing_Logo_Item"></div>
     </div> -->
-    <div class="section-Landing_Content">
+    <div class="section-Landing_Content section-Content">
       <component
         :is="blok.component | dashify"
-        v-for="blok in blok.columns"
+        v-for="blok in blok.body"
         :key="blok._uid"
         :blok="blok"
       ></component>
@@ -23,7 +23,7 @@ export default {
     blok: Object
   },
   mounted() {
-    // console.log("LANDING", this.blok)
+    console.log("LANDING", this.blok)
   }
 }
 </script>
@@ -35,13 +35,12 @@ export default {
     position: relative
     display: flex
     flex-direction: column
+    justify-content: flex-end
     width: 100%
     min-height: 100vh
     padding: 0 var(--spacing-sides)
     background-size: cover
-    h1, p
-        color: $white
-        display: block
+    color: white
     button
         background: $yellow
         color: $white

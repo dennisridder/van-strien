@@ -16,3 +16,13 @@ export default {
   }
 }
 </script>
+
+<style lang="sass" scoped>
+.item-Caption
+  font-size: 14px
+  letter-spacing: 0.95px
+
+.section-Message
+  .item-Caption
+    text-align: center
+</style>

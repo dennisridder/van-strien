@@ -19,3 +19,16 @@ export default {
   }
 }
 </script>
+
+<style lang="sass" scoped>
+@import '~/assets/styles/variables.sass'
+
+.item-Button
+  button
+    background: $black
+    color: white
+    padding: 15px 17px
+    font-size: 14px
+    letter-spacing: 4.9px
+    text-transform: uppercase
+</style>

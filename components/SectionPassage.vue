@@ -5,8 +5,8 @@
         <blok-item-door :image="blok.passage_image" :alt="blok.title" />
       </div>
     </div>
-    <div class="section-Passage_Item section-Passage_Right">
-      <div class="section-Passage_Item_Title">
+    <div class="section-Passage_Item section-Passage_Right section-Content">
+      <div class="section-Passage_Item_Title item-Title">
         <h1 v-if="blok.title_voor">{{ blok.title_voor }}</h1>
         <h1 v-if="blok.title_na">{{ blok.title_na }}</h1>
       </div>
@@ -40,6 +40,11 @@ export default {
     width: 100%
     min-height: 100vh
     box-sizing: border-box
+    .item-Title
+      h1
+        line-height: 1
+      h1:first-child
+        font-family: 'Canela Light Italic'
     &_Item
         display: flex
         flex-direction: column
@@ -47,10 +52,11 @@ export default {
         flex-basis: 50%
         flex-shrink: 0
         &_Text
-            // padding: var(--spacing-three)
-            // padding-right: var(--spacing-three)
-            flex-shrink: 1
+            // flex-shrink: 1
     &_Left
         padding: var(--spacing-four)
         background: $yellow
+    &_Right
+        padding: var(--spacing-two)
+        padding-right: var(--spacing-two)
 </style>
