@@ -23,12 +23,9 @@ export default {
 <style lang="sass" scoped>
 @import '~/assets/styles/variables.sass'
 
-.item-Button
-  button
-    background: $black
-    color: white
-    padding: 15px 17px
-    font-size: 14px
-    letter-spacing: 4.9px
-    text-transform: uppercase
+.item-Text
+  font-family: 'Artegra Sans Alt Medium'
+  font-size: 19px
+  letter-spacing: 0.95px
+  line-height: 42px
 </style>

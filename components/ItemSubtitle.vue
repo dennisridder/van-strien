@@ -22,6 +22,8 @@ export default {
 
 .item-SubTitle
   text-transform: uppercase
+  font-family: 'Artegra Sans Extended Medium'
+  line-height: 44px
 
 .section-Landing
   .item-SubTitle

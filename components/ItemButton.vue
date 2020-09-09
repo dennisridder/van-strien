@@ -18,6 +18,7 @@ export default {
 .item-Button
   button
     background: $black
+    font-family: 'Artegra Sans Extended Medium'
     color: white
     padding: 15px 30px
     font-size: 14px

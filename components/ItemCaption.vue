@@ -21,6 +21,8 @@ export default {
 .item-Caption
   font-size: 14px
   letter-spacing: 0.95px
+  line-height: 32px
+  font-family: 'Artegra Sans Alt Medium'
 
 .section-Message
   .item-Caption
