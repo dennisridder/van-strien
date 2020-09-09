@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="story.content">
+  <div>
     <component
       :is="story.content.component | dashify"
       v-if="story.content.component"
