@@ -52,7 +52,7 @@ export default {
   right: 0
   display: flex
   background: $lightgrey
-  padding: var(--spacing-one) var(--spacing-sides)
+  padding: 30px var(--spacing-sides)
   z-index: 900
   > div
     display: flex

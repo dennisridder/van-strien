@@ -21,7 +21,7 @@ export default {
     background: $black
     font-family: 'Artegra Sans Extended Medium'
     color: white
-    padding: 15px 30px
+    padding: 16px 30px 12px 30px
     font-size: 14px
     letter-spacing: 4.9px
     text-transform: uppercase
