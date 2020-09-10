@@ -6,7 +6,7 @@
     <div class="header-Item header-Logo">
       <nuxt-link class="header-Logo_Item" to="/"></nuxt-link>
     </div>
-    <div class="header-Item header-Button">
+    <div class="header-Item header-Button item-Button">
       <button>Plan free deep call</button>
     </div>
     <div v-if="slideActive === true" class="header-Slide">

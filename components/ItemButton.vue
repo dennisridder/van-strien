@@ -12,8 +12,9 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 @import '~/assets/styles/variables.sass'
+// Don't scope since style reused in header, footer, etc
 
 .item-Button
   button
