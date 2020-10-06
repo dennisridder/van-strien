@@ -73,5 +73,4 @@ export default {
         background: $yellow
     &_Right
         padding: var(--spacing-two)
-        padding-right: var(--spacing-two)
 </style>
