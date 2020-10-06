@@ -13,9 +13,17 @@
   &-Wrapper
     .section-Passage:nth-child(odd)
       flex-direction: row-reverse
+      .section-Passage_Left
+        flex-basis: 43vw
+      .section-Passage_Right
+        padding-right: var(--spacing-three)
+        padding-left: var(--spacing-five)
+
   &-Content
     > div
       margin-bottom: var(--spacing-item-two)
+    > div:last-child
+      margin-bottom: 0
 
 header
   position: relative

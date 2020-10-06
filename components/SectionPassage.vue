@@ -58,7 +58,7 @@ export default {
           flex-shrink: 1
           align-self: flex-start
           &_Top
-            margin-left: -50px
+            margin-left: -3.75vw
             display: flex
             h2
               display: inline
@@ -69,8 +69,9 @@ export default {
               flex-grow: 1
               transform: translateY(-50%)
     &_Left
-        padding: var(--spacing-four) var(--spacing-two)
+        padding: var(--spacing-four)
         background: $yellow
     &_Right
-        padding: var(--spacing-two)
+        padding: var(--spacing-three)
+        padding-right: var(--spacing-five)
 </style>
