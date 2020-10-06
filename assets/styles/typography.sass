@@ -26,15 +26,15 @@
 
 // https://www.madebymike.com.au/writing/fluid-type-calc-examples/
 html
-  font-size: 16px
+  font-size: 18px
 
-@media screen and (min-width: 800px)
-  html
-    font-size: calc(16px + 6 * ((100vw - 800px) / 1200))
+// @media screen and (min-width: 800px)
+//   html
+//     font-size: calc(16px + 6 * ((100vw - 800px) / 1200))
 
-@media screen and (min-width: 2000px)
-  html
-    font-size: 22px
+// @media screen and (min-width: 2000px)
+//   html
+//     font-size: 22px
 
 h1, h2, h3, p, a
   word-wrap: break-word
@@ -64,26 +64,49 @@ li, h1, h2, h3, p, a, a:link, a:visited, a:hover, a:active, span, input, button,
       font-family: 'Canela Light'
       font-size: 74px
       letter-spacing: 3.7px
-// p
-//   font-size: 19px
-//   letter-spacing: 0.95px
-
-h1
-  text-transform: uppercase
 
 a
-  // color: $black
-  text-decoration: underline
+  color: currentColor
+  text-decoration: none
 
-// button
-//   font-size: 14px
-//   letter-spacing: 4.9px
-//   text-transform: uppercase
+.typeDisplay, h1
+  font-family: 'Canela Light'
+  font-size: 3rem
+  letter-spacing: .33em
+  text-transform: uppercase
 
-// .caption
-//   font-size: 14px
-//   letter-spacing: 0.95px
-//   width: 100%
+.typeTitle, h2
+  font-family: 'Canela Light'
+  font-size: 3rem
+  letter-spacing: .33em
+  text-transform: uppercase
+
+.typeTitleItalic, h2
+  font-family: 'Canela Light Italic'
+  font-size: 3rem
+  letter-spacing: .33em
+  text-transform: uppercase
+
+.typeText, p
+  font-family: 'Artegra Sans Alt Medium'
+  font-size: 1rem
+  letter-spacing: 0
+
+.typeTextCaps
+  font-family: 'Artegra Sans Extended Medium'
+  font-size: 1rem
+  letter-spacing: .33em
+  text-transform: uppercase
+
+.typeLink
+  font-family: 'Artegra Sans Extended Medium'
+  font-size: .66rem
+  letter-spacing: .33em
+  text-transform: uppercase
+
+.typeCaption
+  font-family: 'Artegra Sans Alt Medium'
+  font-size: .5rem
 
 strong
   font-weight: bold
