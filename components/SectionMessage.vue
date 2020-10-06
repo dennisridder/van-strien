@@ -31,9 +31,9 @@ export default {
     justify-content: space-around
     &_Content
         padding: var(--spacing-two) var(--spacing-sides)
-        width: 560px
+        max-width: 38em
+        text-align: center
         .markdown, caption
-            text-align: center
             width: 100%
         > div
             margin-bottom: var(--spacing-one)

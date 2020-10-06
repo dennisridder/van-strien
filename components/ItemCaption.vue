@@ -1,6 +1,6 @@
 <template>
   <div v-editable="blok" class="item-Caption">
-    <markdown :input="blok.caption" />
+    <markdown class="typeCaption" :input="blok.caption" />
   </div>
 </template>
 
@@ -16,15 +16,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass" scoped>
-.item-Caption
-  font-size: 14px
-  letter-spacing: 0.95px
-  line-height: 32px
-  font-family: 'Artegra Sans Alt Medium'
-
-.section-Message
-  .item-Caption
-    text-align: center
-</style>
