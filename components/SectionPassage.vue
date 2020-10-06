@@ -7,8 +7,15 @@
     </div>
     <div class="section-Passage_Item section-Passage_Right section-Content">
       <div class="section-Passage_Item_Title item-Title">
-        <h1 v-if="blok.title_voor">{{ blok.title_voor }}</h1>
-        <h1 v-if="blok.title_na">{{ blok.title_na }}</h1>
+        <div class="section-Passage_Item_Title_Top">
+          <h2 class="typeTitleItalic" v-if="blok.title_voor">
+            {{ blok.title_voor }}
+          </h2>
+          <span></span>
+        </div>
+        <div class="section-Passage_Item_Title_Bottom">
+          <h2 class="typeTitle" v-if="blok.title_na">{{ blok.title_na }}</h2>
+        </div>
       </div>
       <component
         :is="blok.component | dashify"
@@ -40,19 +47,25 @@ export default {
     width: 100%
     min-height: 100vh
     box-sizing: border-box
-    .item-Title
-      h1
-        line-height: 1
-      h1:first-child
-        font-family: 'Canela Light Italic'
     &_Item
         display: flex
         flex-direction: column
         justify-content: flex-end
         flex-basis: 50%
         flex-shrink: 0
-        &_Text
-            // flex-shrink: 1
+        &_Title
+          flex-shrink: 1
+          align-self: flex-start
+          &_Top
+            margin-left: -50px
+            display: flex
+            h2
+              display: inline
+            span
+              border-bottom: $black solid 2px
+              width: 100%
+              padding-left: 0px
+              transform: translateY(-50%)
     &_Left
         padding: var(--spacing-four)
         background: $yellow

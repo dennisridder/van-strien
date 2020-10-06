@@ -1,6 +1,6 @@
 <template>
   <div v-editable="blok" class="item-Title">
-    <h1>{{ blok.title }}</h1>
+    <h1 class="typeDisplay">{{ blok.title }}</h1>
   </div>
 </template>
 

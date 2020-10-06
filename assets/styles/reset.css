@@ -163,8 +163,6 @@ button {
   width: auto;
   overflow: visible;
 
-  background: transparent;
-
   /* inherit font & color from ancestor */
   color: inherit;
   font: inherit;

@@ -1,6 +1,6 @@
 <template>
   <div v-editable="blok" class="item-Text">
-    <markdown :input="blok.text" />
+    <markdown class="typeText" :input="blok.text" />
   </div>
 </template>
 
@@ -19,13 +19,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass" scoped>
-@import '~/assets/styles/variables.sass'
-
-.item-Text
-  font-family: 'Artegra Sans Alt Medium'
-  font-size: 19px
-  letter-spacing: 0.95px
-  line-height: 42px
-</style>
