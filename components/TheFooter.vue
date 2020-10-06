@@ -9,7 +9,7 @@
         </div>
         <div class="footer-Top_Mail">
           <input type="text" placeholder="jouw mailadres" />
-          <button class="typeLink">Send</button>
+          <button class="button typeLink">Send</button>
         </div>
       </div>
     </div>

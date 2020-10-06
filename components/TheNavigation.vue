@@ -1,23 +1,23 @@
 <template>
   <header class="header">
     <div class="header-Item header-Toggle">
-      <div class="header-Toggle_Item" @click="toggleSlide"></div>
+      <div class="header-Toggle_Item" @click="toggleSlide">
+        <div
+          class="icon"
+          v-html="require('~/assets/images/icon-hamburger.svg?include')"
+        />
+      </div>
     </div>
     <div class="header-Item header-Logo">
-      <nuxt-link class="header-Logo_Item" to="/"></nuxt-link>
+      <nuxt-link class="header-Logo_Item" to="/">
+        <div
+          class="icon"
+          v-html="require('~/assets/images/logo-circle.svg?include')"
+        />
+      </nuxt-link>
     </div>
     <div class="header-Item header-Button item-Button">
-      <button>Plan free deep call</button>
-    </div>
-    <div v-if="slideActive === true" class="header-Slide">
-      <div class="header-Toggle_Item" @click="toggleSlide"></div>
-      <ul class="header-Slide_Content">
-        <nuxt-link to="/" tag="li">HOME</nuxt-link>
-        <nuxt-link to="/moonlab" tag="li">MOON LAB PROGRAMMA</nuxt-link>
-        <nuxt-link to="/herinneringen" tag="li">HERINNERINGEN</nuxt-link>
-        <nuxt-link to="/over-anne" tag="li">OVER ANNE</nuxt-link>
-        <nuxt-link to="/contact" tag="li">CONTACT</nuxt-link>
-      </ul>
+      <button class="button typeLink">Plan free deep call</button>
     </div>
   </header>
 </template>
@@ -59,12 +59,10 @@ export default {
     align-items: center
   &-Item
     flex-basis: 33.333%
-    border: $testborder
   &-Toggle
     &_Item
-      width: 30px
+      width: 25px
       height: 25px
-      background: $black
       cursor: pointer
   &-Logo
     position: relative
@@ -77,13 +75,10 @@ export default {
       width: 75px
       height: 75px
       transform: translate(-50%, -50%)
-      background: $black
       color: $blacktype
-  &-Button
-    justify-content: flex-end
-    button
-      background: $black
-      color: $blacktype
+  .button
+    background: $black
+    color: $lightyellow
   &-Slide
     position: absolute
     left: 0

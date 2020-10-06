@@ -1,6 +1,6 @@
 <template>
   <div v-editable="blok" class="item-Button">
-    <button>{{ blok.title }}</button>
+    <button class="button typeLink">{{ blok.title }}</button>
   </div>
 </template>
 
@@ -11,21 +11,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass">
-@import '~/assets/styles/variables.sass'
-// Don't scope since style reused in header, footer, etc
-
-.item-Button
-  button
-    background: $black
-    font-family: 'Artegra Sans Extended Medium'
-    color: white
-    padding: 16px 30px 12px 30px
-    font-size: 14px
-    letter-spacing: 4.9px
-    text-transform: uppercase
-    margin-bottom: var(--spacing-item-one)
-    &:last-child
-      margin-bottom: 0
-</style>

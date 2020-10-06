@@ -9,7 +9,7 @@
       >
         <blok-item-door :image="item.cover_image" :alt="item.title" />
         <h2 v-if="item.title">{{ item.title }}</h2>
-        <button>Lees meer</button>
+        <button class="button typeLink">Lees meer</button>
       </nuxt-link>
       <li class="section-BlogHorizontal_Final"></li>
     </ul>
