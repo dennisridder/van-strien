@@ -1,5 +1,4 @@
 import Vue from "vue"
-import VueLazyload from "vue-lazyload"
 
 Vue.filter("transformImage", (image, option) => {
   if (!image) return ""
@@ -8,10 +7,6 @@ Vue.filter("transformImage", (image, option) => {
   let pathOne = image.replace("https://a.storyblok.com", "")
   let pathTwo = pathOne.replace("//a.storyblok.com", "")
   return imageService + option + pathTwo
-})
-
-Vue.use(VueLazyload, {
-  preLoad: 2
 })
 
 Vue.filter("dashify", function (value) {
