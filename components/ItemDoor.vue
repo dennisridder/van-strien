@@ -1,5 +1,5 @@
 <template>
-  <div v-if="image" v-editable="image" class="Item-Door">
+  <div v-if="image" v-editable="image" class="item-Door">
     <img :src="image" :alt="alt" />
   </div>
 </template>
@@ -10,22 +10,20 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 @import '~/assets/styles/variables.sass'
 
 .item-Door
     position: relative
-    width: 400px
+    width: 100%
     height: 0
     padding-top: 125%
-    background: $black
-    border: $testborder
     img
-        position: absolute
-        border: $testborder
-        left: 0
-        top: 0
-        width: 100%
-        height: 100%
-        object-fit: cover
+      border-radius: 1000px 1000px 0 0
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      object-fit: cover
 </style>

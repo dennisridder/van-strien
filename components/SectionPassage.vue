@@ -69,7 +69,7 @@ export default {
               flex-grow: 1
               transform: translateY(-50%)
     &_Left
-        padding: var(--spacing-four)
+        padding: var(--spacing-four) var(--spacing-two)
         background: $yellow
     &_Right
         padding: var(--spacing-two)
