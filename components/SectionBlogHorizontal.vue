@@ -5,11 +5,12 @@
         v-for="(item, i) in filteredHerinneringen"
         :key="i"
         :to="'/herinneringen/' + item.id"
+        tag="li"
         class="section section-BlogHorizontal_Item"
       >
         <blok-item-door :image="item.cover_image" :alt="item.title" />
-        <h2 v-if="item.title">{{ item.title }}</h2>
-        <button class="button typeLink">Lees meer</button>
+        <h2 v-if="item.title" class="typeTextCaps">{{ item.title }}</h2>
+        <button class="button typeLink yellow">Lees meer</button>
       </nuxt-link>
       <li class="section-BlogHorizontal_Final"></li>
     </ul>
@@ -47,7 +48,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 @import '~/assets/styles/variables.sass'
 
 .section-BlogHorizontal
@@ -59,6 +60,10 @@ export default {
         flex-wrap: nowrap
         li
             margin-right: var(--spacing-five)
+            min-width: 400px
+            .typeTextCaps
+              margin-top: var(--spacing-one)
+              margin-bottom: var(--spacing-one)
             &:nth-last-child(2)
                 margin-right: var(--spacing-sides)
     &_Final
