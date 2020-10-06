@@ -11,7 +11,8 @@
           <h2 class="typeTitleItalic" v-if="blok.title_voor">
             {{ blok.title_voor }}
           </h2>
-          <span></span>
+          <span class="spanOne"></span>
+          <span class="spanTwo"></span>
         </div>
         <div class="section-Passage_Item_Title_Bottom">
           <h2 class="typeTitle" v-if="blok.title_na">{{ blok.title_na }}</h2>
@@ -61,10 +62,11 @@ export default {
             display: flex
             h2
               display: inline
-            span
+            .spanOne
+              width: 1em
+            .spanTwo
               border-bottom: $black solid 2px
-              width: 100%
-              padding-left: 0px
+              flex-grow: 1
               transform: translateY(-50%)
     &_Left
         padding: var(--spacing-four)
