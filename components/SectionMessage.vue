@@ -30,8 +30,8 @@ export default {
     display: flex
     justify-content: space-around
     &_Content
-        padding: var(--spacing-two) var(--spacing-sides)
-        max-width: 38em
+        padding: var(--spacing-three) var(--spacing-sides)
+        max-width: 36em
         text-align: center
         .markdown, caption
             width: 100%

@@ -14,6 +14,7 @@ import SectionBlogGrid from "~/components/SectionBlogGrid.vue"
 import ItemButton from "~/components/ItemButton.vue"
 import ItemCaption from "~/components/ItemCaption.vue"
 import ItemDoor from "~/components/ItemDoor.vue"
+import ItemMessage from "~/components/ItemMessage.vue"
 import ItemQuote from "~/components/ItemQuote.vue"
 import ItemSubtitle from "~/components/ItemSubtitle.vue"
 import ItemText from "~/components/ItemText.vue"
@@ -34,6 +35,7 @@ Vue.component("blok-section-blog-grid", SectionBlogGrid)
 Vue.component("blok-item-button", ItemButton)
 Vue.component("blok-item-caption", ItemCaption)
 Vue.component("blok-item-door", ItemDoor)
+Vue.component("blok-item-message", ItemMessage)
 Vue.component("blok-item-quote", ItemQuote)
 Vue.component("blok-item-subtitle", ItemSubtitle)
 Vue.component("blok-item-text", ItemText)
