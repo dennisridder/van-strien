@@ -1,38 +1,38 @@
 <template>
   <!-- Change if needed -->
   <main lang="en-US" translate="no">
-    <the-navigation />
+    <the-navigation-slider :active="showSlide" @toggle-slide="toggleSlide" />
+    <the-navigation-large @toggle-slide="toggleSlide" />
+    <the-navigation-small @toggle-slide="toggleSlide" />
     <transition name="pages" mode="out-in">
       <nuxt />
     </transition>
-    <the-footer v-if="footerActive" />
+    <the-footer v-if="showFooter" />
   </main>
 </template>
 
 <script>
-import TheNavigation from "~/components/TheNavigation.vue"
-import TheFooter from "~/components/TheFooter.vue"
-
 export default {
-  components: {
-    "the-navigation": TheNavigation,
-    "the-footer": TheFooter
-  },
   data() {
     return {
-      footerActive: true
+      showFooter: true,
+      showSlide: false
     }
   },
   watch: {
     $route() {
-      this.checkFooterActive()
+      this.toggleFooter()
+      this.showSlide = false
     }
   },
   mounted() {
-    this.checkFooterActive()
+    this.toggleFooter()
   },
   methods: {
-    checkFooterActive() {
+    toggleSlide() {
+      this.showSlide = !this.showSlide
+    },
+    toggleFooter() {
       if (this.$route.path === "/moonlab") {
         this.footerActive = false
       } else {
