@@ -6,7 +6,10 @@
       :active="showHeaderLarge"
       @toggle-slide="toggleSlide"
     />
-    <the-navigation-small @toggle-slide="toggleSlide" />
+    <the-navigation-small
+      :active="showHeaderSmall"
+      @toggle-slide="toggleSlide"
+    />
     <transition name="pages" mode="out-in">
       <nuxt />
     </transition>
@@ -20,6 +23,7 @@ export default {
     return {
       showFooter: true,
       showHeaderLarge: false,
+      showHeaderSmall: true,
       showSlide: false,
       lastScrollPosition: 0
     }
@@ -48,6 +52,7 @@ export default {
         return
       }
       this.showHeaderLarge = currentScrollPosition < this.lastScrollPosition
+      this.showHeaderSmall = currentScrollPosition > this.lastScrollPosition
       this.lastScrollPosition = currentScrollPosition
     },
     toggleSlide() {

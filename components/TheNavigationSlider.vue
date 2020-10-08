@@ -32,11 +32,6 @@ export default {
 <style lang="sass">
 @import '~/assets/styles/variables.sass'
 
-.navIcon
-  width: 1.2222rem
-  height: 1.2222rem
-  cursor: pointer
-
 .headerSlider
   position: fixed
   z-index: $zindex-header-slider

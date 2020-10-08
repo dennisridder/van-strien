@@ -35,8 +35,13 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 @import '~/assets/styles/variables.sass'
+
+.navIcon
+  width: 1.2222rem
+  height: 1.2222rem
+  cursor: pointer
 
 .headerLarge
   position: fixed
