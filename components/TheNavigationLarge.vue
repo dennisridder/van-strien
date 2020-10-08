@@ -1,5 +1,5 @@
 <template>
-  <div v-if="active" class="headerLarge">
+  <div v-show="active" class="headerLarge">
     <div class="headerLarge-Item headerLarge-Toggle">
       <div class="headerLarge-Toggle" @click="emitToggleSlide">
         <div
@@ -11,7 +11,7 @@
     <div class="headerLarge-Item headerLarge-Logo">
       <nuxt-link class="headerLarge-Logo_Item" to="/">
         <div
-          class="icon"
+          class="icon rotate"
           v-html="require('~/assets/images/logo-circle.svg?include')"
         />
       </nuxt-link>

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="slideActive === true" class="header-Slide">
+  <div v-show="slideActive === true" class="header-Slide">
     <div class="header-Toggle_Item" @click="toggleSlide">
       <div
         class="icon"

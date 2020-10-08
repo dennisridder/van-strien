@@ -1,7 +1,10 @@
 <template>
-  <div v-if="active" class="headerSmall">
+  <div v-show="active" class="headerSmall">
     <div class="headerSmall-Item headerSmall-Logo">
-      <div v-html="require('~/assets/images/logo-circle.svg?include')" />
+      <div
+        class="rotate"
+        v-html="require('~/assets/images/logo-circle.svg?include')"
+      />
     </div>
     <div class="headerSmall-Item headerSmall-Toggle">
       <div class="headerSmall-Toggle" @click="emitToggleSlide">

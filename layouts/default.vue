@@ -18,7 +18,10 @@
 </template>
 
 <script>
+import rotateElement from "@/mixins/rotateElement"
+
 export default {
+  mixins: [rotateElement],
   data() {
     return {
       showFooter: true,
