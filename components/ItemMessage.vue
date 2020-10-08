@@ -22,4 +22,5 @@ export default {
 
 .item-Message
     color: $brown
+    max-width: 32em
 </style>

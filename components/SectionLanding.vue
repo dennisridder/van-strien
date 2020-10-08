@@ -25,7 +25,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 @import '~/assets/styles/variables.sass'
 
 .section-Landing
@@ -59,6 +59,4 @@ export default {
       margin-bottom: 1rem
     .item-Button
       color: $black
-      .button
-        background: $yellow
 </style>

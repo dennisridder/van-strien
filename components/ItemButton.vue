@@ -1,6 +1,10 @@
 <template>
   <div v-editable="blok" class="item-Button">
-    <button class="button typeLink">{{ blok.title }}</button>
+    <div class="button typeLink" :style="`background:${blok.color}`">
+      <a>
+        {{ blok.title }}
+      </a>
+    </div>
   </div>
 </template>
 

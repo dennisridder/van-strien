@@ -31,7 +31,6 @@ export default {
     justify-content: space-around
     &_Content
         padding: var(--spacing-three) var(--spacing-sides)
-        max-width: 36em
         text-align: center
         .markdown, caption
             width: 100%
@@ -39,4 +38,6 @@ export default {
             margin-bottom: var(--spacing-one)
         > div:last-child
             margin-bottom: 0
+        .button, button
+          background: $purple !important
 </style>
