@@ -45,7 +45,7 @@ export default {
     }
   },
   mounted() {
-    console.log("PAGE POST", this.story)
+    // console.log("PAGE POST", this.story)
   }
 }
 </script>

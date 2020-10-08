@@ -36,7 +36,7 @@ export default {
   },
   mounted() {
     this.filterHerinneringen()
-    console.log("BLOG GRID", this.blok, this.herinneringen)
+    // console.log("BLOG GRID", this.blok, this.herinneringen)
   },
   methods: {
     filterHerinneringen() {

@@ -34,7 +34,7 @@ export default {
     blok: Object
   },
   mounted() {
-    console.log("PASSAGE", this.blok)
+    // console.log("PASSAGE", this.blok)
   }
 }
 </script>

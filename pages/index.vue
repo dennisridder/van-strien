@@ -48,7 +48,7 @@ export default {
     }
   },
   mounted() {
-    console.log("INDEX", this.story)
+    // console.log("INDEX", this.story)
   }
 }
 </script>

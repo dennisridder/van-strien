@@ -31,7 +31,7 @@ export default {
     return { story: { content: {} } }
   },
   mounted() {
-    console.log("SLUG", this.story)
+    // console.log("SLUG", this.story)
   }
 }
 </script>

@@ -15,7 +15,7 @@ export default {
     blok: Object
   },
   mounted() {
-    console.log("TEXT", this.blok)
+    // console.log("TEXT", this.blok)
   }
 }
 </script>

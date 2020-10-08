@@ -20,7 +20,7 @@ export default {
     blok: Object
   },
   mounted() {
-    console.log("LANDING", this.blok)
+    // console.log("LANDING", this.blok)
   }
 }
 </script>

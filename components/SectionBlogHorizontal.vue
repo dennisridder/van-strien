@@ -37,7 +37,7 @@ export default {
   },
   mounted() {
     this.filterHerinneringen()
-    console.log("BLOG HORIZONTAL", this.blok, this.herinneringen)
+    // console.log("BLOG HORIZONTAL", this.blok, this.herinneringen)
   },
   methods: {
     filterHerinneringen() {
