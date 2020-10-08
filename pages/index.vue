@@ -12,12 +12,13 @@
 <script>
 import storyblokLivePreview from "@/mixins/storyblokLivePreview"
 import Markdown from "~/components/Markdown.vue"
+import onPageLoad from "@/mixins/onPageLoad"
 
 export default {
   components: {
     markdown: Markdown
   },
-  mixins: [storyblokLivePreview],
+  mixins: [onPageLoad, storyblokLivePreview],
   asyncData(context) {
     return context.app.$storyapi
       .get("cdn/stories/home", {

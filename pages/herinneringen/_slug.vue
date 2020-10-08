@@ -10,7 +10,11 @@
 </template>
 
 <script>
+import storyblokLivePreview from "@/mixins/storyblokLivePreview"
+import onPageLoad from "@/mixins/onPageLoad"
+
 export default {
+  mixins: [onPageLoad, storyblokLivePreview],
   asyncData(context) {
     let endpoint = `cdn/stories/herinneringen/${context.params.slug}`
     let version =

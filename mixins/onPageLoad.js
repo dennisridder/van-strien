@@ -27,19 +27,21 @@ export default {
         let rotateTimeline = gsap.timeline({
           scrollTrigger: {
             trigger: el,
-            scrub: 1,
+            scrub: 0.33,
             start: "top top",
-            end: `+=${height}`
+            end: `+=${height}`,
+            ease: "none"
           }
         })
-        rotateTimeline.to(
-          el,
-          {
-            rotation: 360 * rotations,
-            ease: "none"
-          },
-          0
-        )
+        rotateTimeline.set(el, {
+          rotation: 0,
+          duration: 0,
+          ease: "none"
+        })
+        rotateTimeline.to(el, {
+          rotation: 360 * rotations,
+          ease: "none"
+        })
       })
     }
   }
