@@ -2,7 +2,10 @@
   <!-- Change if needed -->
   <main lang="en-US" translate="no">
     <the-navigation-slider :active="showSlide" @toggle-slide="toggleSlide" />
-    <the-navigation-large @toggle-slide="toggleSlide" />
+    <the-navigation-large
+      :active="showHeaderLarge"
+      @toggle-slide="toggleSlide"
+    />
     <the-navigation-small @toggle-slide="toggleSlide" />
     <transition name="pages" mode="out-in">
       <nuxt />
@@ -16,7 +19,9 @@ export default {
   data() {
     return {
       showFooter: true,
-      showSlide: false
+      showHeaderLarge: false,
+      showSlide: false,
+      lastScrollPosition: 0
     }
   },
   watch: {
@@ -27,8 +32,24 @@ export default {
   },
   mounted() {
     this.toggleFooter()
+    window.addEventListener("scroll", this.toggleHeaderLarge)
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.toggleHeaderLarge)
   },
   methods: {
+    toggleHeaderLarge() {
+      const currentScrollPosition =
+        window.pageYOffset || document.documentElement.scrollTop
+      if (currentScrollPosition < 0) {
+        return
+      }
+      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
+        return
+      }
+      this.showHeaderLarge = currentScrollPosition < this.lastScrollPosition
+      this.lastScrollPosition = currentScrollPosition
+    },
     toggleSlide() {
       this.showSlide = !this.showSlide
     },

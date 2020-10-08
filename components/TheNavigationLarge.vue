@@ -1,5 +1,5 @@
 <template>
-  <div class="headerLarge">
+  <div v-if="active" class="headerLarge">
     <div class="headerLarge-Item headerLarge-Toggle">
       <div class="headerLarge-Toggle" @click="emitToggleSlide">
         <div
@@ -24,6 +24,9 @@
 
 <script>
 export default {
+  props: {
+    active: Boolean
+  },
   methods: {
     emitToggleSlide() {
       this.$emit("toggle-slide")
@@ -41,16 +44,19 @@ export default {
   top: 0
   right: 0
   display: flex
+  justify-content: space-between
   background: $lightgrey
   padding: 30px var(--spacing-sides)
   z-index: $zindex-header-large
   > div
     display: flex
     align-items: center
-  &-Item
-    flex-basis: 33.333%
   &-Logo
-    position: relative
+    position: absolute
+    top: 0
+    left: 50%
+    bottom: 0
+    transform: translateX(-50%)
     justify-content: space-around
     cursor: pointer
     &_Item
