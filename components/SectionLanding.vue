@@ -37,6 +37,7 @@ export default {
   min-height: 100vh
   padding: 0 var(--spacing-sides)
   background-size: cover
+  background-position: center center
   color: white
   > div
     display: flex

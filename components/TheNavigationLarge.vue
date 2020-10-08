@@ -66,6 +66,17 @@ export default {
     transform: translateX(-50%)
     justify-content: space-around
     cursor: pointer
+    .icon
+      position: relative
+      height: 100%
+      width: 100%
+    svg
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      object-fit: cover
     &_Item
       position: absolute
       left: 50%
