@@ -6,8 +6,32 @@ gsap.registerPlugin(ScrollTrigger)
 export default {
   mounted() {
     this.rotateElement()
+    this.horizontalScrollElement()
   },
   methods: {
+    horizontalScrollElement() {
+      // Get page width
+      var width = window.innerWidth / 3
+      // Get el
+      var array = document.querySelectorAll(".horizontalScroll")
+      array.forEach((el) => {
+        let horizontalTimeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: el,
+            scrub: 0,
+            start: "top bottom",
+            end: "bottom top",
+            ease: "none"
+          }
+        })
+        horizontalTimeline.set(el, {
+          x: 0
+        })
+        horizontalTimeline.to(el, {
+          x: -width
+        })
+      })
+    },
     rotateElement() {
       // Get doc height
       var body = document.body,

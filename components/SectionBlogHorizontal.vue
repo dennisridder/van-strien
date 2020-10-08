@@ -1,6 +1,6 @@
 <template>
   <section v-editable="blok" class="section section-BlogHorizontal">
-    <ul class="section section-BlogHorizontal_Wrapper">
+    <ul class="section section-BlogHorizontal_Wrapper horizontalScroll">
       <nuxt-link
         v-for="(item, i) in filteredHerinneringen"
         :key="i"
@@ -53,6 +53,7 @@ export default {
 
 .section-BlogHorizontal
     padding: var(--spacing-three) var(--spacing-sides)
+    padding-left: 33vw
     background: $lightyellow
     overflow-x: auto
     ul
