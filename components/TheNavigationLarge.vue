@@ -1,25 +1,27 @@
 <template>
-  <div v-show="active" class="headerLarge">
-    <div class="headerLarge-Item headerLarge-Toggle">
-      <div class="headerLarge-Toggle" @click="emitToggleSlide">
-        <div
-          class="icon navIcon"
-          v-html="require('~/assets/images/icon-hamburger.svg?include')"
-        />
+  <transition name="fade">
+    <div v-show="active" class="headerLarge">
+      <div class="headerLarge-Item headerLarge-Toggle">
+        <div class="headerLarge-Toggle" @click="emitToggleSlide">
+          <div
+            class="icon navIcon"
+            v-html="require('~/assets/images/icon-hamburger.svg?include')"
+          />
+        </div>
+      </div>
+      <div class="headerLarge-Item headerLarge-Logo">
+        <nuxt-link class="headerLarge-Logo_Item" to="/">
+          <div
+            class="icon rotate"
+            v-html="require('~/assets/images/logo-circle.svg?include')"
+          />
+        </nuxt-link>
+      </div>
+      <div class="headerLarge-Item headerLarge-Button item-Button">
+        <button class="button typeLink">Plan free deep call</button>
       </div>
     </div>
-    <div class="headerLarge-Item headerLarge-Logo">
-      <nuxt-link class="headerLarge-Logo_Item" to="/">
-        <div
-          class="icon rotate"
-          v-html="require('~/assets/images/logo-circle.svg?include')"
-        />
-      </nuxt-link>
-    </div>
-    <div class="headerLarge-Item headerLarge-Button item-Button">
-      <button class="button typeLink">Plan free deep call</button>
-    </div>
-  </div>
+  </transition>
 </template>
 
 <script>

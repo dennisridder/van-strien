@@ -1,20 +1,22 @@
 <template>
-  <div v-show="active" class="headerSmall">
-    <div class="headerSmall-Item headerSmall-Logo">
-      <div
-        class="rotate"
-        v-html="require('~/assets/images/logo-circle.svg?include')"
-      />
-    </div>
-    <div class="headerSmall-Item headerSmall-Toggle">
-      <div class="headerSmall-Toggle" @click="emitToggleSlide">
+  <transition name="fade">
+    <div v-show="active" class="headerSmall">
+      <div class="headerSmall-Item headerSmall-Logo">
         <div
-          class="icon navIcon"
-          v-html="require('~/assets/images/icon-hamburger.svg?include')"
+          class="rotate"
+          v-html="require('~/assets/images/logo-circle.svg?include')"
         />
       </div>
+      <div class="headerSmall-Item headerSmall-Toggle">
+        <div class="headerSmall-Toggle" @click="emitToggleSlide">
+          <div
+            class="icon navIcon"
+            v-html="require('~/assets/images/icon-hamburger.svg?include')"
+          />
+        </div>
+      </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script>

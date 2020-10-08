@@ -1,19 +1,21 @@
 <template>
-  <div v-if="active" class="headerSlider">
-    <div class="headerSlider-Toggle" @click="emitToggleSlide">
-      <div
-        class="icon navIcon"
-        v-html="require('~/assets/images/icon-close.svg?include')"
-      />
+  <transition name="fade">
+    <div v-if="active" class="headerSlider">
+      <div class="headerSlider-Toggle" @click="emitToggleSlide">
+        <div
+          class="icon navIcon"
+          v-html="require('~/assets/images/icon-close.svg?include')"
+        />
+      </div>
+      <ul class="headerSlider-List typeSlider">
+        <nuxt-link to="/" tag="li">HOME</nuxt-link>
+        <nuxt-link to="/moonlab" tag="li">MOON LAB PROGRAMMA</nuxt-link>
+        <nuxt-link to="/herinneringen" tag="li">HERINNERINGEN</nuxt-link>
+        <nuxt-link to="/over-anne" tag="li">OVER ANNE</nuxt-link>
+        <nuxt-link to="/contact" tag="li">CONTACT</nuxt-link>
+      </ul>
     </div>
-    <ul class="headerSlider-List typeSlider">
-      <nuxt-link to="/" tag="li">HOME</nuxt-link>
-      <nuxt-link to="/moonlab" tag="li">MOON LAB PROGRAMMA</nuxt-link>
-      <nuxt-link to="/herinneringen" tag="li">HERINNERINGEN</nuxt-link>
-      <nuxt-link to="/over-anne" tag="li">OVER ANNE</nuxt-link>
-      <nuxt-link to="/contact" tag="li">CONTACT</nuxt-link>
-    </ul>
-  </div>
+  </transition>
 </template>
 
 <script>
