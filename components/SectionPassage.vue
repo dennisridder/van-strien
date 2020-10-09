@@ -48,12 +48,16 @@ export default {
     width: 100%
     min-height: 100vh
     box-sizing: border-box
+    @media screen and (max-width: $breakpoint-mobile)
+      flex-direction: column
     &_Item
         display: flex
         flex-direction: column
         justify-content: flex-end
         flex-basis: 50%
         flex-shrink: 0
+        @media screen and (max-width: $breakpoint-mobile)
+          flex-basis: 100%
         &_Title
           flex-shrink: 1
           align-self: flex-start

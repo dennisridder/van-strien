@@ -53,7 +53,7 @@ export default {
   display: flex
   justify-content: space-between
   background: $lightgrey
-  padding: 30px var(--spacing-sides)
+  padding: 1.6667rem var(--spacing-sides)
   z-index: $zindex-header-large
   > div
     display: flex
@@ -66,6 +66,22 @@ export default {
     transform: translateX(-50%)
     justify-content: space-around
     cursor: pointer
+    @media screen and (max-width: $breakpoint-mobile)
+      position: relative
+      left: auto
+      transform: translateX(0)
+    &_Item
+      width: 75px
+      height: 75px
+      @media screen and (min-width: $breakpoint-mobile)
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        color: $blacktype
+      @media screen and (max-width: $breakpoint-mobile)
+        width: 3rem
+        height: 3rem
     .icon
       position: relative
       height: 100%
@@ -77,15 +93,10 @@ export default {
       width: 100%
       height: 100%
       object-fit: cover
-    &_Item
-      position: absolute
-      left: 50%
-      top: 50%
-      width: 75px
-      height: 75px
-      transform: translate(-50%, -50%)
-      color: $blacktype
-  .button
-    background: $black
-    color: $lightyellow
+  &-Button
+    @media screen and (max-width: $breakpoint-mobile)
+      display: none !important
+    .button
+      background: $black
+      color: $lightyellow
 </style>
