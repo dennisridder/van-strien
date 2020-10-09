@@ -107,13 +107,15 @@ export default {
   &-Top
     background: $yellow
     &_Content
-      justify-content: space-around
+      justify-content: center
+      align-items: center
       @media screen and (max-width: $breakpoint-mobile)
         align-items: flex-start
     &_Mail, &_Community
       display: flex
       flex-direction: column
     &_Community
+      margin-right: var(--spacing-three)
       > div:first-child
         margin-bottom: 1em
       > div:last-child
@@ -129,7 +131,7 @@ export default {
         border: 0
         border-bottom: 1px solid $lightyellow
         padding-bottom: 1rem
-        margin-bottom: 1rem
+        margin-bottom: 1.25rem
         color: $lightyellow
         font-family: 'Artegra Sans Alt Medium'
         letter-spacing: 0

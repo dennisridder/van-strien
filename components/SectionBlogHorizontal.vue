@@ -61,9 +61,9 @@ export default {
         flex-wrap: nowrap
         li
             margin-right: var(--spacing-five)
-            min-width: 25vw
+            min-width: 22.5vw !important
             .typeTextCaps
-              margin-top: var(--spacing-one-vertical)
+              margin-top: var(--spacing-onehalf-vertical)
               margin-bottom: var(--spacing-one-vertical)
             &:nth-last-child(2)
                 margin-right: var(--spacing-sides)
