@@ -1,6 +1,13 @@
 <template>
-  <section v-editable="blok" class="section section-Passage">
-    <div class="section-Passage_Item section-Passage_Left">
+  <section
+    v-editable="blok"
+    class="section section-Passage"
+    :class="{ reverse: blok.reverse }"
+  >
+    <div
+      class="section-Passage_Item section-Passage_Left"
+      :style="`background:${blok.background_color}`"
+    >
       <div v-if="blok.passage_image" class="section-Passage_Item_Door">
         <blok-item-door :image="blok.passage_image" :alt="blok.title" />
       </div>
@@ -34,7 +41,7 @@ export default {
     blok: Object
   },
   mounted() {
-    // console.log("PASSAGE", this.blok)
+    console.log("PASSAGE", this.blok)
   }
 }
 </script>
@@ -74,7 +81,6 @@ export default {
               transform: translateY(-50%)
     &_Left
         padding: var(--spacing-four-vertical) var(--spacing-four)
-        background: $yellow
     &_Right
         padding: var(--spacing-three-vertical) var(--spacing-three)
         @media screen and (min-width: $breakpoint-laptop)
