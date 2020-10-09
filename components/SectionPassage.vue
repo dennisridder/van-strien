@@ -39,7 +39,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 @import '~/assets/styles/variables.sass'
 
 .section-Passage
@@ -73,9 +73,9 @@ export default {
               flex-grow: 1
               transform: translateY(-50%)
     &_Left
-        padding: var(--spacing-four)
+        padding: var(--spacing-four-vertical) var(--spacing-four)
         background: $yellow
     &_Right
-        padding: var(--spacing-three)
+        padding: var(--spacing-three-vertical) var(--spacing-three)
         padding-right: var(--spacing-five)
 </style>

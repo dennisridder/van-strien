@@ -42,9 +42,9 @@ export default {
   > div
     display: flex
     justify-content: space-around
-    margin-bottom: var(--spacing-two)
+    margin-bottom: var(--spacing-two-vertical)
   > div:first-child
-    margin-top: var(--spacing-two)
+    margin-top: var(--spacing-two-vertical)
   &_Logo
     flex-grow: 1
     text-align: center
@@ -56,8 +56,6 @@ export default {
     flex-direction: column
     flex-shrink: 0
     text-align: center
-    h1
-      margin-bottom: 1rem
     .item-Button
       color: $black
 </style>
