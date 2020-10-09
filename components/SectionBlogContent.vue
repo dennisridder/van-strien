@@ -33,4 +33,11 @@ export default {
         padding: var(--spacing-two) var(--spacing-sides)
         width: 100%
         max-width: 1100px
+        > div
+          margin-bottom: 1.5rem
+        .item-Quote
+          margin-top: var(--spacing-three-vertical)
+          margin-bottom: var(--spacing-three-vertical)
+        > div:last-child
+          margin-bottom: 0
 </style>

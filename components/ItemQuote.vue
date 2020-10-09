@@ -1,6 +1,6 @@
 <template>
   <div v-editable="blok" class="item-Quote">
-    <markdown :input="blok.quote" />
+    <markdown class="typeQuote" :input="blok.quote" />
   </div>
 </template>
 
@@ -11,3 +11,14 @@ export default {
   }
 }
 </script>
+
+<style lang="sass">
+.item-Quote
+  display: flex
+  justify-content: space-around
+  margin-top: var(--spacing-three-vertical)
+  margin-bottom: var(--spacing-three-vertical)
+  text-align: center
+  .markdown
+    max-width: 20em
+</style>
