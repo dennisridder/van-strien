@@ -77,5 +77,6 @@ export default {
         background: $yellow
     &_Right
         padding: var(--spacing-three-vertical) var(--spacing-three)
-        padding-right: var(--spacing-five)
+        @media screen and (min-width: $breakpoint-laptop)
+          padding-right: var(--spacing-five)
 </style>
