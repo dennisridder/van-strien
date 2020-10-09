@@ -52,7 +52,7 @@ export default {
 @import '~/assets/styles/variables.sass'
 
 .section-BlogHorizontal
-    padding: var(--spacing-three) var(--spacing-sides)
+    padding: var(--spacing-three-vertical) var(--spacing-sides)
     padding-left: 33vw
     background: $lightyellow
     overflow-x: auto
@@ -61,10 +61,10 @@ export default {
         flex-wrap: nowrap
         li
             margin-right: var(--spacing-five)
-            min-width: 400px
+            min-width: 25vw
             .typeTextCaps
-              margin-top: var(--spacing-one)
-              margin-bottom: var(--spacing-one)
+              margin-top: var(--spacing-one-vertical)
+              margin-bottom: var(--spacing-one-vertical)
             &:nth-last-child(2)
                 margin-right: var(--spacing-sides)
     &_Final

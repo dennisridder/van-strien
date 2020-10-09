@@ -86,7 +86,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 @import '~/assets/styles/variables.sass'
 
 .footer
@@ -94,14 +94,22 @@ export default {
   flex-direction: column
   color: $lightyellow
   &-Top, &-Bottom
-    padding: var(--spacing-two) var(--spacing-sides)
+    padding: var(--spacing-two-vertical) var(--spacing-sides)
     &_Content
       display: flex
       align-items: flex-end
+      @media screen and (max-width: $breakpoint-mobile)
+        flex-direction: column
+        > div
+          margin-bottom: var(--spacing-one-vertical)
+        > div:last-child
+          margin-bottom: 0
   &-Top
     background: $yellow
     &_Content
       justify-content: space-around
+      @media screen and (max-width: $breakpoint-mobile)
+        align-items: flex-start
     &_Mail, &_Community
       display: flex
       flex-direction: column
@@ -134,14 +142,22 @@ export default {
     background: $black
     &_Content
       justify-content: space-between
+      @media screen and (max-width: $breakpoint-mobile)
+        align-items: center
+        > div
+          margin-bottom: 1.75rem
     &_Item
       display: flex
       flex-direction: column
       a
         margin-bottom: 1em
+        @media screen and (max-width: $breakpoint-mobile)
+          text-align: center
         &:last-child
           margin-bottom: 0
     &_Logo
       height: auto
       width: 6rem
+      @media screen and (max-width: $breakpoint-mobile)
+        width: 33vw
 </style>
