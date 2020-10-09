@@ -27,6 +27,7 @@ export default {
         return {
           id: bp.slug,
           title: bp.content.title,
+          excerpt: bp.content.excerpt,
           cover_image: bp.content.cover_image
         }
       })

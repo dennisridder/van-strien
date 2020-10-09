@@ -8,9 +8,12 @@
         tag="li"
         class="section-BlogGrid_Item"
       >
-        <blok-item-door :image="item.cover_image" :alt="item.title" />
-        <h2 v-if="item.title">{{ item.title }}</h2>
-        <button>Lees meer</button>
+        <div class="section-BlogGrid_Item_Content">
+          <blok-item-door :image="item.cover_image" :alt="item.title" />
+          <h2 v-if="item.title" class="typeTextCaps">{{ item.title }}</h2>
+          <markdown class="typeText" :input="item.excerpt" />
+          <div class="button typeLink yellow">Lees meer</div>
+        </div>
       </nuxt-link>
     </ul>
   </section>
@@ -55,6 +58,16 @@ export default {
     display: flex
     flex-wrap: wrap
   &_Item
+    display: flex
+    justify-content: space-around
     flex-basis: 50%
-    border: $testborder
+    padding: var(--spacing-two-vertical)
+    &_Content
+      max-width: 22.5vw
+      .item-Door
+        margin-bottom: var(--spacing-onehalf-vertical)
+      h2
+        margin-bottom: var(--spacing-one-vertical)
+      .markdown
+        margin-bottom: var(--spacing-onehalf-vertical)
 </style>
