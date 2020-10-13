@@ -39,7 +39,7 @@ export default {
   z-index: $zindex-header-slider
   left: 0
   top: 0
-  padding: var(--spacing-three) var(--spacing-five) var(--spacing-five) var(--spacing-three)
+  padding: var(--spacing-header-vertical) var(--spacing-five) var(--spacing-five) var(--spacing-header-horizontal)
   background: $lightgrey
   color: $black
   &-Toggle

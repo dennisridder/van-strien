@@ -67,8 +67,8 @@ export default {
 @import '~/assets/styles/variables.sass'
 
 .navIcon
-  width: 1.2222rem
-  height: 1.2222rem
+  width: 1.5rem
+  height: 1.5rem
   cursor: pointer
 
 .headerLarge
@@ -79,8 +79,10 @@ export default {
   display: flex
   justify-content: space-between
   background: $lightgrey
-  padding: 1.6667rem var(--spacing-section-horizontal)
+  padding: 2.2rem var(--spacing-header-horizontal)
   z-index: $zindex-header-large
+  @media screen and (max-width: $breakpoint-mobile)
+    padding: 2rem var(--spacing-header-horizontal)
   > div
     display: flex
     align-items: center
