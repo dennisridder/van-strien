@@ -60,14 +60,17 @@ export default {
     toggleHeaderLarge() {
       const currentScrollPosition =
         window.pageYOffset || document.documentElement.scrollTop
-      if (currentScrollPosition < 0) {
-        return
+      const windowHeight = window.innerHeight
+      if (currentScrollPosition < windowHeight) {
+        return (this.showHeaderLarge = false)
+      } else {
+        this.showHeaderLarge = true
       }
-      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
-        return
-      }
-      this.showHeaderLarge = currentScrollPosition < this.lastScrollPosition
-      this.lastScrollPosition = currentScrollPosition
+      // if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
+      //   return
+      // }
+      // this.showHeaderLarge = currentScrollPosition < this.lastScrollPosition
+      // this.lastScrollPosition = currentScrollPosition
     },
     toggleSlide() {
       this.showSlide = !this.showSlide
