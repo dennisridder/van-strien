@@ -41,7 +41,7 @@ export default {
     blok: Object
   },
   mounted() {
-    console.log("PASSAGE", this.blok)
+    // console.log("PASSAGE", this.blok)
   }
 }
 </script>
@@ -76,7 +76,7 @@ export default {
             .spanOne
               width: 1em
             .spanTwo
-              border-bottom: $black solid 2px
+              border-bottom: $black solid 1px
               flex-grow: 1
               transform: translateY(-50%)
     &_Left

@@ -36,7 +36,7 @@ export default {
     }
   },
   mounted() {
-    console.log("HERINNERINGEN INDEX", this.story)
+    // console.log("HERINNERINGEN INDEX", this.story)
   }
 }
 </script>
