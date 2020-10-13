@@ -68,8 +68,9 @@ export default {
           flex-shrink: 1
           align-self: flex-start
           &_Top
-            margin-left: -3.75vw
             display: flex
+            @media screen and (min-width: $breakpoint-mobile)
+              margin-left: 2em
             h2
               display: inline
             .spanOne
@@ -78,6 +79,9 @@ export default {
               border-bottom: $darkbrown solid 1px
               flex-grow: 1
               transform: translateY(-50%)
+          &_Bottom
+            @media screen and (max-width: $breakpoint-mobile)
+              margin-left: 2.5em
     &_Left
         // padding: var(--spacing-four-vertical) var(--spacing-four)
         padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
