@@ -11,11 +11,13 @@
       </div>
       <div class="headerLarge-Item headerLarge-Logo">
         <nuxt-link class="headerLarge-Logo_Item" to="/">
-          <!-- <div
+          <div
+            v-if="headerIcon"
             class="icon rotate"
             v-html="require('~/assets/images/logo-circle.svg?include')"
-          /> -->
+          />
           <div
+            v-else
             class="icon rotate"
             v-html="require('~/assets/images/logo-moonlab-circle.svg?include')"
           />
@@ -33,9 +35,29 @@ export default {
   props: {
     active: Boolean
   },
+  data() {
+    return {
+      headerIcon: true
+    }
+  },
+  watch: {
+    $route() {
+      this.determineHeaderIcon()
+    }
+  },
+  mounted() {
+    this.determineHeaderIcon()
+  },
   methods: {
     emitToggleSlide() {
       this.$emit("toggle-slide")
+    },
+    determineHeaderIcon() {
+      if (this.$route.name == "index") {
+        this.headerIcon = true
+      } else {
+        this.headerIcon = false
+      }
     }
   }
 }
