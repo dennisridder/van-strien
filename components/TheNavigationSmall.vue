@@ -9,12 +9,12 @@
           />
         </div>
       </div>
-      <div class="headerSmall-Item headerSmall-Logo">
+      <nuxt-link to="/" tag="div" class="headerSmall-Item headerSmall-Logo">
         <div
           class="rotate"
           v-html="require('~/assets/images/logo-circle.svg?include')"
         />
-      </div>
+      </nuxt-link>
     </div>
   </transition>
 </template>
@@ -43,8 +43,10 @@ export default {
   flex-direction: column
   z-index: $zindex-header-small
   &-Logo
-    width: 3.1111rem
-    height: 3.1111rem
-    margin-top: 1.5rem
-    transform: translateX(-25%)
+    width: 4rem
+    height: 4rem
+    margin-top: calc(#{var(--spacing-header-vertical)} / 2)
+    margin-left: 0.75rem
+    transform: translateX(-50%)
+    cursor: pointer
 </style>

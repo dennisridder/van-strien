@@ -41,7 +41,7 @@ export default {
   top: 0
   padding: var(--spacing-header-vertical) var(--spacing-five) var(--spacing-five) var(--spacing-header-horizontal)
   background: $lightgrey
-  color: $black
+  color: $darkbrown
   &-Toggle
     margin-bottom: var(--spacing-three)
   li

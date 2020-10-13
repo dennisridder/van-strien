@@ -9,7 +9,9 @@
         </div>
         <div class="footer-Top_Mail">
           <input type="text" placeholder="jouw mailadres" />
-          <button class="button typeLink">Send</button>
+          <div class="button typeLink offwhite">
+            <a>Send</a>
+          </div>
         </div>
       </div>
     </div>
@@ -140,9 +142,9 @@ export default {
           color: $lightyellow
       button
         background: $lightyellow
-        color: $black
+        color: $darkbrown
   &-Bottom
-    background: $black
+    background: $darkbrown
     &_Content
       justify-content: space-between
       @media screen and (max-width: $breakpoint-mobile)

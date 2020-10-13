@@ -75,7 +75,7 @@ export default {
             .spanOne
               width: 1em
             .spanTwo
-              border-bottom: $black solid 1px
+              border-bottom: $darkbrown solid 1px
               flex-grow: 1
               transform: translateY(-50%)
     &_Left

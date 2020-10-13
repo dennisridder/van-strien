@@ -51,11 +51,11 @@ export default {
     &_Item
       width: 220px
       height: 220px
-      background: $black
+      background: $darkbrown
   &_Content
     flex-direction: column
     flex-shrink: 0
     text-align: center
     .item-Button
-      color: $black
+      color: $darkbrown
 </style>

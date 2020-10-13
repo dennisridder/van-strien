@@ -9,22 +9,26 @@
           />
         </div>
       </div>
-      <div class="headerLarge-Item headerLarge-Logo">
+      <div v-if="headerIcon" class="headerLarge-Item headerLarge-Logo">
         <nuxt-link class="headerLarge-Logo_Item" to="/">
           <div
-            v-if="headerIcon"
             class="icon rotate"
             v-html="require('~/assets/images/logo-circle.svg?include')"
           />
+        </nuxt-link>
+      </div>
+      <div v-else class="headerLarge-Item headerLarge-Logo">
+        <nuxt-link class="headerLarge-Logo_Item" to="/moonlab">
           <div
-            v-else
             class="icon rotate"
             v-html="require('~/assets/images/logo-moonlab-circle.svg?include')"
           />
         </nuxt-link>
       </div>
       <div class="headerLarge-Item headerLarge-Button item-Button">
-        <button class="button typeLink">Plan free deep call</button>
+        <div class="button typeLink darkbrown">
+          <a>Plan free deep call</a>
+        </div>
       </div>
     </div>
   </transition>
@@ -99,14 +103,14 @@ export default {
       left: auto
       transform: translateX(0)
     &_Item
-      width: 75px
-      height: 75px
+      width: 4rem
+      height: 4rem
       @media screen and (min-width: $breakpoint-mobile)
         position: absolute
         left: 50%
         top: 50%
         transform: translate(-50%, -50%)
-        color: $blacktype
+        color: $darkbrowntype
       @media screen and (max-width: $breakpoint-mobile)
         width: 3rem
         height: 3rem
@@ -125,6 +129,6 @@ export default {
     @media screen and (max-width: $breakpoint-mobile)
       display: none !important
     .button
-      background: $black
+      background: $darkbrown
       color: $lightyellow
 </style>
