@@ -11,9 +11,13 @@
       </div>
       <div class="headerLarge-Item headerLarge-Logo">
         <nuxt-link class="headerLarge-Logo_Item" to="/">
-          <div
+          <!-- <div
             class="icon rotate"
             v-html="require('~/assets/images/logo-circle.svg?include')"
+          /> -->
+          <div
+            class="icon rotate"
+            v-html="require('~/assets/images/logo-moonlab-circle.svg?include')"
           />
         </nuxt-link>
       </div>
