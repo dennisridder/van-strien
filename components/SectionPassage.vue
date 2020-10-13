@@ -53,7 +53,6 @@ export default {
     position: relative
     display: flex
     width: 100%
-    min-height: 100vh
     box-sizing: border-box
     @media screen and (max-width: $breakpoint-mobile)
       flex-direction: column
@@ -80,9 +79,10 @@ export default {
               flex-grow: 1
               transform: translateY(-50%)
     &_Left
-        padding: var(--spacing-four-vertical) var(--spacing-four)
+        // padding: var(--spacing-four-vertical) var(--spacing-four)
+        padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
     &_Right
-        padding: var(--spacing-three-vertical) var(--spacing-three)
+        padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
         @media screen and (min-width: $breakpoint-laptop)
           padding-right: var(--spacing-five)
 </style>

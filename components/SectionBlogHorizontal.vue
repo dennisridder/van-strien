@@ -6,7 +6,7 @@
         :key="i"
         :to="'/herinneringen/' + item.id"
         tag="li"
-        class="section section-BlogHorizontal_Item"
+        class="section-BlogHorizontal_Item"
       >
         <blok-item-door :image="item.cover_image" :alt="item.title" />
         <h2 v-if="item.title" class="typeTextCaps">{{ item.title }}</h2>
@@ -52,7 +52,7 @@ export default {
 @import '~/assets/styles/variables.sass'
 
 .section-BlogHorizontal
-    padding: var(--spacing-three-vertical) var(--spacing-sides)
+    padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
     padding-left: 33vw
     background: $lightyellow
     overflow-x: auto
@@ -66,7 +66,7 @@ export default {
               margin-top: var(--spacing-onehalf-vertical)
               margin-bottom: var(--spacing-one-vertical)
             &:nth-last-child(2)
-                margin-right: var(--spacing-sides)
+                margin-right: var(--spacing-section-horizontal)
     &_Final
         padding-right: 1px
 </style>

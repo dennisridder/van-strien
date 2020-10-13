@@ -21,13 +21,17 @@ export default {
 </script>
 
 <style lang="sass">
+@import '~/assets/styles/variables.sass'
+
 .section-Feature
   display: flex
+  @media screen and (max-width: $breakpoint-mobile)
+    flex-direction: column
   &_Item
     display: flex
     flex-direction: column
     justify-content: flex-end
-    padding: var(--spacing-three-vertical) var(--spacing-sides)
+    padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
     &_Content
       display: flex
       flex-direction: column

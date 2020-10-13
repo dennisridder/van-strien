@@ -94,7 +94,8 @@ export default {
   flex-direction: column
   color: $lightyellow
   &-Top, &-Bottom
-    padding: var(--spacing-two-vertical) var(--spacing-sides)
+    // padding: var(--spacing-two-vertical) var(--spacing-section-horizontal)
+    padding: var(--spacing-section-vertical-small) var(--spacing-section-horizontal)
     &_Content
       display: flex
       align-items: flex-end

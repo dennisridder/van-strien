@@ -35,7 +35,7 @@ export default {
   justify-content: flex-end
   width: 100%
   min-height: 100vh
-  padding: 0 var(--spacing-sides)
+  padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
   background-size: cover
   background-position: center center
   color: white
@@ -43,8 +43,8 @@ export default {
     display: flex
     justify-content: space-around
     margin-bottom: var(--spacing-two-vertical)
-  > div:first-child
-    margin-top: var(--spacing-two-vertical)
+  > div:last-child
+    margin-bottom: 0
   &_Logo
     flex-grow: 1
     text-align: center

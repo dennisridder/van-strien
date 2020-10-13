@@ -33,8 +33,8 @@ export default {
     position: relative
     display: flex
     justify-content: space-around
+    padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
     &_Content
-        padding: var(--spacing-three) var(--spacing-sides)
         text-align: center
         .markdown, caption
             width: 100%

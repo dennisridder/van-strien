@@ -24,7 +24,8 @@ export default {
 @import '~/assets/styles/variables.sass'
 
 .section-Collaborations
-  padding: var(--spacing-two-vertical) var(--spacing-sides)
+  // padding: var(--spacing-two-vertical) var(--spacing-section-horizontal)
+  padding: var(--spacing-section-vertical-small) var(--spacing-section-horizontal)
   background: $lightgrey
   .markdown
     margin-bottom: var(--spacing-one-vertical)
@@ -32,8 +33,8 @@ export default {
     display: flex
     justify-content: space-between
     li
-      margin-left: var(--spacing-sides)
-      margin-right: var(--spacing-sides)
+      margin-left: var(--spacing-section-horizontal)
+      margin-right: var(--spacing-section-horizontal)
     li:first-child
       margin-left: 0
     li:last-child

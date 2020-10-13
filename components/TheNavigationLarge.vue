@@ -79,7 +79,7 @@ export default {
   display: flex
   justify-content: space-between
   background: $lightgrey
-  padding: 1.6667rem var(--spacing-sides)
+  padding: 1.6667rem var(--spacing-section-horizontal)
   z-index: $zindex-header-large
   > div
     display: flex
