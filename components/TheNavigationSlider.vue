@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div v-if="active" class="headerSlider">
+    <div v-if="active" class="headerSlider" @mouseleave="emitToggleSlide">
       <div class="headerSlider-Toggle" @click="emitToggleSlide">
         <div
           class="icon navIcon"
@@ -46,7 +46,12 @@ export default {
     margin-bottom: var(--spacing-three)
   li
     cursor: pointer
+    transition: color $transition-hover, font-weight $transition-hover
     &.nuxt-link-exact-active
       color: $brown
       font-weight: bold
+    &:hover
+      @media screen and ( hover: hover)
+        color: $brown
+        font-weight: bold
 </style>
