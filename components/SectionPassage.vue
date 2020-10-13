@@ -70,7 +70,7 @@ export default {
           &_Top
             display: flex
             @media screen and (min-width: $breakpoint-mobile)
-              margin-left: 2em
+              margin-left: -2.5em
             h2
               display: inline
             .spanOne
