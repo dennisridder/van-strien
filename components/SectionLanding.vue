@@ -42,7 +42,7 @@ export default {
   > div
     display: flex
     justify-content: space-around
-    margin-bottom: var(--spacing-two-vertical)
+    margin-bottom: var(--spacing-item-vertical)
   > div:last-child
     margin-bottom: 0
   &_Logo

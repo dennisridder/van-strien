@@ -96,7 +96,6 @@ export default {
   flex-direction: column
   color: $lightyellow
   &-Top, &-Bottom
-    // padding: var(--spacing-two-vertical) var(--spacing-section-horizontal)
     padding: var(--spacing-section-vertical-small) var(--spacing-section-horizontal)
     &_Content
       display: flex
@@ -104,7 +103,7 @@ export default {
       @media screen and (max-width: $breakpoint-mobile)
         flex-direction: column
         > div
-          margin-bottom: var(--spacing-one-vertical)
+          margin-bottom: var(--spacing-item-vertical)
         > div:last-child
           margin-bottom: 0
   &-Top
@@ -150,7 +149,7 @@ export default {
       @media screen and (max-width: $breakpoint-mobile)
         align-items: center
         > div
-          margin-bottom: 1.75rem
+          margin-bottom: var(--spacing-item-vertical)
     &_Item
       display: flex
       flex-direction: column

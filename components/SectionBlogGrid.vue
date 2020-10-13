@@ -61,13 +61,12 @@ export default {
     display: flex
     justify-content: space-around
     flex-basis: 50%
-    padding: var(--spacing-two-vertical)
+    padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
+    padding-bottom: 0
+    &:last-child
+      padding-bottom: var(--spacing-section-vertical)
     &_Content
       max-width: 22.5vw
-      .item-Door
-        margin-bottom: var(--spacing-onehalf-vertical)
-      h2
-        margin-bottom: var(--spacing-one-vertical)
-      .markdown
-        margin-bottom: var(--spacing-onehalf-vertical)
+      .item-Door, h2, .markdown
+        margin-bottom: var(--spacing-item-vertical)
 </style>

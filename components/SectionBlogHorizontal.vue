@@ -65,8 +65,8 @@ export default {
             margin-right: var(--spacing-five)
             min-width: 22.5vw !important
             .typeTextCaps
-              margin-top: var(--spacing-onehalf-vertical)
-              margin-bottom: var(--spacing-one-vertical)
+              margin-top: var(--spacing-item-vertical)
+              margin-bottom: var(--spacing-item-vertical)
             &:nth-last-child(2)
                 margin-right: var(--spacing-section-horizontal)
     &_Final

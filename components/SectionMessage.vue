@@ -39,9 +39,7 @@ export default {
         .markdown, caption
             width: 100%
         > div
-            margin-bottom: var(--spacing-one)
+            margin-bottom: var(--spacing-item-vertical)
         > div:last-child
             margin-bottom: 0
-        .button, button
-          background: $purple !important
 </style>

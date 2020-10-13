@@ -24,11 +24,10 @@ export default {
 @import '~/assets/styles/variables.sass'
 
 .section-Collaborations
-  // padding: var(--spacing-two-vertical) var(--spacing-section-horizontal)
   padding: var(--spacing-section-vertical-small) var(--spacing-section-horizontal)
   background: $lightgrey
   .markdown
-    margin-bottom: var(--spacing-one-vertical)
+    margin-bottom: var(--spacing-item-vertical)
   ul
     display: flex
     justify-content: space-between

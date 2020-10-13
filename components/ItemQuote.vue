@@ -16,8 +16,6 @@ export default {
 .item-Quote
   display: flex
   justify-content: space-around
-  margin-top: var(--spacing-three-vertical)
-  margin-bottom: var(--spacing-three-vertical)
   text-align: center
   .markdown
     max-width: 20em

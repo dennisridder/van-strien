@@ -39,7 +39,7 @@ export default {
       align-items: center
       text-align: center
       > div
-        margin-bottom: var(--spacing-one-vertical)
+        margin-bottom: var(--spacing-item-vertical)
       > div:last-child
         margin-bottom: 0
 </style>
