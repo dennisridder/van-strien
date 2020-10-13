@@ -32,7 +32,6 @@ export default {
   },
   watch: {
     $route() {
-      console.log("ROUTE", this.$route)
       this.determineWhichHeader()
       this.toggleFooter()
       this.showSlide = false
@@ -49,9 +48,9 @@ export default {
   methods: {
     determineWhichHeader() {
       if (
-        this.$route.name === "index" ||
-        this.$route.path === "/moonlab" ||
-        this.$route.path === "/moonlab/"
+        this.$route.name == "index" ||
+        this.$route.path == "/moonlab" ||
+        this.$route.path == "/moonlab/"
       ) {
         this.whichHeader = true
       } else {
@@ -74,10 +73,10 @@ export default {
       this.showSlide = !this.showSlide
     },
     toggleFooter() {
-      if (this.$route.path === "/moonlab") {
-        this.footerActive = false
+      if (this.$route.path == "/moonlab" || this.$route.path == "/moonlab/") {
+        this.showFooter = false
       } else {
-        this.footerActive = true
+        this.showFooter = true
       }
     }
   }
