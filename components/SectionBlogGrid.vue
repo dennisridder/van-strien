@@ -50,7 +50,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 @import '~/assets/styles/variables.sass'
 
 .section-BlogGrid

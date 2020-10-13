@@ -11,6 +11,7 @@ import SectionCollaborations from "~/components/SectionCollaborations.vue"
 import SectionLanding from "~/components/SectionLanding.vue"
 import SectionMessage from "~/components/SectionMessage.vue"
 import SectionPassage from "~/components/SectionPassage.vue"
+import SectionWeken from "~/components/SectionWeken.vue"
 // ITEMS
 import ItemButton from "~/components/ItemButton.vue"
 import ItemCaption from "~/components/ItemCaption.vue"
@@ -20,6 +21,7 @@ import ItemQuote from "~/components/ItemQuote.vue"
 import ItemSubtitle from "~/components/ItemSubtitle.vue"
 import ItemText from "~/components/ItemText.vue"
 import ItemTitle from "~/components/ItemTitle.vue"
+import ItemWeek from "~/components/ItemWeek.vue"
 
 // PAGES
 Vue.component("blok-page", Page)
@@ -33,6 +35,7 @@ Vue.component("blok-section-collaborations", SectionCollaborations)
 Vue.component("blok-section-landing", SectionLanding)
 Vue.component("blok-section-message", SectionMessage)
 Vue.component("blok-section-passage", SectionPassage)
+Vue.component("blok-section-weken", SectionWeken)
 // ITEMS
 Vue.component("blok-item-button", ItemButton)
 Vue.component("blok-item-caption", ItemCaption)
@@ -42,3 +45,4 @@ Vue.component("blok-item-quote", ItemQuote)
 Vue.component("blok-item-subtitle", ItemSubtitle)
 Vue.component("blok-item-text", ItemText)
 Vue.component("blok-item-title", ItemTitle)
+Vue.component("blok-item-week", ItemWeek)
