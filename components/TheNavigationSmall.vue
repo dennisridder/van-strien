@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div v-show="active" class="headerSmall">
+    <div class="headerSmall">
       <div class="headerSmall-Item headerSmall-Logo">
         <div
           class="rotate"
@@ -21,9 +21,6 @@
 
 <script>
 export default {
-  props: {
-    active: Boolean
-  },
   methods: {
     emitToggleSlide() {
       this.$emit("toggle-slide")

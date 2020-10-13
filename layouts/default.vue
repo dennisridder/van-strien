@@ -3,11 +3,12 @@
   <main lang="en-US" translate="no">
     <the-navigation-slider :active="showSlide" @toggle-slide="toggleSlide" />
     <the-navigation-large
+      v-if="whichHeader === true"
       :active="showHeaderLarge"
       @toggle-slide="toggleSlide"
     />
     <the-navigation-small
-      :active="showHeaderSmall"
+      v-if="whichHeader === false"
       @toggle-slide="toggleSlide"
     />
     <transition name="pages" mode="out-in">
@@ -21,6 +22,7 @@
 export default {
   data() {
     return {
+      whichHeader: true,
       showFooter: true,
       showHeaderLarge: false,
       showHeaderSmall: true,
@@ -30,11 +32,14 @@ export default {
   },
   watch: {
     $route() {
+      console.log("ROUTE", this.$route)
+      this.determineWhichHeader()
       this.toggleFooter()
       this.showSlide = false
     }
   },
   mounted() {
+    this.determineWhichHeader()
     this.toggleFooter()
     window.addEventListener("scroll", this.toggleHeaderLarge)
   },
@@ -42,6 +47,17 @@ export default {
     window.removeEventListener("scroll", this.toggleHeaderLarge)
   },
   methods: {
+    determineWhichHeader() {
+      if (
+        this.$route.name === "index" ||
+        this.$route.path === "/moonlab" ||
+        this.$route.path === "/moonlab/"
+      ) {
+        this.whichHeader = true
+      } else {
+        this.whichHeader = false
+      }
+    },
     toggleHeaderLarge() {
       const currentScrollPosition =
         window.pageYOffset || document.documentElement.scrollTop
@@ -52,7 +68,6 @@ export default {
         return
       }
       this.showHeaderLarge = currentScrollPosition < this.lastScrollPosition
-      this.showHeaderSmall = currentScrollPosition > this.lastScrollPosition
       this.lastScrollPosition = currentScrollPosition
     },
     toggleSlide() {
