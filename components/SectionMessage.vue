@@ -1,5 +1,9 @@
 <template>
-  <section v-editable="blok" class="section section-Message">
+  <section
+    v-editable="blok"
+    class="section section-Message"
+    :style="`background:${blok.background_color}`"
+  >
     <div class="section-Message_Content">
       <component
         :is="blok.component | dashify"
