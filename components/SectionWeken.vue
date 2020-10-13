@@ -17,7 +17,7 @@ export default {
     blok: Object
   },
   mounted() {
-    console.log("WEKEN", this.blok)
+    // console.log("WEKEN", this.blok)
   }
 }
 </script>

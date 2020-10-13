@@ -8,6 +8,7 @@ import SectionBlogContent from "~/components/SectionBlogContent.vue"
 import SectionBlogHorizontal from "~/components/SectionBlogHorizontal.vue"
 import SectionBlogGrid from "~/components/SectionBlogGrid.vue"
 import SectionCollaborations from "~/components/SectionCollaborations.vue"
+import SectionFeature from "~/components/SectionFeature.vue"
 import SectionLanding from "~/components/SectionLanding.vue"
 import SectionMessage from "~/components/SectionMessage.vue"
 import SectionPassage from "~/components/SectionPassage.vue"
@@ -16,6 +17,7 @@ import SectionWeken from "~/components/SectionWeken.vue"
 import ItemButton from "~/components/ItemButton.vue"
 import ItemCaption from "~/components/ItemCaption.vue"
 import ItemDoor from "~/components/ItemDoor.vue"
+import ItemFeature from "~/components/ItemFeature.vue"
 import ItemMessage from "~/components/ItemMessage.vue"
 import ItemQuote from "~/components/ItemQuote.vue"
 import ItemSubtitle from "~/components/ItemSubtitle.vue"
@@ -32,6 +34,7 @@ Vue.component("blok-section-blog-content", SectionBlogContent)
 Vue.component("blok-section-blog-horizontal", SectionBlogHorizontal)
 Vue.component("blok-section-blog-grid", SectionBlogGrid)
 Vue.component("blok-section-collaborations", SectionCollaborations)
+Vue.component("blok-section-feature", SectionFeature)
 Vue.component("blok-section-landing", SectionLanding)
 Vue.component("blok-section-message", SectionMessage)
 Vue.component("blok-section-passage", SectionPassage)
@@ -40,6 +43,7 @@ Vue.component("blok-section-weken", SectionWeken)
 Vue.component("blok-item-button", ItemButton)
 Vue.component("blok-item-caption", ItemCaption)
 Vue.component("blok-item-door", ItemDoor)
+Vue.component("blok-item-feature", ItemFeature)
 Vue.component("blok-item-message", ItemMessage)
 Vue.component("blok-item-quote", ItemQuote)
 Vue.component("blok-item-subtitle", ItemSubtitle)
