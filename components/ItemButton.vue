@@ -15,3 +15,13 @@ export default {
   }
 }
 </script>
+
+<style lang="sass">
+.button
+  display: inline-block
+  cursor: pointer
+  padding: .833rem 2.44rem
+  color: currentColor
+  a
+    vertical-align: sub
+</style>
