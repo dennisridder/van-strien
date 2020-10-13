@@ -9,7 +9,7 @@
           />
         </div>
       </div>
-      <div v-if="headerIcon" class="headerLarge-Item headerLarge-Logo">
+      <div v-if="headerIcon === true" class="headerLarge-Item headerLarge-Logo">
         <nuxt-link class="headerLarge-Logo_Item" to="/">
           <div
             class="icon rotate"
@@ -17,7 +17,10 @@
           />
         </nuxt-link>
       </div>
-      <div v-else class="headerLarge-Item headerLarge-Logo">
+      <div
+        v-if="headerIcon === false"
+        class="headerLarge-Item headerLarge-Logo"
+      >
         <nuxt-link class="headerLarge-Logo_Item" to="/moonlab">
           <div
             class="icon rotate"

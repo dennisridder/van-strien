@@ -3,12 +3,12 @@
   <main lang="en-US" translate="no">
     <the-navigation-slider :active="showSlide" @toggle-slide="toggleSlide" />
     <the-navigation-large
-      v-if="whichHeader === true"
+      v-show="whichHeader === true"
       :active="showHeaderLarge"
       @toggle-slide="toggleSlide"
     />
     <the-navigation-small
-      v-if="whichHeader === false"
+      v-show="whichHeader === false"
       @toggle-slide="toggleSlide"
     />
     <transition name="pages" mode="out-in">

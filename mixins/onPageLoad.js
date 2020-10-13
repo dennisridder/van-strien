@@ -4,6 +4,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 gsap.registerPlugin(ScrollTrigger)
 
 export default {
+  // watch: {
+  //   $route() {
+  //     this.rotateElement()
+  //     this.horizontalScrollElement()
+  //   }
+  // },
   mounted() {
     this.rotateElement()
     this.horizontalScrollElement()
@@ -44,24 +50,25 @@ export default {
         html.offsetHeight
       )
       // Calc number of rotations
-      var rotations = height / window.innerHeight / 2
+      var rotations = height / window.innerHeight
+      var container = document.querySelector("main")
       // Scrolltrigger animation
       var array = document.querySelectorAll(".rotate")
       array.forEach((el) => {
         let rotateTimeline = gsap.timeline({
           scrollTrigger: {
-            trigger: el,
-            scrub: 0.33,
+            trigger: container,
+            scrub: 0,
             start: "top top",
-            end: `+=${height}`,
+            end: "bottom bottom",
             ease: "none"
           }
         })
-        rotateTimeline.set(el, {
-          rotation: 0,
-          duration: 0,
-          ease: "none"
-        })
+        // rotateTimeline.set(el, {
+        //   rotation: 0,
+        //   duration: 0,
+        //   ease: "none"
+        // })
         rotateTimeline.to(el, {
           rotation: 360 * rotations,
           ease: "none"
