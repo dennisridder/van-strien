@@ -36,8 +36,8 @@ export default {
         > div
           margin-bottom: 1.5rem
         .item-Quote
-          margin-top: var(--spacing-section-vertical-small)
-          margin-bottom: var(--spacing-section-vertical-small)
+          margin-top: var(--spacing-section-vertical)
+          margin-bottom: var(--spacing-section-vertical)
         > div:last-child
           margin-bottom: 0
 </style>

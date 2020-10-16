@@ -40,6 +40,8 @@ export default {
             width: 100%
         > div
             margin-bottom: var(--spacing-item-vertical)
+        .item-Quote
+          margin-bottom: calc(#{var(--spacing-item-vertical)} + 1.5em)
         > div:last-child
             margin-bottom: 0
     &.backgroundWhite
