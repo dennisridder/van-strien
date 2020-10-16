@@ -1,7 +1,31 @@
 <template>
   <div v-editable="blok" class="item-Button">
-    <div class="button typeLink" :class="blok.color">
+    <div
+      v-if="blok.scroll_down_ipv_link"
+      class="button typeLink"
+      :class="blok.color"
+      @click="scrollDown"
+    >
       <a>
+        {{ blok.title }}
+      </a>
+    </div>
+    <div
+      v-if="blok.link.cached_url"
+      class="button typeLink"
+      :class="blok.color"
+    >
+      <nuxt-link :to="'/' + blok.link.cached_url">
+        {{ blok.title }}
+      </nuxt-link>
+    </div>
+    <div v-if="blok.link.email" class="button typeLink" :class="blok.color">
+      <a
+        :href="`mailto:${blok.link.email}`"
+        target="_blank"
+        rel="noreferrer"
+        title="email"
+      >
         {{ blok.title }}
       </a>
     </div>
@@ -12,6 +36,19 @@
 export default {
   props: {
     blok: Object
+  },
+  mounted() {
+    console.log("BUTTON ITEM", this.blok)
+  },
+  methods: {
+    scrollDown() {
+      const height = window.innerHeight
+      window.scrollTo({
+        top: height,
+        behaviour: "smooth"
+      })
+      console.log("FIRED", height)
+    }
   }
 }
 </script>
