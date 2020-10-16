@@ -4,13 +4,13 @@
       <div class="footer-Top_Content">
         <div class="footer-Top_Community">
           <div class="typeTextCaps">Meld je aan voor de nieuwsbrief</div>
-          <div class="typeTitle">Join the</div>
-          <div class="typeTitleItalic">community</div>
+          <div class="typeTitle">Moon Medicine</div>
+          <div class="typeTitleItalic">Letters</div>
         </div>
         <div class="footer-Top_Mail">
           <input type="text" placeholder="jouw mailadres" />
           <div class="button typeLink offwhite">
-            <a>Verstuur</a>
+            <a>Ontvang</a>
           </div>
         </div>
       </div>
