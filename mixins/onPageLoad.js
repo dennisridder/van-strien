@@ -50,7 +50,7 @@ export default {
         html.offsetHeight
       )
       // Calc number of rotations
-      var rotations = height / window.innerHeight
+      var rotations = height / (window.innerHeight * 3)
       var container = document.querySelector("main")
       // Scrolltrigger animation
       var array = document.querySelectorAll(".rotate")
