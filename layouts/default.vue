@@ -32,6 +32,7 @@ export default {
   },
   watch: {
     $route() {
+      this.showSlide = false
       this.determineWhichHeader()
       this.toggleFooter()
       this.showSlide = false
@@ -66,11 +67,6 @@ export default {
       } else {
         this.showHeaderLarge = true
       }
-      // if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
-      //   return
-      // }
-      // this.showHeaderLarge = currentScrollPosition < this.lastScrollPosition
-      // this.lastScrollPosition = currentScrollPosition
     },
     toggleSlide() {
       this.showSlide = !this.showSlide
