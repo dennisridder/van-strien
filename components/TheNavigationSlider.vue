@@ -1,19 +1,22 @@
 <template>
   <transition name="fade">
-    <div v-if="active" class="headerSlider" @mouseleave="emitToggleSlide">
-      <div class="headerSlider-Toggle" @click="emitToggleSlide">
-        <div
-          class="icon navIcon"
-          v-html="require('~/assets/images/icon-close.svg?include')"
-        />
+    <div v-if="active" class="headerSlider">
+      <div class="headerSlider-Background"></div>
+      <div class="headerSlider-Content" @mouseleave="emitToggleSlide">
+        <div class="headerSlider-Toggle" @click="emitToggleSlide">
+          <div
+            class="icon navIcon"
+            v-html="require('~/assets/images/icon-close.svg?include')"
+          />
+        </div>
+        <ul class="headerSlider-List typeSlider">
+          <nuxt-link to="/" tag="li">HOME</nuxt-link>
+          <nuxt-link to="/moonlab" tag="li">MOON LAB PROGRAMMA</nuxt-link>
+          <nuxt-link to="/herinneringen" tag="li">HERINNERINGEN</nuxt-link>
+          <nuxt-link to="/over-anne" tag="li">OVER ANNE</nuxt-link>
+          <nuxt-link to="/contact" tag="li">CONTACT</nuxt-link>
+        </ul>
       </div>
-      <ul class="headerSlider-List typeSlider">
-        <nuxt-link to="/" tag="li">HOME</nuxt-link>
-        <nuxt-link to="/moonlab" tag="li">MOON LAB PROGRAMMA</nuxt-link>
-        <nuxt-link to="/herinneringen" tag="li">HERINNERINGEN</nuxt-link>
-        <nuxt-link to="/over-anne" tag="li">OVER ANNE</nuxt-link>
-        <nuxt-link to="/contact" tag="li">CONTACT</nuxt-link>
-      </ul>
     </div>
   </transition>
 </template>
@@ -39,9 +42,22 @@ export default {
   z-index: $zindex-header-slider
   left: 0
   top: 0
-  padding: var(--spacing-header-vertical) var(--spacing-five) var(--spacing-five) var(--spacing-header-horizontal)
-  background: $lightgrey
-  color: $darkbrown
+  &-Background
+    position: fixed
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    background: black
+    opacity: .5
+    z-index: -1
+  &-Content
+    position: fixed
+    left: 0
+    top: 0
+    padding: var(--spacing-header-vertical) var(--spacing-five) var(--spacing-five) var(--spacing-header-horizontal)
+    background: $lightgrey
+    color: $darkbrown
   &-Toggle
     margin-bottom: var(--spacing-three)
   li
