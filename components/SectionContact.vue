@@ -5,14 +5,19 @@
       <form
         name="contact"
         method="post"
-        action="/success"
+        action="/succes"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
       >
         <input type="hidden" name="form-name" value="contact" />
-        <input type="text" placeholder="naam" />
-        <input type="text" placeholder=" email adres" />
-        <textarea type="textarea" placeholder="bericht..." />
+        <input type="text" required name="name" placeholder="naam" />
+        <input type="text" required name="email" placeholder=" email adres" />
+        <textarea
+          type="textarea"
+          required
+          name="message"
+          placeholder="bericht..."
+        />
         <input class="button typeLink yellow" type="submit" value="verstuur" />
       </form>
     </div>
