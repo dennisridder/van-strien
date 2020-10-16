@@ -8,10 +8,27 @@
           <div class="typeTitleItalic">Letters</div>
         </div>
         <div class="footer-Top_Mail">
-          <input type="text" placeholder="jouw mailadres" />
-          <div class="button typeLink offwhite">
-            <a>Ontvang</a>
-          </div>
+          <form
+            name="subscribe"
+            method="post"
+            action="/succes"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+
+            <input
+              type="text"
+              required
+              name="email"
+              placeholder="jouw mailadres"
+            />
+            <input
+              class="button typeLink offwhite"
+              type="submit"
+              value="Ontvang"
+            />
+          </form>
         </div>
       </div>
     </div>

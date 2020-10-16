@@ -40,4 +40,9 @@ export default {
 
 .section-Contact
   color: $brown
+  form
+    input, textarea
+      margin-bottom: var(--spacing-section-vertical-small)
+      &.button
+        color: $darkbrown
 </style>

@@ -59,10 +59,10 @@ export default {
 .button
   display: inline-block
   cursor: pointer
-  padding-left: calc(2.44rem - 2px)
-  padding-top: calc(.833rem - 2px)
-  padding-right: calc(2.44rem - 2px)
-  padding-bottom: calc(.833rem - 2px)
+  padding-left: calc(2.44rem - 2px) !important
+  padding-top: calc(.833rem - 2px) !important
+  padding-right: calc(2.44rem - 2px) !important
+  padding-bottom: calc(.833rem - 2px) !important
   transition: background $transition-hover, color $transition-hover, border $transition-hover
   a
     vertical-align: sub
