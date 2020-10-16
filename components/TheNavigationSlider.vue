@@ -11,9 +11,9 @@
         </div>
         <ul class="headerSlider-List typeSlider">
           <nuxt-link to="/" tag="li" @click="emitSlideToFalse">HOME</nuxt-link>
-          <nuxt-link to="/moonlab" tag="li" @click="emitSlideToFalse"
+          <!-- <nuxt-link to="/moonlab" tag="li" @click="emitSlideToFalse"
             >MOON LAB PROGRAMMA</nuxt-link
-          >
+          > -->
           <nuxt-link to="/herinneringen" tag="li" @click="emitSlideToFalse"
             >HERINNERINGEN</nuxt-link
           >
