@@ -25,8 +25,9 @@ export default {
   .item-Title
     text-align: center
     font-size: 92px
-    font-family: 'Canela Light Italic'
+    font-family: 'Canela Light'
     letter-spacing: 4.6px
+    font-style: italic
 
 .section-Passage, .section-BlogHorizontal, .section-Footer, .section-Steps
   .item-Title
