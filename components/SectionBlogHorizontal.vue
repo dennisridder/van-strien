@@ -64,7 +64,7 @@ export default {
         background: $lightyellow
         li
             margin-right: var(--spacing-five)
-            min-width: 22.5vw !important
+            min-width: 25vw !important
             @media screen and (max-width: $breakpoint-mobile)
               min-width: 50vw !important
             .typeTextCaps
