@@ -63,10 +63,14 @@ export default {
     flex-basis: 50%
     padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
     padding-bottom: 0
+    @media screen and (max-width: $breakpoint-mobile)
+      flex-basis: 100%
     &:last-child
       padding-bottom: var(--spacing-section-vertical)
     &_Content
-      max-width: 22.5vw
+      max-width: 25vw
+      @media screen and (max-width: $breakpoint-mobile)
+        max-width: 50vw
       .item-Door, h2, .markdown
         margin-bottom: var(--spacing-item-vertical)
 </style>
