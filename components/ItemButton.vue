@@ -35,6 +35,8 @@ export default {
     border: 2px solid $yellow
   &.purple
     border: 2px solid $purple
+  &.darkbrown
+    border: 2px solid $darkbrown
   &:hover
     background: rgba(0,0,0,0)
 </style>

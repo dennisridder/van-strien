@@ -128,6 +128,8 @@ export default {
       height: 100%
       object-fit: cover
   &-Button
+    .button:hover
+      color: $darkbrown
     @media screen and (max-width: $breakpoint-mobile)
       display: none !important
     .button
