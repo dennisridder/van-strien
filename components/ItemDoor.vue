@@ -29,7 +29,7 @@ export default {
       width: 100%
       height: 100%
       object-fit: cover
-      transform: scale(1.2)
+      transform: scale(1.1)
       z-index: -1
 
 .shadow

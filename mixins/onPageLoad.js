@@ -15,10 +15,10 @@ export default {
       var targets = document.querySelectorAll(".scrollSlow-Door")
       targets.forEach((el) => {
         gsap.set(el, {
-          yPercent: -15
+          yPercent: -10
         })
         gsap.to(el, {
-          yPercent: 15,
+          yPercent: 10,
           ease: "none",
           scrollTrigger: {
             trigger: el,
