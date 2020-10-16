@@ -1,8 +1,5 @@
 <template>
-  <section
-    class="section section-Landing"
-    :style="{ backgroundImage: `url(${blok.background_image})` }"
-  >
+  <section class="section section-Landing">
     <div class="section-Landing_Content section-Content">
       <component
         :is="blok.component | dashify"
@@ -11,6 +8,7 @@
         :blok="blok"
       ></component>
     </div>
+    <img :src="blok.background_image" class="scrollSlow-Landing" />
   </section>
 </template>
 
@@ -36,9 +34,16 @@ export default {
   width: 100%
   min-height: 100vh
   padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
-  background-size: cover
-  background-position: center center
+  background: rgba(0,0,0,0)
   color: white
+  img
+    position: absolute
+    top: 0
+    right: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+    z-index: -1
   > div
     display: flex
     justify-content: space-around

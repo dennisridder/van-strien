@@ -4,17 +4,46 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 gsap.registerPlugin(ScrollTrigger)
 
 export default {
-  // watch: {
-  //   $route() {
-  //     this.rotateElement()
-  //     this.horizontalScrollElement()
-  //   }
-  // },
   mounted() {
     this.rotateElement()
+    this.scrollSlowLanding()
+    this.scrollSlowDoor()
     this.horizontalScrollElement()
   },
   methods: {
+    scrollSlowDoor() {
+      var targets = document.querySelectorAll(".scrollSlow-Door")
+      targets.forEach((el) => {
+        gsap.set(el, {
+          yPercent: -15
+        })
+        gsap.to(el, {
+          yPercent: 15,
+          ease: "none",
+          scrollTrigger: {
+            trigger: el,
+            scrub: true,
+            start: "top bottom",
+            end: "bottom top"
+          }
+        })
+      })
+    },
+    scrollSlowLanding() {
+      var targets = document.querySelectorAll(".scrollSlow-Landing")
+      targets.forEach((el) => {
+        gsap.to(el, {
+          y: window.innerHeight / 5,
+          ease: "none",
+          scrollTrigger: {
+            trigger: el,
+            scrub: true,
+            start: "top top",
+            end: "bottom top"
+          }
+        })
+      })
+    },
     horizontalScrollElement() {
       // Get page width
       var width = window.innerWidth / 3
