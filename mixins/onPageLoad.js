@@ -33,7 +33,8 @@ export default {
       var targets = document.querySelectorAll(".scrollSlow-Landing")
       targets.forEach((el) => {
         gsap.to(el, {
-          y: window.innerHeight / 5,
+          // y: window.innerHeight / 5,
+          yPercent: 10,
           ease: "none",
           scrollTrigger: {
             trigger: el,
