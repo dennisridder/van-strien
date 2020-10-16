@@ -11,7 +11,7 @@
         <div class="section-BlogGrid_Item_Content">
           <blok-item-door :image="item.cover_image" :alt="item.title" />
           <h2 v-if="item.title" class="typeTextCaps">{{ item.title }}</h2>
-          <markdown class="typeText" :input="item.excerpt" />
+          <markdown class="typeText lineClamp" :input="item.excerpt" />
           <div class="button typeLink yellow">Lees meer</div>
         </div>
       </nuxt-link>
