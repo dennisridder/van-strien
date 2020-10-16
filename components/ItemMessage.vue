@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="blok" class="item-Message">
+  <div v-editable="blok" class="item-Message" :class="blok.background_color">
     <markdown class="typeTextMessage" :input="blok.message" />
   </div>
 </template>

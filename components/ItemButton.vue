@@ -1,6 +1,6 @@
 <template>
   <div v-editable="blok" class="item-Button">
-    <div class="button typeLink" :style="`background:${blok.color}`">
+    <div class="button typeLink" :class="blok.color">
       <a>
         {{ blok.title }}
       </a>
@@ -21,7 +21,6 @@ export default {
   display: inline-block
   cursor: pointer
   padding: .833rem 2.44rem
-  color: currentColor
   a
     vertical-align: sub
 </style>

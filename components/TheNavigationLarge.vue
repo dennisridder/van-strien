@@ -113,7 +113,6 @@ export default {
         left: 50%
         top: 50%
         transform: translate(-50%, -50%)
-        color: $darkbrowntype
       @media screen and (max-width: $breakpoint-mobile)
         width: 3rem
         height: 3rem

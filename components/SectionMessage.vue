@@ -2,7 +2,7 @@
   <section
     v-editable="blok"
     class="section section-Message"
-    :style="`background:${blok.background_color}`"
+    :class="blok.background_color"
   >
     <div class="section-Message_Content">
       <component
@@ -42,4 +42,15 @@ export default {
             margin-bottom: var(--spacing-item-vertical)
         > div:last-child
             margin-bottom: 0
+    &.backgroundWhite
+      background: $white
+    &.backgroundOffwhite
+      background: $offwhite
+    &.backgroundLightgrey
+      background: $lightgrey
+    &.backgroundYellow
+      background: $yellow
+    &.backgroundDarkbrown
+      background: $darkbrown
+      color: $white
 </style>
