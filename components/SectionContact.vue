@@ -10,9 +10,9 @@
         data-netlify-honeypot="bot-field"
       >
         <input type="hidden" name="form-name" value="contact" />
-        <input type="text" placeholder="jouw naam" />
-        <input type="text" placeholder="jouw mailadres" />
-        <textarea type="textarea" placeholder="je bericht..." />
+        <input type="text" placeholder="naam" />
+        <input type="text" placeholder=" email adres" />
+        <textarea type="textarea" placeholder="bericht..." />
         <input class="button typeLink yellow" type="submit" value="verstuur" />
       </form>
     </div>
