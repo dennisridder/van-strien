@@ -70,7 +70,7 @@ export default {
     &_Content
       max-width: 25vw
       @media screen and (max-width: $breakpoint-mobile)
-        max-width: 50vw
+        max-width: 100%
       .item-Door, h2, .markdown
         margin-bottom: var(--spacing-item-vertical)
 </style>
