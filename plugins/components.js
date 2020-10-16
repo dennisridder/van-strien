@@ -8,6 +8,7 @@ import SectionBlogContent from "~/components/SectionBlogContent.vue"
 import SectionBlogHorizontal from "~/components/SectionBlogHorizontal.vue"
 import SectionBlogGrid from "~/components/SectionBlogGrid.vue"
 import SectionCollaborations from "~/components/SectionCollaborations.vue"
+import SectionContact from "~/components/SectionContact.vue"
 import SectionFeature from "~/components/SectionFeature.vue"
 import SectionLanding from "~/components/SectionLanding.vue"
 import SectionMessage from "~/components/SectionMessage.vue"
@@ -34,6 +35,7 @@ Vue.component("blok-section-blog-content", SectionBlogContent)
 Vue.component("blok-section-blog-horizontal", SectionBlogHorizontal)
 Vue.component("blok-section-blog-grid", SectionBlogGrid)
 Vue.component("blok-section-collaborations", SectionCollaborations)
+Vue.component("blok-section-contact", SectionContact)
 Vue.component("blok-section-feature", SectionFeature)
 Vue.component("blok-section-landing", SectionLanding)
 Vue.component("blok-section-message", SectionMessage)

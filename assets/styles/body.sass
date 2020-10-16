@@ -26,6 +26,32 @@
   padding-left: 1em
   padding-right: 1em
 
+form
+  opacity: 1
+  input, textarea
+    margin-bottom: var(--spacing-section-vertical-small)
+
+input, textarea
+  width: 100%
+  background: none
+  outline: none
+  border: 0
+  border-bottom: 1px solid currentColor
+  border-radius: 0
+  padding-bottom: 1rem
+  margin-bottom: 1.25rem
+  color: currentColor
+  font-family: 'Artegra Sans Alt Medium'
+  font-size: 1rem
+  font-weight: normal
+  letter-spacing: 0
+  opacity: 1
+  &::placeholder
+    color: currentColor
+
+textarea
+  min-height: var(--spacing-section-vertical-small)
+
 .white
   background: $white
   color: $darkbrown

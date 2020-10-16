@@ -35,7 +35,6 @@ export default {
       this.showSlide = false
       this.determineWhichHeader()
       this.toggleFooter()
-      this.showSlide = false
     }
   },
   mounted() {
@@ -70,6 +69,7 @@ export default {
     },
     toggleSlide() {
       this.showSlide = !this.showSlide
+      console.log("TOGGLE SLIDE", this.showSlide)
     },
     toggleFooter() {
       if (this.$route.path == "/moonlab" || this.$route.path == "/moonlab/") {

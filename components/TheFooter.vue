@@ -10,7 +10,7 @@
         <div class="footer-Top_Mail">
           <input type="text" placeholder="jouw mailadres" />
           <div class="button typeLink offwhite">
-            <a>Send</a>
+            <a>Verstuur</a>
           </div>
         </div>
       </div>
@@ -126,22 +126,6 @@ export default {
       width: 100%
       max-width: 400px
       align-items: flex-start
-      input
-        width: 100%
-        background: none
-        outline: none
-        border: 0
-        border-bottom: 1px solid $lightyellow
-        padding-bottom: 1rem
-        margin-bottom: 1.25rem
-        color: $lightyellow
-        font-family: 'Artegra Sans Alt Medium'
-        letter-spacing: 0
-        &::placeholder
-          color: $lightyellow
-      button
-        background: $lightyellow
-        color: $darkbrown
   &-Bottom
     background: $darkbrown
     &_Content

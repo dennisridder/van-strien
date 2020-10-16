@@ -30,7 +30,7 @@ export default {
     display: flex
     justify-content: space-around
     &_Content
-        padding: var(--spacing-two) var(--spacing-section-horizontal)
+        padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
         width: 100%
         max-width: 1100px
         > div

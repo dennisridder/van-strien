@@ -153,7 +153,7 @@ li, h1, h2, h3, p, a, a:link, a:visited, a:hover, a:active, span, input, button,
     letter-spacing: 0.050em
 
 // 14 / 44 / 350
-.typeLink, a
+.typeLink
   font-family: 'Artegra Sans Extended Medium'
   font-size: .66rem
   letter-spacing: 0.350em
@@ -165,7 +165,7 @@ li, h1, h2, h3, p, a, a:link, a:visited, a:hover, a:active, span, input, button,
     font-size: .66rem
     letter-spacing: 0.350em
     line-height: 1.5
-    text-transform: uppercase
+    // text-transform: uppercase
     user-select: none
 
 // 14 / 44 / 250
@@ -189,6 +189,18 @@ strong
 
 em
   font-style: italic
+
+.markdown
+  a
+    position: relative
+  a::before
+    content: ''
+    position: absolute
+    left: 0
+    bottom: 0
+    right: 0
+    height: 1px
+    background: currentColor
 
 .ellipsis
   overflow: hidden
