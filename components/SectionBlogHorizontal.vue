@@ -61,9 +61,12 @@ export default {
     ul
         display: flex
         flex-wrap: nowrap
+        background: $lightyellow
         li
             margin-right: var(--spacing-five)
             min-width: 22.5vw !important
+            @media screen and (max-width: $breakpoint-mobile)
+              min-width: 50vw !important
             .typeTextCaps
               margin-top: var(--spacing-item-vertical)
               margin-bottom: var(--spacing-item-vertical)
