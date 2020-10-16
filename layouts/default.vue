@@ -1,7 +1,11 @@
 <template>
   <!-- Change if needed -->
   <main lang="en-US" translate="no">
-    <the-navigation-slider :active="showSlide" @toggle-slide="toggleSlide" />
+    <the-navigation-slider
+      :active="showSlide"
+      @toggle-slide="toggleSlide"
+      @slide-to-false="slideToFalse"
+    />
     <the-navigation-large
       v-if="whichHeader === true"
       :active="showHeaderLarge"
@@ -69,7 +73,9 @@ export default {
     },
     toggleSlide() {
       this.showSlide = !this.showSlide
-      console.log("TOGGLE SLIDE", this.showSlide)
+    },
+    slideToFalse() {
+      this.toggleSlide = false
     },
     toggleFooter() {
       if (this.$route.path == "/moonlab" || this.$route.path == "/moonlab/") {

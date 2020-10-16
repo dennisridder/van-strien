@@ -10,11 +10,19 @@
           />
         </div>
         <ul class="headerSlider-List typeSlider">
-          <nuxt-link to="/" tag="li">HOME</nuxt-link>
-          <nuxt-link to="/moonlab" tag="li">MOON LAB PROGRAMMA</nuxt-link>
-          <nuxt-link to="/herinneringen" tag="li">HERINNERINGEN</nuxt-link>
-          <nuxt-link to="/over-anne" tag="li">OVER ANNE</nuxt-link>
-          <nuxt-link to="/contact" tag="li">CONTACT</nuxt-link>
+          <nuxt-link to="/" tag="li" @click="emitSlideToFalse">HOME</nuxt-link>
+          <nuxt-link to="/moonlab" tag="li" @click="emitSlideToFalse"
+            >MOON LAB PROGRAMMA</nuxt-link
+          >
+          <nuxt-link to="/herinneringen" tag="li" @click="emitSlideToFalse"
+            >HERINNERINGEN</nuxt-link
+          >
+          <nuxt-link to="/over-anne" tag="li" @click="emitSlideToFalse"
+            >OVER ANNE</nuxt-link
+          >
+          <nuxt-link to="/contact" tag="li" @click="emitSlideToFalse"
+            >CONTACT</nuxt-link
+          >
         </ul>
       </div>
     </div>
@@ -29,6 +37,9 @@ export default {
   methods: {
     emitToggleSlide() {
       this.$emit("toggle-slide")
+    },
+    emitSlideToFalse() {
+      this.$emit("slide-to-false")
     }
   }
 }
