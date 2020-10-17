@@ -69,7 +69,6 @@ export default {
     },
     rotateElement() {
       // Get doc height
-      console.log("ROTATE INIT")
       var body = document.body,
         html = document.documentElement
       var height = Math.max(

@@ -39,9 +39,6 @@
 export default {
   props: {
     blok: Object
-  },
-  mounted() {
-    // console.log("PASSAGE", this.blok)
   }
 }
 </script>

@@ -28,9 +28,6 @@
 export default {
   props: {
     blok: Object
-  },
-  mounted() {
-    // console.log("CONTACT", this.blok)
   }
 }
 </script>

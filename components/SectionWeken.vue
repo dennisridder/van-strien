@@ -15,9 +15,6 @@
 export default {
   props: {
     blok: Object
-  },
-  mounted() {
-    // console.log("WEKEN", this.blok)
   }
 }
 </script>

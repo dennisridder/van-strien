@@ -37,9 +37,6 @@ export default {
   props: {
     blok: Object
   },
-  mounted() {
-    console.log("BUTTON ITEM", this.blok)
-  },
   methods: {
     scrollDown() {
       const height = window.innerHeight
@@ -47,7 +44,6 @@ export default {
         top: height,
         behaviour: "smooth"
       })
-      console.log("FIRED", height)
     }
   }
 }

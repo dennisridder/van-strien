@@ -13,9 +13,6 @@
 export default {
   props: {
     blok: Object
-  },
-  mounted() {
-    // console.log("PAGE ABOUT", this.blok)
   }
 }
 </script>

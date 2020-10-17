@@ -13,9 +13,6 @@
 export default {
   props: {
     blok: Object
-  },
-  mounted() {
-    // console.log("FEATURE", this.blok)
   }
 }
 </script>

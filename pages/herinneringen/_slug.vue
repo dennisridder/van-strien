@@ -47,9 +47,6 @@ export default {
     return {
       story: { content: {} }
     }
-  },
-  mounted() {
-    // console.log("PAGE POST", this.story)
   }
 }
 </script>

@@ -16,9 +16,6 @@
 export default {
   props: {
     blok: Object
-  },
-  mounted() {
-    // console.log("LANDING", this.blok)
   }
 }
 </script>
