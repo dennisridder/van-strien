@@ -35,10 +35,12 @@
     <div class="footer-Bottom">
       <div class="footer-Bottom_Content">
         <div class="footer-Bottom_Logo">
-          <div
-            class="icon"
-            v-html="require('~/assets/images/logo-rectangle.svg?include')"
-          />
+          <nuxt-link to="/">
+            <div
+              class="icon"
+              v-html="require('~/assets/images/logo-rectangle.svg?include')"
+            />
+          </nuxt-link>
         </div>
         <div class="footer-Bottom_Item">
           <a
@@ -54,7 +56,7 @@
             :href="`tel:0031${general[0].content.phone}`"
             target="_blank"
             rel="noreferrer"
-            title="phone"
+            title="bellen"
             class="typeLink"
           >
             00{{ general[0].content.phone }}
@@ -74,7 +76,7 @@
             :href="general[0].content.linkedin"
             target="_blank"
             rel="noreferrer"
-            title="directions"
+            title="linkedin"
             class="typeLink"
           >
             linkedin
