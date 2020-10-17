@@ -12,8 +12,7 @@ export default {
   },
   methods: {
     scrollSlowDoor() {
-      // prettier-ignore
-      setTimeout(function() {
+      setTimeout(function () {
         var targets = document.querySelectorAll(".scrollSlow-Door")
         targets.forEach((el) => {
           gsap.set(el, {
@@ -33,8 +32,7 @@ export default {
       }, 200)
     },
     scrollSlowLanding() {
-      // prettier-ignore
-      setTimeout(function() {
+      setTimeout(function () {
         var targets = document.querySelectorAll(".scrollSlow-Landing")
         targets.forEach((el) => {
           gsap.to(el, {
@@ -52,8 +50,7 @@ export default {
     },
     horizontalScrollElement() {
       // Get page width
-      // prettier-ignore
-      setTimeout(function() {
+      setTimeout(function () {
         var width = window.innerWidth / 3
         // Get el
         var array = document.querySelectorAll(".horizontalScroll")
@@ -78,8 +75,7 @@ export default {
     },
     rotateElement() {
       // Get doc height
-      // prettier-ignore
-      setTimeout(function() {
+      setTimeout(function () {
         var body = document.body,
           html = document.documentElement
         var height = Math.max(

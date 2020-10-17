@@ -4,9 +4,8 @@
       v-if="blok.scroll_down_ipv_link"
       class="button typeLink"
       :class="blok.color"
-      @click="scrollDown"
     >
-      <a>
+      <a v-scroll-to="'.section-Passage'">
         {{ blok.title }}
       </a>
     </div>
@@ -36,15 +35,6 @@
 export default {
   props: {
     blok: Object
-  },
-  methods: {
-    scrollDown() {
-      const height = window.innerHeight
-      window.scrollTo({
-        top: height,
-        behaviour: "smooth"
-      })
-    }
   }
 }
 </script>
