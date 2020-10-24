@@ -44,6 +44,7 @@
         </div>
         <div class="footer-Bottom_Item">
           <a
+            v-if="general[0].content.email"
             :href="`mailto:${general[0].content.email}`"
             target="_blank"
             rel="noreferrer"
@@ -53,6 +54,7 @@
             {{ general[0].content.email }}
           </a>
           <a
+            v-if="general[0].content.phone"
             :href="`tel:0031${general[0].content.phone}`"
             target="_blank"
             rel="noreferrer"
@@ -64,6 +66,7 @@
         </div>
         <div class="footer-Bottom_Item">
           <a
+            v-if="general[0].content.instagram"
             :href="general[0].content.instagram"
             target="_blank"
             rel="noreferrer"
@@ -73,6 +76,7 @@
             instagram
           </a>
           <a
+            v-if="general[0].content.linkedin"
             :href="general[0].content.linkedin"
             target="_blank"
             rel="noreferrer"
