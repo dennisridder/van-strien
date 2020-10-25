@@ -15,19 +15,27 @@ export default {
       setTimeout(function () {
         var targets = document.querySelectorAll(".scrollSlow-Door")
         targets.forEach((el) => {
-          gsap.set(el, {
-            yPercent: -10
-          })
-          gsap.to(el, {
-            yPercent: 10,
-            ease: "none",
-            scrollTrigger: {
-              trigger: el,
-              scrub: true,
-              start: "top bottom",
-              end: "bottom top"
-            }
-          })
+          // Don't fire on the horizontal scrolling elements
+          if (
+            el.parentElement.parentElement.classList[0] ==
+            "section-BlogHorizontal_Item"
+          ) {
+            return
+          } else {
+            gsap.set(el, {
+              yPercent: -10
+            })
+            gsap.to(el, {
+              yPercent: 10,
+              ease: "none",
+              scrollTrigger: {
+                trigger: el,
+                scrub: true,
+                start: "top bottom",
+                end: "bottom top"
+              }
+            })
+          }
         })
       }, 200)
     },
