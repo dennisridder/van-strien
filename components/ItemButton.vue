@@ -10,7 +10,7 @@
       </a>
     </div>
     <div
-      v-if="blok.link.linktype === 'url'"
+      v-else-if="blok.link.linktype === 'url'"
       class="button typeLink"
       :class="blok.color"
     >
@@ -19,7 +19,7 @@
       </a>
     </div>
     <div
-      v-if="blok.link.linktype === 'story'"
+      v-else-if="blok.link.linktype === 'story'"
       class="button typeLink"
       :class="blok.color"
     >
@@ -27,7 +27,11 @@
         {{ blok.title }}
       </nuxt-link>
     </div>
-    <div v-if="blok.link.email" class="button typeLink" :class="blok.color">
+    <div
+      v-else-if="blok.link.email"
+      class="button typeLink"
+      :class="blok.color"
+    >
       <a
         :href="`mailto:${blok.link.email}`"
         target="_blank"
