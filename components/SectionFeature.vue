@@ -1,5 +1,9 @@
 <template>
-  <section v-editable="blok" class="section section-Feature">
+  <section
+    v-editable="blok"
+    class="section section-Feature"
+    :class="blok.background_color"
+  >
     <component
       :is="blok.component | dashify"
       v-for="blok in blok.body"
@@ -13,6 +17,9 @@
 export default {
   props: {
     blok: Object
+  },
+  mounted() {
+    console.log("SECTION FEATURE", this.blok)
   }
 }
 </script>
@@ -22,12 +29,14 @@ export default {
 
 .section-Feature
   display: flex
+  justify-content: center
   @media screen and (max-width: $breakpoint-mobile)
     flex-direction: column
   &_Item
     display: flex
     flex-direction: column
     justify-content: flex-end
+    max-width: 50vw
     padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
     &_Content
       display: flex
