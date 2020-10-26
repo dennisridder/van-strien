@@ -10,11 +10,20 @@
       </a>
     </div>
     <div
-      v-if="blok.link.cached_url"
+      v-if="blok.link.linktype === 'url'"
       class="button typeLink"
       :class="blok.color"
     >
-      <nuxt-link :to="'/' + blok.link.cached_url">
+      <a :href="blok.link.cached_url" target="_blank">
+        {{ blok.title }}
+      </a>
+    </div>
+    <div
+      v-if="blok.link.linktype === 'story'"
+      class="button typeLink"
+      :class="blok.color"
+    >
+      <nuxt-link :to="blok.link.cached_url">
         {{ blok.title }}
       </nuxt-link>
     </div>
