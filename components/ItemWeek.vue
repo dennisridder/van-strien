@@ -16,9 +16,6 @@ export default {
   props: {
     blok: Object,
     index: Number
-  },
-  mounted() {
-    console.log("ITEM WEEK", this.blok, this.index)
   }
 }
 </script>
