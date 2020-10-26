@@ -25,7 +25,6 @@ export default {
   },
   mounted() {
     this.init()
-    console.log(this.blok)
   },
   methods: {
     init() {
