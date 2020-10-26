@@ -3,9 +3,10 @@
     <ul class="section-BlogGrid_Wrapper">
       <component
         :is="blok.component | dashify"
-        v-for="blok in blok.body"
+        v-for="(blok, index) in blok.body"
         :key="blok._uid"
         :blok="blok"
+        :index="index"
       ></component>
     </ul>
   </section>
@@ -15,6 +16,9 @@
 export default {
   props: {
     blok: Object
+  },
+  mounted() {
+    console.log("ITEM WEKEN", this.blok)
   }
 }
 </script>

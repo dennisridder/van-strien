@@ -66,7 +66,14 @@ export default {
       flex-basis: 100%
     &:last-child
       padding-bottom: var(--spacing-section-vertical)
+    &_Number
+      position: absolute
+      left: 0
+      top: 0
+      z-index: +1
+      transform: translateY(-25%)
     &_Content
+      position: relative
       max-width: 25vw
       @media screen and (max-width: $breakpoint-mobile)
         max-width: 100%
