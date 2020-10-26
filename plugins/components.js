@@ -22,6 +22,7 @@ import ItemDoor from "~/components/ItemDoor.vue"
 import ItemFeature from "~/components/ItemFeature.vue"
 import ItemGraphic from "~/components/ItemGraphic.vue"
 import ItemMessage from "~/components/ItemMessage.vue"
+import ItemPodcastPlayer from "~/components/ItemPodcastPlayer.vue"
 import ItemQuote from "~/components/ItemQuote.vue"
 import ItemSubtitle from "~/components/ItemSubtitle.vue"
 import ItemText from "~/components/ItemText.vue"
@@ -51,6 +52,7 @@ Vue.component("blok-item-door", ItemDoor)
 Vue.component("blok-item-feature", ItemFeature)
 Vue.component("blok-item-graphic", ItemGraphic)
 Vue.component("blok-item-message", ItemMessage)
+Vue.component("blok-item-podcast-player", ItemPodcastPlayer)
 Vue.component("blok-item-quote", ItemQuote)
 Vue.component("blok-item-subtitle", ItemSubtitle)
 Vue.component("blok-item-text", ItemText)
