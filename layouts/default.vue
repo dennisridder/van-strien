@@ -19,6 +19,7 @@
       <nuxt />
     </transition>
     <the-footer v-if="showFooter" />
+    <the-popup v-if="showPopup" @toggle-popup="togglePopup" />
   </main>
 </template>
 
@@ -31,6 +32,7 @@ export default {
       showHeaderLarge: false,
       showHeaderSmall: true,
       showSlide: false,
+      showPopup: false,
       lastScrollPosition: 0
     }
   },
@@ -76,6 +78,9 @@ export default {
     },
     slideToFalse() {
       this.toggleSlide = false
+    },
+    togglePopup() {
+      this.showPopup = !this.showPopup
     },
     toggleFooter() {
       if (this.$route.path == "/moonlab" || this.$route.path == "/moonlab/") {

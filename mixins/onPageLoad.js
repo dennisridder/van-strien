@@ -21,6 +21,11 @@ export default {
             "section-BlogHorizontal_Item"
           ) {
             return
+          } else if (
+            el.parentElement.parentElement.parentElement.parentElement
+              .parentElement.parentElement.classList[0] == "section-Popup"
+          ) {
+            return
           } else {
             gsap.set(el, {
               yPercent: -10

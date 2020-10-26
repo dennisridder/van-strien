@@ -43,6 +43,17 @@ export default {
         }
       })
       commit("general/update", general)
+
+      let getPopup = await app.$storyapi.get("cdn/stories", {
+        version: process.env.NODE_ENV === "production" ? "published" : "draft",
+        starts_with: "popup/"
+      })
+      let popup = getPopup.data.stories.map((bp) => {
+        return {
+          content: bp.content
+        }
+      })
+      commit("popup/update", popup)
     }
   }
 }
