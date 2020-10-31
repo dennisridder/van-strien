@@ -60,7 +60,6 @@ export default {
   mounted() {
     this.determineWhichHeader()
     this.toggleFooter()
-
     window.addEventListener("scroll", this.toggleHeaderLarge)
     document.addEventListener("mouseleave", this.mouseLeftDocument)
   },
