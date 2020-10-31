@@ -1,5 +1,5 @@
 <template>
-  <div class="section-Popup" @click="emitTogglePopup">
+  <div class="section-Popup">
     <component
       :is="popup[0].content.component | dashify"
       v-if="popup[0].content.component"
@@ -8,7 +8,6 @@
     ></component>
   </div>
 </template>
-
 <script>
 import { mapState } from "vuex"
 
@@ -19,12 +18,14 @@ export default {
     })
   },
   mounted() {
-    console.log("POPUP", this.popup)
+    // console.log("POPUP", this.popup)
   },
   methods: {
     emitTogglePopup() {
-      console.log("CLICKED")
       this.$emit("toggle-popup")
+    },
+    emitTogglePopupFalse() {
+      this.$emit("toggle-popup-false")
     }
   }
 }
@@ -39,7 +40,26 @@ export default {
   top: 0
   right: 0
   bottom: 0
+  display: flex
+  justify-content: space-around
+  align-items: center
   z-index: $zindex-header-popup
+  background: rgba(0,0,0,0.5)
+  // Resets
   .section
-    background: rgba(0,0,0,0.5)
+    background: rgba(0,0,0,0)
+  .section-Feature
+    // pointer-events: none
+  .section-Feature_Item
+    padding: var(--spacing-item-vertical)
+    max-width: 100%
+  .section-Feature_Item_Content > div
+    margin-bottom: calc(#{var(--spacing-item-vertical)} / 2)
+  .item-Door
+    max-width: calc(33vh / 1.25)
+  .typeDisplay
+    font-size: 2rem
+  // Actual
+  &_Container
+    // pointer-events: none
 </style>

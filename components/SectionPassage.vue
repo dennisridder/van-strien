@@ -59,6 +59,9 @@ export default {
         justify-content: flex-end
         flex-basis: 50%
         flex-shrink: 0
+        &_Door
+          display: flex
+          justify-content: space-around
         @media screen and (max-width: $breakpoint-mobile)
           flex-basis: 100%
         &_Title

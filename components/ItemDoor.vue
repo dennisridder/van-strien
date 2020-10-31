@@ -1,7 +1,9 @@
 <template>
   <div v-if="image" v-editable="image" class="item-Door">
-    <img :src="image" :alt="alt" class="scrollSlow-Door" />
-    <div class="shadow"></div>
+    <div class="item-Door_aspectRatioBox">
+      <img :src="image" :alt="alt" class="scrollSlow-Door" />
+      <div class="shadow"></div>
+    </div>
   </div>
 </template>
 
@@ -17,11 +19,14 @@ export default {
 .item-Door
     position: relative
     width: 100%
-    height: 0
-    padding-top: 125%
-    border-radius: 1000px 1000px 0 0
-    overflow: hidden
     z-index: +1
+    &_aspectRatioBox
+      position: relative
+      width: 100%
+      height: 0
+      padding-top: 125%
+      overflow: hidden
+      border-radius: 1000px 1000px 0 0
     img
       position: absolute
       left: 0

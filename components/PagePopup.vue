@@ -1,5 +1,5 @@
 <template>
-  <div class="section-Wrapper section-Page">
+  <div class="section-Popup_Container">
     <component
       :is="blok.component | dashify"
       v-for="blok in blok.body"
