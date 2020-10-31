@@ -19,18 +19,17 @@
       <nuxt />
     </transition>
     <the-footer v-if="showFooter" />
-    <the-popup
-      v-if="showPopup"
-      tabindex="0"
-      @toggle-popup="togglePopup"
-      @toggle-popup-false="togglePopupFalse"
-      @keydown.esc="togglePopupFalse"
-    />
+    <the-popup v-if="popupState" tabindex="0" />
   </main>
 </template>
 
 <script>
+import { mapState } from "vuex"
+
 export default {
+  fetch({ store }) {
+    store.commit("toggleThePopup")
+  },
   data() {
     return {
       whichHeader: true,
@@ -41,6 +40,11 @@ export default {
       showPopup: true,
       lastScrollPosition: 0
     }
+  },
+  computed: {
+    ...mapState({
+      popupState: (state) => state.popupstate.popupState
+    })
   },
   watch: {
     $route() {
@@ -53,9 +57,11 @@ export default {
     this.determineWhichHeader()
     this.toggleFooter()
     window.addEventListener("scroll", this.toggleHeaderLarge)
+    document.addEventListener("mouseleave", this.mouseLeftDocument)
   },
   destroyed() {
     window.removeEventListener("scroll", this.toggleHeaderLarge)
+    document.removeEventListener("mouseleave", this.mouseLeftDocument)
   },
   methods: {
     determineWhichHeader() {
@@ -100,6 +106,9 @@ export default {
       } else {
         this.showFooter = true
       }
+    },
+    mouseLeftDocument() {
+      this.$store.commit("popupstate/toggleThePopup")
     }
   }
 }

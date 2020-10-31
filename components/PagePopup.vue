@@ -1,5 +1,8 @@
 <template>
   <div class="section-Popup_Container">
+    <div class="section-Popup_Close">
+      <p @click="emitTogglePopupFalse">close</p>
+    </div>
     <component
       :is="blok.component | dashify"
       v-for="blok in blok.body"
@@ -10,9 +13,30 @@
 </template>
 
 <script>
+import { mapState } from "vuex"
 export default {
   props: {
     blok: Object
+  },
+  fetch({ store }) {
+    store.commit("toggleThePopup")
+  },
+  computed: {
+    ...mapState({
+      popup: (state) => state.popup.list,
+      popupState: (state) => state.popupstate.popupState
+    })
+  },
+  mounted() {
+    document.addEventListener("keydown", this.emitTogglePopupFalse)
+  },
+  destroyed() {
+    document.removeEventListener("keydown", this.emitTogglePopupFalse)
+  },
+  methods: {
+    emitTogglePopupFalse() {
+      this.$store.commit("popupstate/toggleThePopup")
+    }
   }
 }
 </script>

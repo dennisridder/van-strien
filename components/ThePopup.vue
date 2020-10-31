@@ -16,17 +16,6 @@ export default {
     ...mapState({
       popup: (state) => state.popup.list
     })
-  },
-  mounted() {
-    // console.log("POPUP", this.popup)
-  },
-  methods: {
-    emitTogglePopup() {
-      this.$emit("toggle-popup")
-    },
-    emitTogglePopupFalse() {
-      this.$emit("toggle-popup-false")
-    }
   }
 }
 </script>
@@ -61,5 +50,16 @@ export default {
     font-size: 2rem
   // Actual
   &_Container
+    position: relative
     // pointer-events: none
+  &_Close
+    position: absolute
+    top: 0
+    right: 0
+    padding: 1.3rem
+    display: flex
+    justify-content: flex-end
+    p
+      line-height: 1
+      cursor: pointer
 </style>
