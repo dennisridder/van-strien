@@ -23,7 +23,8 @@ export default {
             return
           } else if (
             el.parentElement.parentElement.parentElement.parentElement
-              .parentElement.parentElement.classList[0] == "section-Popup"
+              .parentElement.parentElement.classList[0] ==
+            "section-Popup_Container"
           ) {
             return
           } else {
