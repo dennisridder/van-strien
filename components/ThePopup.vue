@@ -34,11 +34,10 @@ export default {
   align-items: center
   z-index: $zindex-header-popup
   background: rgba(0,0,0,0.5)
+  user-select: none
   // Resets
   .section
     background: rgba(0,0,0,0)
-  .section-Feature
-    // pointer-events: none
   .section-Feature_Item
     padding: var(--spacing-item-vertical)
     max-width: 100%
@@ -51,7 +50,7 @@ export default {
   // Actual
   &_Container
     position: relative
-    // pointer-events: none
+    user-select: none
   &_Close
     position: absolute
     top: 0

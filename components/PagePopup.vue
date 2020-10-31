@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     emitTogglePopupFalse() {
-      this.$store.commit("popupstate/toggleThePopup")
+      this.$store.commit("popupstate/popupFalse")
     }
   }
 }

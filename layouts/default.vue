@@ -19,14 +19,18 @@
       <nuxt />
     </transition>
     <the-footer v-if="showFooter" />
-    <the-popup v-if="popupState" tabindex="0" />
+    <transition name="fade">
+      <the-popup v-if="popupState" tabindex="0" />
+    </transition>
   </main>
 </template>
 
 <script>
 import { mapState } from "vuex"
+import detectVisitorIsIdle from "@/mixins/detectVisitorIsIdle"
 
 export default {
+  mixins: [detectVisitorIsIdle],
   fetch({ store }) {
     store.commit("toggleThePopup")
   },
@@ -56,6 +60,7 @@ export default {
   mounted() {
     this.determineWhichHeader()
     this.toggleFooter()
+
     window.addEventListener("scroll", this.toggleHeaderLarge)
     document.addEventListener("mouseleave", this.mouseLeftDocument)
   },
@@ -108,7 +113,7 @@ export default {
       }
     },
     mouseLeftDocument() {
-      this.$store.commit("popupstate/toggleThePopup")
+      this.$store.commit("popupstate/popupTrue")
     }
   }
 }
