@@ -1,7 +1,10 @@
 <template>
   <div class="section-Popup_Container">
-    <div class="section-Popup_Close">
-      <p @click="emitTogglePopupFalse">close</p>
+    <div class="section-Popup_Close" @click="emitTogglePopupFalse">
+      <div
+        class="icon navIcon"
+        v-html="require('~/assets/images/icon-close.svg?include')"
+      />
     </div>
     <component
       :is="blok.component | dashify"

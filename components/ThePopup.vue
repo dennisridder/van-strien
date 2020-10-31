@@ -54,11 +54,10 @@ export default {
   &_Close
     position: absolute
     top: 0
-    right: 0
-    padding: 1.3rem
+    left: 0
+    padding: var(--spacing-one)
     display: flex
-    justify-content: flex-end
-    p
-      line-height: 1
+    justify-content: flex-start
+    .icon
       cursor: pointer
 </style>

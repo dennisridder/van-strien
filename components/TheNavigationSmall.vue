@@ -2,12 +2,31 @@
   <transition name="fade">
     <div class="headerSmall">
       <div class="headerSmall-Item headerSmall-Toggle">
-        <div class="headerSmall-Toggle" @click="emitToggleSlide">
+        <transition-group name="fadegroup" mode="out-in">
+          <nuxt-link
+            v-if="this.$route.name === 'herinneringen-slug'"
+            key="one"
+            class="headerSmall-Toggle_Item"
+            to="/herinneringen/"
+            tag="div"
+          >
+            <div
+              class="icon navIcon"
+              v-html="require('~/assets/images/icon-arrow.svg?include')"
+            />
+          </nuxt-link>
           <div
-            class="icon navIcon"
-            v-html="require('~/assets/images/icon-hamburger.svg?include')"
-          />
-        </div>
+            v-else
+            key="two"
+            class="headerSmall-Toggle_Item"
+            @click="emitToggleSlide"
+          >
+            <div
+              class="icon navIcon"
+              v-html="require('~/assets/images/icon-hamburger.svg?include')"
+            />
+          </div>
+        </transition-group>
       </div>
       <nuxt-link to="/" tag="div" class="headerSmall-Item headerSmall-Logo">
         <div
@@ -49,4 +68,11 @@ export default {
     margin-left: 0.75rem
     transform: translateX(-50%)
     cursor: pointer
+  &-Toggle
+    position: relative
+    height: calc(#{var(--spacing-header-vertical)} / 2)
+    &_Item
+      position: absolute
+      left: 0
+      top: 0
 </style>
