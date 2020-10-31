@@ -41,7 +41,7 @@ module.exports = {
         content: "#ffffff"
       }
     ],
-    link: [{ rel: "icon", type: "image/png", href: "/icon.png" }]
+    link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }]
   },
 
   /*
@@ -172,5 +172,9 @@ module.exports = {
     //     id: process.env.GA_ID
     //   }
     // ]
-  ]
+  ],
+  // PWA OPTIONS
+  pwa: {
+    icon: false
+  }
 }
