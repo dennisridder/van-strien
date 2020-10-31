@@ -55,7 +55,6 @@ export default {
       this.showSlide = false
       this.determineWhichHeader()
       this.toggleFooter()
-      console.log(this.$route)
     }
   },
   mounted() {

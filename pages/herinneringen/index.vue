@@ -34,6 +34,11 @@ export default {
     return {
       story: { content: {} }
     }
+  },
+  head() {
+    return {
+      title: this.story.name + " — Anne van Strien"
+    }
   }
 }
 </script>
