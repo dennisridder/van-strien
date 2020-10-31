@@ -1,7 +1,17 @@
 <template>
   <div v-if="image" v-editable="image" class="item-Door">
     <div class="item-Door_aspectRatioBox">
-      <img :src="image" :alt="alt" class="scrollSlow-Door" />
+      <!-- prettier-ignore -->
+      <img
+      v-lazy="`${transformImage(image, '1440x0')}`"
+      :data-srcset="
+        `${transformImage(image, '400x0')} 400w, 
+          ${transformImage(image, '800x0')} 800w, 
+          ${transformImage(image, '1200x0')} 1200w,
+          ${transformImage(image, '1600x0')} 1600w,
+          ${transformImage(image, '2000x0')} 2000w`"
+      class="lazy scrollSlow-Door"
+      :alt="alt" />
       <div class="shadow"></div>
     </div>
   </div>
@@ -9,7 +19,17 @@
 
 <script>
 export default {
-  props: { image: String, alt: String }
+  props: { image: String, alt: String },
+  methods: {
+    transformImage(image, option) {
+      if (!image) return ""
+      if (!option) return ""
+      let imageService = "//img2.storyblok.com/"
+      let pathOne = image.replace("https://a.storyblok.com", "")
+      let pathTwo = pathOne.replace("//a.storyblok.com", "")
+      return imageService + option + pathTwo
+    }
+  }
 }
 </script>
 

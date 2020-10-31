@@ -8,7 +8,17 @@
         :blok="blok"
       ></component>
     </div>
-    <img :src="blok.background_image" class="scrollSlow-Landing" />
+    <!-- prettier-ignore -->
+    <img
+      v-lazy="`${transformImage(blok.background_image, '1440x0')}`"
+      :data-srcset="
+        `${transformImage(blok.background_image, '400x0')} 400w, 
+          ${transformImage(blok.background_image, '800x0')} 800w, 
+          ${transformImage(blok.background_image, '1200x0')} 1200w,
+          ${transformImage(blok.background_image, '1600x0')} 1600w,
+          ${transformImage(blok.background_image, '2000x0')} 2000w`"
+      class="lazy scrollSlow-Landing"
+      :alt="blok.background_image" />
   </section>
 </template>
 
@@ -16,6 +26,16 @@
 export default {
   props: {
     blok: Object
+  },
+  methods: {
+    transformImage(image, option) {
+      if (!image) return ""
+      if (!option) return ""
+      let imageService = "//img2.storyblok.com/"
+      let pathOne = image.replace("https://a.storyblok.com", "")
+      let pathTwo = pathOne.replace("//a.storyblok.com", "")
+      return imageService + option + pathTwo
+    }
   }
 }
 </script>

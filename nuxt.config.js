@@ -6,6 +6,7 @@ require("dotenv").config()
 // TODO: Add rel="noreferrer" to all links (prevents window object access)
 
 module.exports = {
+  target: "static",
   /*
    ** Headers of the page
    */
@@ -48,6 +49,12 @@ module.exports = {
    */
   loading: false,
 
+  router: {
+    scrollBehavior: function (to, from, savedPosition) {
+      return { x: 0, y: 0 }
+    }
+  },
+
   /*
    ** Global CSS
    */
@@ -63,7 +70,12 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ["~/plugins/components", "~/plugins/filters"],
+  plugins: [
+    "~/plugins/components",
+    "~/plugins/filters",
+    "~/plugins/vue-lazyload",
+    "~/plugins/vue-click-outside"
+  ],
 
   components: true,
 

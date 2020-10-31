@@ -1,5 +1,14 @@
 @import '~/assets/styles/variables.sass'
 
+img
+  user-select: none
+
+.lazy
+  opacity: 0
+  transition: opacity $trans-img
+  &[lazy="loaded"]
+    opacity: 1
+
 .section
   max-width: 100%
   background: $white
