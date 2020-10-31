@@ -1,46 +1,42 @@
 <template>
   <div v-editable="blok" class="item-Button">
-    <div
+    <a
       v-if="blok.scroll_down_ipv_link"
+      v-scroll-to="'.section-Passage'"
       class="button typeLink"
       :class="blok.color"
     >
-      <a v-scroll-to="'.section-Passage'">
-        {{ blok.title }}
-      </a>
-    </div>
-    <div
+      {{ blok.title }}
+    </a>
+    <a
       v-else-if="blok.link.linktype === 'url'"
+      :href="blok.link.cached_url"
+      target="_blank"
       class="button typeLink"
       :class="blok.color"
     >
-      <a :href="blok.link.cached_url" target="_blank">
-        {{ blok.title }}
-      </a>
-    </div>
-    <div
+      {{ blok.title }}
+    </a>
+    <nuxt-link
       v-else-if="blok.link.linktype === 'story'"
       class="button typeLink"
       :class="blok.color"
+      tag="a"
+      :to="blok.link.cached_url"
     >
-      <nuxt-link :to="blok.link.cached_url">
-        {{ blok.title }}
-      </nuxt-link>
-    </div>
-    <div
+      {{ blok.title }}
+    </nuxt-link>
+    <a
       v-else-if="blok.link.email"
       class="button typeLink"
       :class="blok.color"
+      :href="`mailto:${blok.link.email}`"
+      target="_blank"
+      rel="noreferrer"
+      title="email"
     >
-      <a
-        :href="`mailto:${blok.link.email}`"
-        target="_blank"
-        rel="noreferrer"
-        title="email"
-      >
-        {{ blok.title }}
-      </a>
-    </div>
+      {{ blok.title }}
+    </a>
   </div>
 </template>
 
