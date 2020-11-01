@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div v-show="active" class="headerLarge">
+    <div class="headerLarge" :class="{ active: active }">
       <div class="headerLarge-Item headerLarge-Toggle">
         <div class="headerLarge-Toggle" @click="emitToggleSlide">
           <div
@@ -54,6 +54,10 @@ export default {
   },
   mounted() {
     this.determineHeaderIcon()
+    document.addEventListener("scroll", this.checkIfFirstViewport)
+  },
+  destroyed() {
+    document.removeEventListener("scroll", this.checkIfFirstViewport)
   },
   methods: {
     emitToggleSlide() {
@@ -85,14 +89,18 @@ export default {
   right: 0
   display: flex
   justify-content: space-between
-  background: $lightgrey
+  background: rgba(0,0,0,0)
   padding: 2.2rem var(--spacing-header-horizontal)
   z-index: $zindex-header-large
+  transition: background $transition-nav-change
   @media screen and (max-width: $breakpoint-mobile)
     padding: 2rem var(--spacing-header-horizontal)
   > div
     display: flex
     align-items: center
+  &-Toggle
+    opacity: 0
+    transition: opacity $transition-nav-change
   &-Logo
     position: absolute
     top: 0
@@ -106,20 +114,25 @@ export default {
       left: auto
       transform: translateX(0)
     &_Item
-      width: 4rem
-      height: 4rem
+      width: 8rem
+      height: 8rem
+      transition: width $transition-nav-change, height $transition-nav-change
+      will-change: width, height
       @media screen and (min-width: $breakpoint-mobile)
         position: absolute
         left: 50%
         top: 50%
         transform: translate(-50%, -50%)
       @media screen and (max-width: $breakpoint-mobile)
-        width: 3rem
-        height: 3rem
+        width: 6rem
+        height: 6rem
     .icon
       position: relative
       height: 100%
       width: 100%
+      color: $white
+      transition: color $transition-nav-change
+      will-change: color
     svg
       position: absolute
       left: 0
@@ -128,6 +141,8 @@ export default {
       height: 100%
       object-fit: cover
   &-Button
+    opacity: 0
+    transition: opacity $transition-nav-change
     .button:hover
       color: $darkbrown
     @media screen and (max-width: $breakpoint-mobile)
@@ -135,4 +150,22 @@ export default {
     .button
       background: $darkbrown
       color: $lightyellow
+
+  &.active
+    background: $lightgrey
+    .headerLarge
+      &-Toggle
+        opacity: 1
+      &-Logo
+        color: $darkbrown
+        &_Item
+          width: 4rem
+          height: 4rem
+          .icon
+            color: $darkbrown
+          @media screen and (max-width: $breakpoint-mobile)
+            width: 3rem
+            height: 3rem
+      &-Button
+        opacity: 1
 </style>
