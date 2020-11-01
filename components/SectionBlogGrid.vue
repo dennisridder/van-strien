@@ -44,7 +44,6 @@ export default {
     filterHerinneringen() {
       var array = this.herinneringen.slice(1)
       this.filteredHerinneringen = array
-      console.log(array)
     }
   }
 }
