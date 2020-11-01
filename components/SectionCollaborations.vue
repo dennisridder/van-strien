@@ -21,18 +21,27 @@ export default {
 @import '~/assets/styles/variables.sass'
 
 .section-Collaborations
-  padding: var(--spacing-section-vertical-small) var(--spacing-section-horizontal)
+  padding-top: var(--spacing-section-vertical-small)
   background: $lightgrey
   .markdown
     margin-bottom: var(--spacing-item-vertical)
+    padding: 0 var(--spacing-section-horizontal)
   ul
     display: flex
+    flex-wrap: wrap
     justify-content: space-between
+    @media screen and (max-width: $breakpoint-mobile)
+      justify-content: flex-start
     li
       margin-left: var(--spacing-section-horizontal)
       margin-right: var(--spacing-section-horizontal)
-    li:first-child
-      margin-left: 0
-    li:last-child
-      margin-right: 0
+      margin-bottom: var(--spacing-section-vertical-small)
+      display: inline-block
+      width: auto
+      img
+        height: 100%
+        width: auto
+        height: 5.5rem
+        @media screen and (min-width: $breakpoint-laptop)
+          height: 8vw
 </style>
