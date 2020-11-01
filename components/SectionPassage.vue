@@ -84,6 +84,9 @@ export default {
               margin-left: 2.5em
     &_Left
         padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
+        @media screen and (max-width: $breakpoint-mobile)
+          padding-left: calc(2 * #{var(--spacing-section-horizontal)})
+          padding-right: calc(2 * #{var(--spacing-section-horizontal)})
     &_Right
         padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
         @media screen and (min-width: $breakpoint-laptop)

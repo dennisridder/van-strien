@@ -40,6 +40,10 @@ export default {
     position: relative
     width: 100%
     z-index: +1
+    @media screen and (min-width: $breakpoint-mobile)
+      max-width: 33vw
+    @media screen and (min-width: $breakpoint-laptop)
+      max-width: 26vw
     &_aspectRatioBox
       position: relative
       width: 100%
@@ -66,4 +70,14 @@ export default {
   top: 0
   left: 0
   opacity: .2
+
+.section-BlogHorizontal, .section-BlogGrid
+  .item-Door
+    @media screen and (min-width: $breakpoint-mobile)
+      max-width: 21vw
+
+.section-BlogHorizontal
+  .item-Door
+    @media screen and (max-width: $breakpoint-mobile)
+      max-width: 40vw
 </style>

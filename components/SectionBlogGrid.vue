@@ -64,6 +64,8 @@ export default {
     padding-bottom: 0
     @media screen and (max-width: $breakpoint-mobile)
       flex-basis: 100%
+      padding-left: calc(2 * #{var(--spacing-section-horizontal)})
+      padding-right: calc(2 * #{var(--spacing-section-horizontal)})
     &:last-child
       padding-bottom: var(--spacing-section-vertical)
     &_Number
