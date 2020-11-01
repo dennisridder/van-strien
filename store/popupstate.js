@@ -1,5 +1,6 @@
 export const state = () => ({
-  popupState: false
+  popupState: false,
+  popupCount: 0
 })
 
 export const mutations = {
@@ -7,7 +8,12 @@ export const mutations = {
     state.popupState = !state.popupState
   },
   popupTrue(state) {
-    state.popupState = true
+    if (state.popupCount < 1) {
+      state.popupState = true
+      state.popupCount = state.popupCount + 1
+    } else {
+      return
+    }
   },
   popupFalse(state) {
     state.popupState = false

@@ -41,13 +41,13 @@ export default {
       showHeaderLarge: false,
       showHeaderSmall: true,
       showSlide: false,
-      showPopup: true,
       lastScrollPosition: 0
     }
   },
   computed: {
     ...mapState({
-      popupState: (state) => state.popupstate.popupState
+      popupState: (state) => state.popupstate.popupState,
+      popupCount: (state) => state.popupstate.popupCount
     })
   },
   watch: {
@@ -97,12 +97,6 @@ export default {
     },
     slideToFalse() {
       this.toggleSlide = false
-    },
-    togglePopup() {
-      this.showPopup = !this.showPopup
-    },
-    togglePopupFalse() {
-      this.showPopup = false
     },
     toggleFooter() {
       if (this.$route.path == "/moonlab" || this.$route.path == "/moonlab/") {
