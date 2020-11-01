@@ -44,6 +44,7 @@ export default {
     filterHerinneringen() {
       var array = this.herinneringen.slice(1)
       this.filteredHerinneringen = array
+      console.log(array)
     }
   }
 }
@@ -77,6 +78,7 @@ export default {
     &_Content
       position: relative
       max-width: 25vw
+      cursor: pointer
       @media screen and (max-width: $breakpoint-mobile)
         max-width: 100%
       .item-Door, h2, .markdown

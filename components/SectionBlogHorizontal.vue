@@ -64,6 +64,7 @@ export default {
         li
             margin-right: var(--spacing-five)
             min-width: 25vw !important
+            cursor: pointer
             @media screen and (max-width: $breakpoint-mobile)
               min-width: 50vw !important
             .typeTextCaps

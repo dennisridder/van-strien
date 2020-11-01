@@ -19,7 +19,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 @import '~/assets/styles/variables.sass'
 
 .section-BlogContent
@@ -29,7 +29,7 @@ export default {
     &_Content
         padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
         width: 100%
-        max-width: 1100px
+        max-width: $max-blog-content
         > div
           margin-bottom: 1.5rem
         .item-Quote

@@ -6,12 +6,32 @@
       :key="blok._uid"
       :blok="blok"
     ></component>
+    <section class="section section-Related">
+      <div class="section-Related_Content">
+        <div class="markdown">
+          <h3 class="typeTextCaps">
+            andere herinneringen die je interessant zult vinden
+          </h3>
+        </div>
+        <div class="section-Related_Items">
+          <nuxt-link
+            v-for="(item, i) in filteredHerinneringen"
+            :key="i"
+            :to="'/herinnering/' + item.id"
+            class="section-Related_Item"
+          >
+            <blok-item-door :image="item.cover_image" :alt="item.title" />
+          </nuxt-link>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
 import storyblokLivePreview from "@/mixins/storyblokLivePreview"
 import onPageLoad from "@/mixins/onPageLoad"
+import { mapState } from "vuex"
 
 export default {
   mixins: [onPageLoad, storyblokLivePreview],
@@ -45,7 +65,33 @@ export default {
   },
   data() {
     return {
-      story: { content: {} }
+      story: { content: {} },
+      filteredHerinneringen: []
+    }
+  },
+  computed: {
+    ...mapState({
+      herinneringen: (state) => state.herinneringen.list
+    })
+  },
+  mounted() {
+    this.filterHerinneringen()
+  },
+  methods: {
+    filterHerinneringen() {
+      var array = this.herinneringen.slice(1)
+      this.shuffle(array)
+      var filtered = array.filter((el) => el.id !== this.story.slug)
+      this.filteredHerinneringen = filtered.slice(0, 2)
+    },
+    shuffle(values) {
+      for (var i = values.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1))
+        var temp = values[i]
+        values[i] = values[j]
+        values[j] = temp
+      }
+      return values
     }
   },
   head() {
@@ -55,3 +101,25 @@ export default {
   }
 }
 </script>
+
+<style lang="sass">
+@import '~/assets/styles/variables.sass'
+
+.section-Related
+    position: relative
+    display: flex
+    justify-content: space-around
+    &_Content
+      padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
+      width: 100%
+      max-width: $max-blog-content
+      > div
+        margin-bottom: 1.5rem
+      > div:last-child
+        margin-bottom: 0
+    &_Items
+      display: flex
+    &_Item
+      width: 5.5rem
+      margin-right: 2.5rem
+</style>
