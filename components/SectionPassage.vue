@@ -6,6 +6,7 @@
   >
     <div
       class="section-Passage_Item section-Passage_Left"
+      :class="{ backgroundActive: blok.background_graphic }"
       :style="`background:${blok.background_color}`"
     >
       <div v-if="blok.passage_image" class="section-Passage_Item_Door">
@@ -87,6 +88,11 @@ export default {
         @media screen and (max-width: $breakpoint-mobile)
           padding-left: calc(2 * #{var(--spacing-section-horizontal)})
           padding-right: calc(2 * #{var(--spacing-section-horizontal)})
+        &.backgroundActive
+          background-image: url('~assets/images/background-doors.svg') !important
+          background-size: 100% !important
+          background-position: 3.75vw 50% !important
+          background-repeat: no-repeat !important
     &_Right
         padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
         @media screen and (min-width: $breakpoint-laptop)
