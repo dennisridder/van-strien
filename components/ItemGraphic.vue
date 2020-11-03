@@ -43,7 +43,7 @@ export default {
       width: 9rem
       transform: translate(-50%, -50%)
     &_Moons
-      width: 18rem
+      width: 22rem
       transform: translate(-50%, -75%)
     &_Moonlab
       width: 9rem
