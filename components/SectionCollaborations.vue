@@ -3,7 +3,9 @@
     <markdown class="typeTextCaps" :input="blok.text" />
     <ul class="section-Collaborations_Logos">
       <li v-for="(image, i) in blok.logos" :key="i">
-        <img :src="image.filename" :alt="image.name" />
+        <a :href="'https://' + image.name" target="_blank">
+          <img :src="image.filename" :alt="image.name" />
+        </a>
       </li>
     </ul>
   </section>
