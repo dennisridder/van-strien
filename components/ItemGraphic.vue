@@ -31,6 +31,7 @@ export default {
   &-Graphic
     position: relative
     margin-bottom: var(--spacing-section-vertical) !important
+    z-index: +1
     &_Single
       position: absolute
       top: 0

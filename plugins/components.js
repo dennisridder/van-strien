@@ -2,6 +2,7 @@ import Vue from "vue"
 // PAGES
 import Page from "~/components/Page.vue"
 import PageAbout from "~/components/PageAbout.vue"
+import PageContact from "~/components/PageContact.vue"
 import PagePopup from "~/components/PagePopup.vue"
 import PagePost from "~/components/PagePost.vue"
 // SECTIONS
@@ -32,6 +33,7 @@ import ItemWeek from "~/components/ItemWeek.vue"
 // PAGES
 Vue.component("blok-page", Page)
 Vue.component("blok-page-about", PageAbout)
+Vue.component("blok-page-contact", PageContact)
 Vue.component("blok-page-popup", PagePopup)
 Vue.component("blok-page-post", PagePost)
 // SECTIONS
