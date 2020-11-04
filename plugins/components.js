@@ -28,6 +28,7 @@ import ItemQuote from "~/components/ItemQuote.vue"
 import ItemSubtitle from "~/components/ItemSubtitle.vue"
 import ItemText from "~/components/ItemText.vue"
 import ItemTitle from "~/components/ItemTitle.vue"
+import ItemVideo from "~/components/ItemVideo.vue"
 import ItemWeek from "~/components/ItemWeek.vue"
 
 // PAGES
@@ -59,4 +60,5 @@ Vue.component("blok-item-quote", ItemQuote)
 Vue.component("blok-item-subtitle", ItemSubtitle)
 Vue.component("blok-item-text", ItemText)
 Vue.component("blok-item-title", ItemTitle)
+Vue.component("blok-item-video", ItemVideo)
 Vue.component("blok-item-week", ItemWeek)
