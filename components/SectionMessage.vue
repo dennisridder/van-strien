@@ -41,7 +41,7 @@ export default {
       margin-bottom: calc(#{var(--spacing-item-vertical)} + 1.5em)
     > div:last-child
       margin-bottom: 0
-    // Question blok
+    // IF QUESTION BLOK THEN
     > div:nth-child(3).item-Question
       margin-top: var(--spacing-section-vertical)
   &.backgroundWhite
