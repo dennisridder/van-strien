@@ -1,5 +1,5 @@
 <template>
-  <div class="item-Graphic">
+  <div class="item-Graphic" :class="blok.show_graphic">
     <div
       v-if="blok.show_graphic === 'leaf'"
       class="item-Graphic_Single item-Graphic_Leaf"
@@ -22,9 +22,6 @@
 export default {
   props: {
     blok: Object
-  },
-  mounted() {
-    console.log(this.blok)
   }
 }
 </script>
@@ -33,12 +30,15 @@ export default {
 .item
   &-Graphic
     position: relative
-    margin-bottom: var(--spacing-section-vertical) !important
+    margin: 0
+    padding: 0
     z-index: +1
     // border: 1px solid orange
+    &.moons
+      margin-bottom: 12.5rem
     &_Single
       position: absolute
-      top: 0
+      top: calc(0px - #{var(--spacing-section-vertical)})
       left: 50%
       svg
         width: 100%
@@ -46,13 +46,16 @@ export default {
     &_Leaf
       width: 15rem
       transform: translate(-50%, -50%)
+      top: calc(0px - #{var(--spacing-section-vertical)})
       // border: 1px solid purple
     &_Moons
       width: 22rem
-      transform: translate(-50%, -75%)
+      transform: translate(-50%, -50%)
+      top: calc(0px - (#{var(--spacing-section-vertical)} / 2))
       // border: 1px solid red
     &_Moonlab
       width: 9rem
       transform: translate(-50%, -50%)
+      top: calc(0px - #{var(--spacing-section-vertical)})
       // border: 1px solid blue
 </style>
