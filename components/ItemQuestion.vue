@@ -25,9 +25,6 @@ export default {
       toggleState: false
     }
   },
-  updated() {
-    console.log(this.toggleState)
-  },
   methods: {
     toggleTheState() {
       this.toggleState = !this.toggleState
