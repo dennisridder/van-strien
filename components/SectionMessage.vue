@@ -27,29 +27,32 @@ export default {
 @import '~/assets/styles/variables.sass'
 
 .section-Message
-    position: relative
-    display: flex
-    justify-content: space-around
-    padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
-    &_Content
-        text-align: center
-        .markdown, caption
-            width: 100%
-        > div
-            margin-bottom: var(--spacing-item-vertical)
-        .item-Quote
-          margin-bottom: calc(#{var(--spacing-item-vertical)} + 1.5em)
-        > div:last-child
-            margin-bottom: 0
-    &.backgroundWhite
-      background: $white
-    &.backgroundOffwhite
-      background: $offwhite
-    &.backgroundLightgrey
-      background: $lightgrey
-    &.backgroundYellow
-      background: $yellow
-    &.backgroundDarkbrown
-      background: $darkbrown
-      color: $white
+  position: relative
+  display: flex
+  justify-content: space-around
+  padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
+  &_Content
+    text-align: center
+    .markdown, caption
+      width: 100%
+    > div
+      margin-bottom: var(--spacing-item-vertical)
+    .item-Quote
+      margin-bottom: calc(#{var(--spacing-item-vertical)} + 1.5em)
+    > div:last-child
+      margin-bottom: 0
+    // Question blok
+    > div:nth-child(3).item-Question
+      margin-top: var(--spacing-section-vertical)
+  &.backgroundWhite
+    background: $white
+  &.backgroundOffwhite
+    background: $offwhite
+  &.backgroundLightgrey
+    background: $lightgrey
+  &.backgroundYellow
+    background: $yellow
+  &.backgroundDarkbrown
+    background: $darkbrown
+    color: $white
 </style>
