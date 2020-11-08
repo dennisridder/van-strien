@@ -25,6 +25,7 @@ import ItemGraphic from "~/components/ItemGraphic.vue"
 import ItemMessage from "~/components/ItemMessage.vue"
 import ItemPodcastPlayer from "~/components/ItemPodcastPlayer.vue"
 import ItemQuote from "~/components/ItemQuote.vue"
+import ItemQuestion from "~/components/ItemQuestion.vue"
 import ItemSubtitle from "~/components/ItemSubtitle.vue"
 import ItemText from "~/components/ItemText.vue"
 import ItemTitle from "~/components/ItemTitle.vue"
@@ -57,6 +58,7 @@ Vue.component("blok-item-graphic", ItemGraphic)
 Vue.component("blok-item-message", ItemMessage)
 Vue.component("blok-item-podcast-player", ItemPodcastPlayer)
 Vue.component("blok-item-quote", ItemQuote)
+Vue.component("blok-item-question", ItemQuestion)
 Vue.component("blok-item-subtitle", ItemSubtitle)
 Vue.component("blok-item-text", ItemText)
 Vue.component("blok-item-title", ItemTitle)
