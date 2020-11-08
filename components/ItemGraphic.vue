@@ -22,6 +22,9 @@
 export default {
   props: {
     blok: Object
+  },
+  mounted() {
+    console.log(this.blok)
   }
 }
 </script>
@@ -32,6 +35,7 @@ export default {
     position: relative
     margin-bottom: var(--spacing-section-vertical) !important
     z-index: +1
+    // border: 1px solid orange
     &_Single
       position: absolute
       top: 0
@@ -40,12 +44,15 @@ export default {
         width: 100%
         height: auto
     &_Leaf
-      width: 9rem
+      width: 15rem
       transform: translate(-50%, -50%)
+      // border: 1px solid purple
     &_Moons
       width: 22rem
       transform: translate(-50%, -75%)
+      // border: 1px solid red
     &_Moonlab
       width: 9rem
       transform: translate(-50%, -50%)
+      // border: 1px solid blue
 </style>
