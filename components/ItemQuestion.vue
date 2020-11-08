@@ -2,7 +2,7 @@
   <div v-editable="blok" class="item-Question" @click="toggleTheState">
     <div class="item-Question_Question">
       <div class="plusminus">
-        <transition-group name="fadegroup">
+        <transition-group name="fade">
           <span v-if="!toggleState" key="plus" class="plus">+</span>
           <span v-if="toggleState" key="minus" class="minus">-</span>
         </transition-group>
@@ -43,10 +43,13 @@ export default {
       position: relative
       transform: translateY(-2px)
       width: 1.5rem
+      text-align: center
       span
         position: absolute
         left: 0
         top: 0
+        .minus
+          left: 2px
     &_Question
       display: inline-flex
       cursor: pointer
