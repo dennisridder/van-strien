@@ -91,12 +91,15 @@ export default {
     },
     toggleSlide() {
       this.showSlide = !this.showSlide
+      console.log("TOGGLE SLIDE", this.showSlide)
     },
     toggleSlideOff() {
       this.showSlide = false
+      console.log("SLIDE OFF", this.showSlide)
     },
     slideToFalse() {
-      this.toggleSlide = false
+      this.showSlide = false
+      console.log(" SLIDE TO FALSE", this.showSlide)
     },
     toggleFooter() {
       if (this.$route.path == "/moonlab" || this.$route.path == "/moonlab/") {
