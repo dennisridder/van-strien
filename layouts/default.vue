@@ -4,7 +4,7 @@
     <the-navigation-slider
       :active="showSlide"
       @toggle-slide="toggleSlide"
-      @slide-to-false="slideToFalse"
+      @toggle-slide-off="toggleSlideOff"
     />
     <the-navigation-large
       v-if="whichHeader === true"
@@ -52,7 +52,7 @@ export default {
   },
   watch: {
     $route() {
-      this.showSlide = false
+      this.toggleSlideOff()
       this.determineWhichHeader()
       this.toggleFooter()
     }
@@ -96,10 +96,6 @@ export default {
     toggleSlideOff() {
       this.showSlide = false
       console.log("SLIDE OFF", this.showSlide)
-    },
-    slideToFalse() {
-      this.showSlide = false
-      console.log(" SLIDE TO FALSE", this.showSlide)
     },
     toggleFooter() {
       if (this.$route.path == "/moonlab" || this.$route.path == "/moonlab/") {

@@ -2,8 +2,8 @@
   <transition name="fade">
     <div v-if="active" class="headerSlider">
       <div class="headerSlider-Background"></div>
-      <div class="headerSlider-Content" @mouseleave="emitToggleSlide">
-        <div class="headerSlider-Toggle" @click="emitToggleSlide">
+      <div class="headerSlider-Content" @mouseleave="emitToggleSlideOff">
+        <div class="headerSlider-Toggle" @click="emitToggleSlideOff">
           <div
             class="icon navIcon"
             v-html="require('~/assets/images/icon-close.svg?include')"
@@ -38,8 +38,8 @@ export default {
     emitToggleSlide() {
       this.$emit("toggle-slide")
     },
-    emitSlideToFalse() {
-      this.$emit("slide-to-false")
+    emitToggleSlideOff() {
+      this.$emit("toggle-slide-off")
     }
   }
 }
