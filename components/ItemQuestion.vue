@@ -1,5 +1,5 @@
 <template>
-  <div @click="toggleTheState" v-editable="blok" class="item-Question">
+  <div v-editable="blok" class="item-Question" @click="toggleTheState">
     <div class="item-Question_Question">
       <div class="plusminus">
         <transition-group name="fadegroup">
@@ -30,7 +30,6 @@ export default {
   },
   methods: {
     toggleTheState() {
-      console.log(this.toggleState)
       this.toggleState = !this.toggleState
     }
   }
@@ -41,16 +40,29 @@ export default {
 .item
   &-Question
     .plusminus
+      position: relative
       transform: translateY(-2px)
+      width: 1.5rem
+      span
+        position: absolute
+        left: 0
+        top: 0
     &_Question
-      cursor: pointer
       display: inline-flex
-      .markdown
-        margin-left: .5rem
+      cursor: pointer
     &_Answer
       max-height: 0
-      transition: max-height .33s ease-in-out
+      transition: max-height .33s ease .165s
       overflow: hidden
+      max-width: 42em
+      .markdown
+        padding-top: 0.5rem
+        opacity: 0
+        transition: all .33s ease
       &.active
-        max-height: 1000px
+        max-height: 500px
+        transition: max-height .33s ease
+        .markdown
+          opacity: 1
+          transition: all .33s ease
 </style>
