@@ -10,8 +10,8 @@
     </div>
     <!-- prettier-ignore -->
     <img
-      :src="`${transformImage(blok.background_image, '1680x0/filters:format(jpg):quality(40)')}`"
-      :srcset="
+      v-lazy="`${transformImage(blok.background_image, '1680x0/filters:format(jpg):quality(40)')}`"
+      :data-srcset="
         `${transformImage(blok.background_image, '2880x0/filters:quality(40)')} 2880w,
         ${transformImage(blok.background_image, '2560x0/filters:quality(40)')} 2560w, 
         ${transformImage(blok.background_image, '1920x0/filters:quality(40)')} 1920w, 
@@ -19,7 +19,7 @@
         ${transformImage(blok.background_image, '1280x0/filters:quality(40)')} 1280w,
         ${transformImage(blok.background_image, '1024x0/filters:quality(40)')} 1024w, 
         ${transformImage(blok.background_image, '768x0/filters:quality(40)')} 768w`"
-      class="scrollSlow-Landing"
+      class="lazy scrollSlow-Landing"
       sizes="100w"
       :alt="blok.background_image" />
   </section>
