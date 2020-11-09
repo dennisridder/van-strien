@@ -40,6 +40,8 @@ export default {
     position: relative
     width: 100%
     z-index: +1
+    border-radius: 1000px 1000px 0 0
+    overflow: hidden
     @media screen and (min-width: $breakpoint-mobile)
       max-width: 33vw
     @media screen and (min-width: $breakpoint-laptop)
@@ -49,8 +51,8 @@ export default {
       width: 100%
       height: 0
       padding-top: 125%
-      overflow: hidden
       border-radius: 1000px 1000px 0 0
+      overflow: hidden
     img
       position: absolute
       left: 0
@@ -66,10 +68,12 @@ export default {
   width: 100%
   height: 100%
   box-shadow: inset 2px 2px 5px 0px #000000
+  -webkit-box-shadow: inset 2px 2px 5px 0px #000000
   border-radius: 1000px 1000px 0 0
   top: 0
   left: 0
   opacity: .2
+  overflow: hidden
 
 .section-BlogHorizontal, .section-BlogGrid
   .item-Door
