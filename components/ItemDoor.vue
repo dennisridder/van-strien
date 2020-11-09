@@ -3,14 +3,19 @@
     <div class="item-Door_aspectRatioBox">
       <!-- prettier-ignore -->
       <img
-      v-lazy="`${transformImage(image, '1440x0')}`"
-      :data-srcset="
-        `${transformImage(image, '400x0')} 400w, 
-          ${transformImage(image, '800x0')} 800w, 
-          ${transformImage(image, '1200x0')} 1200w,
-          ${transformImage(image, '1600x0')} 1600w,
-          ${transformImage(image, '2000x0')} 2000w`"
+      v-lazy="`${transformImage(image, '1440x0/filters:format(jpg):quality(80)')}`"
+      :data-srcset="`
+          ${transformImage(image, '2000x0/filters:format(jpg):quality(80)')} 2000w,
+          ${transformImage(image, '1600x0/filters:format(jpg):quality(80)')} 1600w,
+          ${transformImage(image, '140x0/filters:format(jpg):quality(80)')} 140w, 
+          ${transformImage(image, '1200x0/filters:format(jpg):quality(80)')} 1200w,
+          ${transformImage(image, '1000x0/filters:format(jpg):quality(80)')} 1000w, 
+          ${transformImage(image, '800x0/filters:format(jpg):quality(80)')} 800w, 
+          ${transformImage(image, '600x0/filters:format(jpg):quality(80)')} 600w, 
+          ${transformImage(image, '400x0/filters:format(jpg):quality(80)')} 400w, 
+          `"
       class="lazy scrollSlow-Door"
+      sizes="(min-width: 800px) 33vw, (min-width: 1360px) 26vw, 100vw"
       :alt="alt" />
       <div class="shadow"></div>
     </div>
