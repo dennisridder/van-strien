@@ -10,10 +10,6 @@
     </div>
     <!-- prettier-ignore -->
     <img
-      v-lazy="blok.background_image"
-      class="lazy scrollSlow-Landing"
-      :alt="blok.background_image" />
-    <!-- <img
       v-lazy="`${transformImage(blok.background_image, '1680x0/filters:format(jpg):quality(40)')}`"
       :data-srcset="
         `${transformImage(blok.background_image, '2880x0/filters:quality(40)')} 2880w,
@@ -25,7 +21,7 @@
         ${transformImage(blok.background_image, '768x0/filters:quality(40)')} 768w`"
       class="lazy scrollSlow-Landing"
       sizes="100w"
-      :alt="blok.background_image" /> -->
+      :alt="blok.background_image" />
   </section>
 </template>
 
