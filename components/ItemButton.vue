@@ -5,6 +5,7 @@
       v-scroll-to="'.section-Passage'"
       class="button typeLink"
       :class="blok.color"
+      :title="blok.title"
     >
       {{ blok.title }}
     </a>
@@ -14,6 +15,8 @@
       target="_blank"
       class="button typeLink"
       :class="blok.color"
+      :title="blok.title"
+      rel="noreferrer"
     >
       {{ blok.title }}
     </a>
@@ -23,6 +26,7 @@
       :class="blok.color"
       tag="a"
       :to="blok.link.cached_url"
+      :title="blok.title"
     >
       {{ blok.title }}
     </nuxt-link>

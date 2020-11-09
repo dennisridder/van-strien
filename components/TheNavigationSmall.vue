@@ -9,6 +9,7 @@
             class="headerSmall-Toggle_Item"
             to="/herinneringen/"
             tag="div"
+            title="Terug"
           >
             <div
               class="icon navIcon"
@@ -28,7 +29,12 @@
           </div>
         </transition-group>
       </div>
-      <nuxt-link to="/" tag="div" class="headerSmall-Item headerSmall-Logo">
+      <nuxt-link
+        to="/"
+        tag="div"
+        class="headerSmall-Item headerSmall-Logo"
+        title="Homepage"
+      >
         <div
           class="rotate"
           v-html="require('~/assets/images/logo-circle.svg?include')"

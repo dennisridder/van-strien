@@ -35,7 +35,7 @@
     <div class="footer-Bottom">
       <div class="footer-Bottom_Content">
         <div class="footer-Bottom_Logo">
-          <nuxt-link to="/">
+          <nuxt-link to="/" title="Homepage">
             <div
               class="icon"
               v-html="require('~/assets/images/logo-rectangle.svg?include')"
@@ -87,10 +87,16 @@
           </a>
         </div>
         <div class="footer-Bottom_Item">
-          <nuxt-link to="/algemene-voorwaarden" class="typeLink"
+          <nuxt-link
+            to="/algemene-voorwaarden"
+            class="typeLink"
+            title="Algemene voorwaarden"
             >Algemene voorwaarden</nuxt-link
           >
-          <nuxt-link to="/privacy-verklaring" class="typeLink"
+          <nuxt-link
+            to="/privacy-verklaring"
+            class="typeLink"
+            title="Privacy verklaring"
             >Privacy verklaring</nuxt-link
           >
         </div>

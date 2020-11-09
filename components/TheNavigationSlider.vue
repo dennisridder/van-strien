@@ -14,13 +14,25 @@
           <!-- <nuxt-link to="/moonlab" tag="li" @click="emitSlideToFalse"
             >MOON LAB PROGRAMMA</nuxt-link
           > -->
-          <nuxt-link to="/herinneringen" tag="li" @click="emitSlideToFalse"
+          <nuxt-link
+            to="/herinneringen"
+            tag="li"
+            title="Herinneringen"
+            @click="emitSlideToFalse"
             >HERINNERINGEN</nuxt-link
           >
-          <nuxt-link to="/over-anne" tag="li" @click="emitSlideToFalse"
+          <nuxt-link
+            to="/over-anne"
+            tag="li"
+            title="Over Anne"
+            @click="emitSlideToFalse"
             >OVER ANNE</nuxt-link
           >
-          <nuxt-link to="/contact" tag="li" @click="emitSlideToFalse"
+          <nuxt-link
+            to="/contact"
+            tag="li"
+            title="Contact"
+            @click="emitSlideToFalse"
             >CONTACT</nuxt-link
           >
         </ul>

@@ -10,7 +10,7 @@
         </div>
       </div>
       <div v-if="headerIcon === true" class="headerLarge-Item headerLarge-Logo">
-        <nuxt-link class="headerLarge-Logo_Item" to="/">
+        <nuxt-link class="headerLarge-Logo_Item" to="/" title="Homepage">
           <div
             class="icon rotate"
             v-html="require('~/assets/images/logo-circle.svg?include')"
@@ -21,7 +21,7 @@
         v-if="headerIcon === false"
         class="headerLarge-Item headerLarge-Logo"
       >
-        <nuxt-link class="headerLarge-Logo_Item" to="/moonlab">
+        <nuxt-link class="headerLarge-Logo_Item" to="/moonlab" title="Homepage">
           <div
             class="icon rotate"
             v-html="require('~/assets/images/logo-moonlab-circle.svg?include')"
@@ -30,7 +30,7 @@
       </div>
       <div class="headerLarge-Item headerLarge-Button item-Button">
         <div class="button typeLink darkbrown">
-          <a>Plan free deep call</a>
+          <a rel="noreferrer">Plan free deep call</a>
         </div>
       </div>
     </div>

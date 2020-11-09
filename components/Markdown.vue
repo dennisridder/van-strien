@@ -14,7 +14,7 @@ marked.setOptions({
 
 renderer.link = function (href, title, text) {
   return (
-    '<a target="_blank" href="' +
+    '<a target="_blank" rel="noreferrer" href="' +
     href +
     '" title="' +
     text +
