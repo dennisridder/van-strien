@@ -32,6 +32,7 @@
     "imagemin-svgo": "^7.0.0",
     "jimp": "^0.16.1",
     "responsive-loader": "^2.2.0",
+    "sass-loader": "^10.0.3",
     "sqip-loader": "^1.0.0",
     "webp-loader": "^0.6.0"
   },
@@ -43,7 +44,6 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-vue": "^6.2.2",
     "css-loader": "^4.2.2",
-    "sass-loader": "^10.0.3",
     "node-sass": "^4.14.1",
     "prettier": "^2.1.1",
     "nodemon": "^2.0.5"
