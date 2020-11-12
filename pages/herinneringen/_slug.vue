@@ -6,7 +6,30 @@
       :key="blok._uid"
       :blok="blok"
     ></component>
-    <section class="section section-Related">
+    <!-- SHARE CONTENT -->
+    <section class="section section-Share section-BlogContentFooter">
+      <div class="section-Share_Content">
+        <div class="markdown">
+          <h3 class="typeTextCaps">Deel mijn herinnering</h3>
+        </div>
+        <!-- prettier-ignore -->
+        <div class="section-Share_Items">
+          <a class="section-Share_Item typeLink" 
+          :href="`https://twitter.com/share?url=https://www.annevanstrien.nl/${story.full_slug}&text=${story.name}`" target="_blank"
+            rel="noreferrer" title="share on linkedin">Twitter</a>
+          <a
+            class="section-Share_Item typeLink"
+            :href="`http://www.linkedin.com/shareArticle?mini=true&url=https://www.annevanstrien.nl/${story.full_slug}&title=${story.name}&source=annevanstrien.nl`"
+            target="_blank"
+            rel="noreferrer"
+            title="share on linkedin"
+            >LinkedIn</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- RELATED CONTENT -->
+    <section class="section section-Related section-BlogContentFooter">
       <div class="section-Related_Content">
         <div class="markdown">
           <h3 class="typeTextCaps">
@@ -76,6 +99,7 @@ export default {
   },
   mounted() {
     this.filterHerinneringen()
+    console.log(this.story)
   },
   methods: {
     filterHerinneringen() {
@@ -105,21 +129,40 @@ export default {
 <style lang="sass">
 @import '~/assets/styles/variables.sass'
 
-.section-Related
-    position: relative
-    display: flex
-    justify-content: space-around
-    &_Content
-      padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
-      width: 100%
-      max-width: $max-blog-content
-      > div
-        margin-bottom: 1.5rem
-      > div:last-child
-        margin-bottom: 0
-    &_Items
+.section
+  &-BlogContentFooter
+      position: relative
       display: flex
-    &_Item
-      width: 5.5rem
-      margin-right: 2.5rem
+      justify-content: space-around
+  &-Share
+      &_Content
+        padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
+        width: 100%
+        max-width: $max-blog-content
+        > div
+          margin-bottom: 1.5rem
+        > div:last-child
+          margin-bottom: 0
+      &_Item
+        display: block
+        color: $yellow !important
+        p, a
+          color: $yellow !important
+        &:first-child
+          margin-bottom: 1em
+  &-Related
+      &_Content
+        padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
+        padding-top: 0
+        width: 100%
+        max-width: $max-blog-content
+        > div
+          margin-bottom: 1.5rem
+        > div:last-child
+          margin-bottom: 0
+      &_Items
+        display: flex
+      &_Item
+        width: 5.5rem
+        margin-right: 2.5rem
 </style>
