@@ -6,16 +6,16 @@
         <a :href="'https://' + image.name" target="_blank" rel="noreferrer">
           <!-- prettier-ignore -->
           <img
-        v-lazy="`${transformImage(image.filename, '1440x0/filters:format(jpg):quality(80)')}`"
+        v-lazy="`${transformImage(image.filename, '1440x0')}`"
         :data-srcset="`
-            ${transformImage(image.filename, '2000x0/filters:format(jpg):quality(80)')} 2000w,
-            ${transformImage(image.filename, '1600x0/filters:format(jpg):quality(80)')} 1600w,
-            ${transformImage(image.filename, '140x0/filters:format(jpg):quality(80)')} 140w, 
-            ${transformImage(image.filename, '1200x0/filters:format(jpg):quality(80)')} 1200w,
-            ${transformImage(image.filename, '1000x0/filters:format(jpg):quality(80)')} 1000w, 
-            ${transformImage(image.filename, '800x0/filters:format(jpg):quality(80)')} 800w, 
-            ${transformImage(image.filename, '600x0/filters:format(jpg):quality(80)')} 600w, 
-            ${transformImage(image.filename, '400x0/filters:format(jpg):quality(80)')} 400w, 
+            ${transformImage(image.filename, '2000x0')} 2000w,
+            ${transformImage(image.filename, '1600x0')} 1600w,
+            ${transformImage(image.filename, '140x0')} 140w, 
+            ${transformImage(image.filename, '1200x0')} 1200w,
+            ${transformImage(image.filename, '1000x0')} 1000w, 
+            ${transformImage(image.filename, '800x0')} 800w, 
+            ${transformImage(image.filename, '600x0')} 600w, 
+            ${transformImage(image.filename, '400x0')} 400w, 
             `"
         class="lazy scrollSlow-Door"
         sizes="33vw"
@@ -65,6 +65,7 @@ export default {
       margin-bottom: var(--spacing-section-vertical-small)
       display: inline-block
       width: auto
+      height: 100%
       img
         height: 100%
         width: auto
