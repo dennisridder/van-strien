@@ -1,5 +1,17 @@
 <template>
   <section class="section section-Landing">
+    <div v-if="this.$route.name == 'index'" class="section-Landing_Logo">
+      <div
+        class="icon rotate"
+        v-html="require('~/assets/images/logo-circle.svg?include')"
+      />
+    </div>
+    <div v-if="this.$route.path == '/moonlab'" class="section-Landing_Logo">
+      <div
+        class="icon rotate"
+        v-html="require('~/assets/images/logo-moonlab-circle.svg?include')"
+      />
+    </div>
     <div class="section-Landing_Content section-Content">
       <component
         :is="blok.component | dashify"
@@ -29,6 +41,9 @@
 export default {
   props: {
     blok: Object
+  },
+  mounted() {
+    console.log(this.$route)
   },
   methods: {
     transformImage(image, option) {
@@ -74,10 +89,9 @@ export default {
   &_Logo
     flex-grow: 1
     text-align: center
-    &_Item
-      width: 220px
-      height: 220px
-      background: $darkbrown
+    .icon
+      width: 12rem
+      height: 12rem
   &_Content
     flex-direction: column
     flex-shrink: 0

@@ -102,37 +102,35 @@ export default {
     opacity: 0
     transition: opacity $transition-nav-change
   &-Logo
+    opacity: 0
     position: absolute
     top: 0
     left: 50%
     bottom: 0
     transform: translateX(-50%)
     justify-content: space-around
+    transition: opacity $transition-nav-change
     cursor: pointer
     @media screen and (max-width: $breakpoint-mobile)
       position: relative
       left: auto
       transform: translateX(0)
     &_Item
-      width: 8rem
-      height: 8rem
-      transition: width $transition-nav-change, height $transition-nav-change
-      will-change: width, height
+      width: 4rem
+      height: 4rem
       @media screen and (min-width: $breakpoint-mobile)
         position: absolute
         left: 50%
         top: 50%
         transform: translate(-50%, -50%)
       @media screen and (max-width: $breakpoint-mobile)
-        width: 6rem
-        height: 6rem
+        width: 3rem
+        height: 3rem
     .icon
       position: relative
       height: 100%
       width: 100%
-      color: $white
-      transition: color $transition-nav-change
-      will-change: color
+      color: $darkbrown
     svg
       position: absolute
       left: 0
@@ -157,15 +155,7 @@ export default {
       &-Toggle
         opacity: 1
       &-Logo
-        color: $darkbrown
-        &_Item
-          width: 4rem
-          height: 4rem
-          .icon
-            color: $darkbrown
-          @media screen and (max-width: $breakpoint-mobile)
-            width: 3rem
-            height: 3rem
+        opacity: 1
       &-Button
         opacity: 1
 </style>
