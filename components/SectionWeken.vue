@@ -19,10 +19,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass">
-.section-Weken
-  .section-BlogGrid_Item
-    .markdown
-      width: calc(100% + #{var(--spacing-section-horizontal)})
-</style>

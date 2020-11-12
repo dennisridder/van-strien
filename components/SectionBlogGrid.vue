@@ -62,6 +62,8 @@ export default {
     flex-basis: 50%
     padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
     padding-bottom: 0
+    .markdown
+      width: calc(100% + #{var(--spacing-section-horizontal)})
     @media screen and (max-width: $breakpoint-mobile)
       flex-basis: 100%
       padding-left: calc(2 * #{var(--spacing-section-horizontal)})
