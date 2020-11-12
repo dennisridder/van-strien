@@ -30,7 +30,12 @@
       </div>
       <div class="headerLarge-Item headerLarge-Button item-Button">
         <div class="button typeLink darkbrown">
-          <a rel="noreferrer">Plan free deep call</a>
+          <a
+            rel="noreferrer"
+            href="https://calendly.com/annevanstrien/deepcall"
+            target="_blank"
+            >Plan free deep call</a
+          >
         </div>
       </div>
     </div>
