@@ -6,12 +6,6 @@
       :key="blok._uid"
       :blok="blok"
     ></component>
-    <div class="item-Graphic">
-      <div
-        class="item-Graphic_MoonCircle"
-        v-html="require('~/assets/images/moons.svg?include')"
-      />
-    </div>
   </div>
 </template>
 
@@ -38,16 +32,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass">
-.section
-  &-PageContact
-    .item-Graphic, .item-Graphic_MoonCircle
-      position: absolute
-      top: 0
-      left: 0
-    .item-Graphic_MoonCircle
-      opacity: 0
-      width: 18rem
-      transform: translate(-50%, -1rem)
-</style>
