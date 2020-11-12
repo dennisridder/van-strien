@@ -71,7 +71,7 @@ export default {
   padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
   background: rgba(0,0,0,0)
   color: white
-  box-shadow: inset 0px -2px 5px 0px rgba(0,0,0,.2)
+  // box-shadow: inset 0px -2px 5px 0px rgba(0,0,0,.2)
   img
     position: absolute
     top: 0
