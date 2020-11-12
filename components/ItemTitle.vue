@@ -1,6 +1,7 @@
 <template>
   <div v-editable="blok" class="item-Title">
-    <h1 class="typeDisplay">{{ blok.title }}</h1>
+    <!-- <h1 class="typeDisplay">{{ blok.title }}</h1> -->
+    <markdown class="typeDisplay" :input="blok.title" />
   </div>
 </template>
 
