@@ -57,7 +57,6 @@ export default {
     &_Item
         display: flex
         flex-direction: column
-        justify-content: flex-end
         flex-basis: 50%
         flex-shrink: 0
         &_Door
@@ -84,6 +83,7 @@ export default {
             @media screen and (max-width: $breakpoint-mobile)
               margin-left: 2.5em
     &_Left
+        justify-content: space-around
         padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
         @media screen and (max-width: $breakpoint-mobile)
           padding-left: calc(2 * #{var(--spacing-section-horizontal)})
@@ -94,6 +94,7 @@ export default {
           background-position: 3.75vw 50% !important
           background-repeat: no-repeat !important
     &_Right
+        justify-content: flex-end
         padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
         @media screen and (min-width: $breakpoint-laptop)
           padding-right: var(--spacing-five)

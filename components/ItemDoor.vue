@@ -72,8 +72,8 @@ export default {
   position: absolute
   width: 100%
   height: 100%
-  box-shadow: inset 2px 2px 5px 0px #000000
-  -webkit-box-shadow: inset 2px 2px 5px 0px #000000
+  box-shadow: inset 1px 1px 4px 0px rgba(#000000, 0.5)
+  -webkit-box-shadow: inset 1px 1px 4px 0px rgba(#000000, 0.5)
   border-radius: 1000px 1000px 0 0
   top: 0
   left: 0
