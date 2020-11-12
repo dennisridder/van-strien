@@ -39,12 +39,13 @@ export default {
   .section
     background: rgba(0,0,0,0)
   .section-Feature_Item
-    padding: var(--spacing-item-vertical)
+    padding: var(--spacing-item-vertical) var(--spacing-section-horizontal)
     max-width: 100%
   .section-Feature_Item_Content > div
     margin-bottom: calc(#{var(--spacing-item-vertical)} / 2)
   .item-Door
     max-width: calc(33vh / 1.25)
+    margin-top: 1rem
   .typeDisplay
     font-size: 2rem
   // Actual
