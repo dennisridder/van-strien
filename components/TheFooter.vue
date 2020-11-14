@@ -8,9 +8,12 @@
           <div class="typeTitleItalic">Letters</div>
         </div>
         <div class="footer-Top_Mail">
-          <client-only>
-            <MailchimpSignup />
-          </client-only>
+          <!-- <client-only> -->
+          <!-- <MailchimpSignup /> -->
+          <!-- </client-only> -->
+          <!-- <client-only>
+            <Subscribe />
+          </client-only> -->
           <form
             name="subscribe"
             method="post"
