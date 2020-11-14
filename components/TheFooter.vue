@@ -9,9 +9,6 @@
         </div>
         <div class="footer-Top_Mail">
           <client-only>
-            <Subscribe />
-          </client-only>
-          <client-only>
             <MailchimpSignup />
           </client-only>
           <form

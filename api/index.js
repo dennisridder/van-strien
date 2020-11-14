@@ -1,9 +1,8 @@
 import express from "express"
 import Mailchimp from "mailchimp-api-v3"
-// import mailchimpMarketing from "@mailchimp/mailchimp_marketing"
 
 const apiKey = process.env.MAILCHIMP_API_KEY
-const audienceId = process.env.MAILCHIMP_LIST_ID
+const audienceId = process.env.MAILCHIMP_AUDIENCE_ID
 const mailchimp = new Mailchimp(apiKey)
 
 const app = express()
@@ -32,16 +31,3 @@ export default {
   path: "/api",
   handler: app
 }
-
-// MAILCHIMP MARKETING API
-// mailchimp.setConfig({
-//   apiKey: "YOUR_API_KEY",
-//   server: "YOUR_SERVER_PREFIX"
-// })
-
-// async function run() {
-//   const response = await mailchimpMarketing.ping.get()
-//   console.log(response)
-// }
-
-// run()
