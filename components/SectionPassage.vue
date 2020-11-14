@@ -2,7 +2,7 @@
   <section
     v-editable="blok"
     class="section section-Passage"
-    :class="{ reverse: blok.reverse }"
+    :class="[{ reverse: blok.reverse }, { nodoor: blok.verwijder_deur_omtrek }]"
   >
     <div
       class="section-Passage_Item section-Passage_Left"
@@ -10,7 +10,11 @@
       :style="`background:${blok.background_color}`"
     >
       <div v-if="blok.passage_image" class="section-Passage_Item_Door">
-        <blok-item-door :image="blok.passage_image" :alt="blok.title" />
+        <blok-item-door
+          :class="{ nodoor: blok.verwijder_deur_omtrek }"
+          :image="blok.passage_image"
+          :alt="blok.title"
+        />
       </div>
     </div>
     <div class="section-Passage_Item section-Passage_Right section-Content">
@@ -40,6 +44,9 @@
 export default {
   props: {
     blok: Object
+  },
+  mounted() {
+    console.log(this.blok.verwijder_deur_omtrek)
   }
 }
 </script>
@@ -98,4 +105,13 @@ export default {
         padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
         @media screen and (min-width: $breakpoint-laptop)
           padding-right: var(--spacing-five)
+    &.nodoor
+      .item-Door
+        border: 0
+        border-radius: 0
+        &_aspectRatioBox
+          border-radius: 0
+          border: 0
+      .shadow
+        display: none
 </style>
