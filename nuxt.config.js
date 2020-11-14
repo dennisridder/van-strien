@@ -74,7 +74,11 @@ module.exports = {
     "~/plugins/components",
     "~/plugins/filters",
     "~/plugins/vue-lazyload",
-    "~/plugins/vue-click-outside"
+    "~/plugins/vue-click-outside",
+    {
+      src: "~/plugins/vee-validate",
+      ssr: false
+    }
   ],
 
   components: true,
