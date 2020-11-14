@@ -8,33 +8,28 @@
           <div class="typeTitleItalic">Letters</div>
         </div>
         <div class="footer-Top_Mail">
-          <!-- <client-only> -->
-          <!-- <MailchimpSignup /> -->
-          <!-- </client-only> -->
-          <!-- <client-only>
-            <Subscribe />
-          </client-only> -->
-          <form
-            name="subscribe"
-            method="post"
-            action="/succes"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-          >
-            <input type="hidden" name="form-name" value="contact" />
-
-            <input
-              type="text"
-              required
-              name="email"
-              placeholder="jouw mailadres"
-            />
-            <input
-              class="button typeLink offwhite"
-              type="submit"
-              value="Ontvang"
-            />
-          </form>
+          <client-only>
+            <form
+              name="subscribe"
+              method="POST"
+              action="/succes"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+            >
+              <input type="hidden" name="form-name" value="subscribe" />
+              <input
+                type="text"
+                required
+                name="email"
+                placeholder="jouw mailadres"
+              />
+              <input
+                class="button typeLink offwhite"
+                type="submit"
+                value="Ontvang"
+              />
+            </form>
+          </client-only>
         </div>
       </div>
     </div>

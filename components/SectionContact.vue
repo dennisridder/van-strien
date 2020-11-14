@@ -4,7 +4,7 @@
     <div class="section-Passage_Item section-Passage_Right section-Content">
       <form
         name="contact"
-        method="post"
+        method="POST"
         action="/succes"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
