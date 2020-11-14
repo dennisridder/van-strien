@@ -46,7 +46,7 @@ export default {
     blok: Object
   },
   mounted() {
-    console.log(this.blok.verwijder_deur_omtrek)
+    console.log(this.blok)
   }
 }
 </script>

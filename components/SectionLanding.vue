@@ -42,9 +42,6 @@ export default {
   props: {
     blok: Object
   },
-  mounted() {
-    console.log(this.$route)
-  },
   methods: {
     transformImage(image, option) {
       if (!image) return ""

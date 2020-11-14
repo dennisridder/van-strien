@@ -16,7 +16,6 @@ export default {
         var targets = document.querySelectorAll(".scrollSlow-Door")
         targets.forEach((el) => {
           // Don't fire on the horizontal scrolling elements
-          console.log("WOOHOO", el.parentElement.parentElement.classList)
           if (
             el.parentElement.parentElement.classList[0] ==
             "section-BlogHorizontal_Item"

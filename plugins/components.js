@@ -30,6 +30,7 @@ import ItemQuestion from "~/components/ItemQuestion.vue"
 import ItemSubtitle from "~/components/ItemSubtitle.vue"
 import ItemText from "~/components/ItemText.vue"
 import ItemTitle from "~/components/ItemTitle.vue"
+import ItemVertical from "~/components/ItemVertical.vue"
 import ItemVideo from "~/components/ItemVideo.vue"
 import ItemWeek from "~/components/ItemWeek.vue"
 
@@ -64,5 +65,6 @@ Vue.component("blok-item-question", ItemQuestion)
 Vue.component("blok-item-subtitle", ItemSubtitle)
 Vue.component("blok-item-text", ItemText)
 Vue.component("blok-item-title", ItemTitle)
+Vue.component("blok-item-vertical", ItemVertical)
 Vue.component("blok-item-video", ItemVideo)
 Vue.component("blok-item-week", ItemWeek)
