@@ -1,9 +1,8 @@
 import express from "express"
 import Mailchimp from "mailchimp-api-v3"
 
-const apiKey =
-  process.env.MAILCHIMP_API_KEY || "d0e59b9028e09ae8868af5b56d5df25b-us19"
-const audienceId = process.env.MAILCHIMP_AUDIENCE_ID || "d5606368df"
+const apiKey = process.env.MAILCHIMP_API_KEY
+const audienceId = process.env.MAILCHIMP_AUDIENCE_ID
 const mailchimp = new Mailchimp(apiKey)
 
 const app = express()
@@ -20,6 +19,7 @@ app.post("/subscribe", async (req, res) => {
         status: "subscribed"
       }
     })
+    console.log("EXPRESS RESPONSE", response)
     const { _links, ...result } = response
     res.status(result.statusCode).json(result)
   } catch (err) {
