@@ -3,7 +3,7 @@
     <section class="section-Succes">
       <div class="section-Succes_Content">
         <p>
-          Succes! Je hebt een bevestigings mail ontbangen.<br />
+          Succes! Je hebt een bevestigings mail ontvangen.<br />
           Ga terug naar <nuxt-link to="/">home</nuxt-link>,
           <nuxt-link to="/moonlab">Moonlab</nuxt-link> of lees mijn
           <nuxt-link to="/herinneringen">herinneringen</nuxt-link>.
