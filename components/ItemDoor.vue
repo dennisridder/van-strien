@@ -79,6 +79,7 @@ export default {
   left: 0
   opacity: .2
   overflow: hidden
+  pointer-events: none
 
 .section-BlogHorizontal, .section-BlogGrid
   .item-Door
