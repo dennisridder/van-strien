@@ -61,18 +61,20 @@ export default {
     border-radius: 1000px 1000px 0 0
     overflow: hidden
     max-width: 350px
-    .markdown
+    @media screen and (min-width: $breakpoint-mobile)
+      max-width: 33vw
+    @media screen and (min-width: $breakpoint-laptop)
+      max-width: 26vw
+    .markdown p
       color: white
       font-family: 'Artegra Sans Extended Medium'
-      font-size: .75rem !important
+      font-size: 1.33rem !important
       letter-spacing: 0.350em !important
-      line-height: 1.5 !important
+      line-height: 2 !important
       text-transform: uppercase
       user-select: none
-    // @media screen and (min-width: $breakpoint-mobile)
-    //   max-width: 33vw
-    // @media screen and (min-width: $breakpoint-laptop)
-    //   max-width: 26vw
+      text-align: center
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5)
     &_aspectRatioBox
       position: relative
       width: 100%
@@ -99,6 +101,9 @@ export default {
       flex-direction: column
       justify-content: center
       align-items: center
+      padding: 1rem
+      .icon svg
+        filter: drop-shadow(0px 0px 1px rgba(0,0,0,0.165))
       > div:nth-child(n+2)
-        margin-top: 1rem
+        margin-top: 2rem
 </style>
