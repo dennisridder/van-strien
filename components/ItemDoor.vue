@@ -90,5 +90,16 @@ export default {
 .section-BlogHorizontal
   .item-Door
     @media screen and (max-width: $breakpoint-mobile)
-      width: 33vw
+      width: 50vw
+      h2
+        border: 1px solid red
+        display: -webkit-box
+        -webkit-line-clamp: 1
+        -webkit-box-orient: vertical
+        text-overflow: ellipsis
+        overflow: hidden
+        white-space: nowrap
+        overflow: hidden
+        min-width: 0
+        text-overflow: ellipsis
 </style>

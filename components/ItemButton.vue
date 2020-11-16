@@ -59,7 +59,7 @@ export default {
   display: inline-block
   cursor: pointer
   padding-left: calc(2.44rem - 2px) !important
-  padding-top: calc(.833rem - 2px) !important
+  padding-top: calc(.833rem) !important
   padding-right: calc(2.44rem - 2px) !important
   padding-bottom: calc(.833rem - 2px) !important
   transition: background $transition-hover, color $transition-hover, border $transition-hover

@@ -22,15 +22,15 @@
     </div>
     <!-- prettier-ignore -->
     <img
-      v-lazy="`${transformImage(blok.background_image, '1680x0/filters:format(jpg):quality(30)')}`"
+      v-lazy="`${transformImage(blok.background_image, '1680x0/filters:format(jpg):quality(50)')}`"
       :data-srcset="
-        `${transformImage(blok.background_image, '2880x0/filters:quality(30)')} 2880w,
-        ${transformImage(blok.background_image, '2560x0/filters:quality(30)')} 2560w, 
-        ${transformImage(blok.background_image, '1920x0/filters:quality(30)')} 1920w, 
-        ${transformImage(blok.background_image, '1680x0/filters:quality(30)')} 1680w, 
-        ${transformImage(blok.background_image, '1280x0/filters:quality(30)')} 1280w,
-        ${transformImage(blok.background_image, '1024x0/filters:quality(30)')} 1024w, 
-        ${transformImage(blok.background_image, '768x0/filters:quality(30)')} 768w`"
+        `${transformImage(blok.background_image, '2880x0/filters:quality(50)')} 2880w,
+        ${transformImage(blok.background_image, '2560x0/filters:quality(50)')} 2560w, 
+        ${transformImage(blok.background_image, '1920x0/filters:quality(50)')} 1920w, 
+        ${transformImage(blok.background_image, '1680x0/filters:quality(50)')} 1680w, 
+        ${transformImage(blok.background_image, '1280x0/filters:quality(50)')} 1280w,
+        ${transformImage(blok.background_image, '1024x0/filters:quality(50)')} 1024w, 
+        ${transformImage(blok.background_image, '768x0/filters:quality(50)')} 768w`"
       class="lazy scrollSlow-Landing"
       sizes="100w"
       :alt="blok.background_image" />
