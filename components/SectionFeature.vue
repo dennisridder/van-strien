@@ -35,6 +35,8 @@ export default {
     justify-content: flex-end
     max-width: 50vw
     padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
+    @media screen and (max-width: $breakpoint-mobile)
+      max-width: 100%
     &_Content
       display: flex
       flex-direction: column

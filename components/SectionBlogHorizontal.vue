@@ -63,10 +63,7 @@ export default {
         background: $lightyellow
         li
             margin-right: var(--spacing-five)
-            min-width: 25vw !important
             cursor: pointer
-            @media screen and (max-width: $breakpoint-mobile)
-              min-width: 50vw !important
             .typeTextCaps
               margin-top: var(--spacing-item-vertical)
               margin-bottom: var(--spacing-item-vertical)

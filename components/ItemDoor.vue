@@ -84,10 +84,11 @@ export default {
 .section-BlogHorizontal, .section-BlogGrid
   .item-Door
     @media screen and (min-width: $breakpoint-mobile)
-      max-width: 21vw
+      // max-width: 21vw
+      width: 21vw
 
 .section-BlogHorizontal
   .item-Door
     @media screen and (max-width: $breakpoint-mobile)
-      max-width: 40vw
+      width: 33vw
 </style>

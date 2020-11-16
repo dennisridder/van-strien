@@ -26,7 +26,7 @@ img
           .section-Passage_Right
             padding-right: var(--spacing-three)
             padding-left: var(--spacing-five)
-    @media screen and (max-width: $breakpoint-laptop) and (min-width: $breakpoint-mobile)
+    @media screen and (min-width: $breakpoint-mobile)
       .section-Passage
         margin-top: var(--spacing-section-vertical-small)
         margin-bottom: var(--spacing-section-vertical-small)
@@ -38,6 +38,8 @@ img
   &-Content
     > div
       margin-bottom: var(--spacing-item-vertical)
+      &.item-Title
+        margin-bottom: 1.38rem
     > div:last-child
       margin-bottom: 0
 

@@ -1,6 +1,6 @@
 <template>
   <div class="section-Feature_Item" :class="blok.background_color">
-    <div class="section-Feature_Item_Content">
+    <div class="section-Feature_Item_Content section-Content">
       <blok-item-door :image="blok.image.filename" :alt="blok.image.name" />
       <component
         :is="blok.component | dashify"
