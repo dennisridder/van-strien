@@ -27,13 +27,14 @@ export default {
 </script>
 
 <style lang="sass">
+@import '~/assets/styles/variables.sass'
+
 .item
   &-Graphic
     position: relative
     margin: 0
     padding: 0
     z-index: +1
-    // border: 1px solid orange
     &.moons
       margin-bottom: 12.5rem
     &_Single
@@ -47,12 +48,14 @@ export default {
       width: 15rem
       transform: translate(-50%, -50%)
       top: calc(0px - #{var(--spacing-section-vertical)})
-      // border: 1px solid purple
+      @media screen and (max-width: $breakpoint-mobile)
+        margin-top: var(--spacing-item-vertical)
     &_Moons
       width: 22rem
       transform: translate(-50%, -50%)
       top: calc(0px - (#{var(--spacing-section-vertical)} / 2))
-      // border: 1px solid red
+      @media screen and (max-width: $breakpoint-mobile)
+        margin-top: var(--spacing-item-vertical)
     &_Moonlab
       width: 9rem
       transform: translate(-50%, -50%)

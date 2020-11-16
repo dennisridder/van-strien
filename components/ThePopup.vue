@@ -52,6 +52,9 @@ export default {
   &_Container
     position: relative
     user-select: none
+    @media screen and (max-width: $breakpoint-mobile)
+      margin-left: 1rem
+      margin-right: 1rem
   &_Close
     position: absolute
     top: 0
