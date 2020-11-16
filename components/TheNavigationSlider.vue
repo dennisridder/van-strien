@@ -88,9 +88,7 @@ export default {
     transition: color $transition-hover, font-weight $transition-hover
     &.nuxt-link-exact-active
       color: $brown
-      font-weight: bold
     &:hover
       @media screen and ( hover: hover)
         color: $brown
-        font-weight: bold
 </style>
