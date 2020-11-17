@@ -39,7 +39,6 @@ export default {
   },
   mounted() {
     this.filterHerinneringen()
-    console.log(this.filteredHerinneringen)
   },
   methods: {
     filterHerinneringen() {
