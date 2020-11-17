@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     filterHerinneringen() {
-      var array = this.herinneringen.slice(1, 6)
+      var array = this.herinneringen.slice(1, 8)
       this.filteredHerinneringen = array
     }
   }
