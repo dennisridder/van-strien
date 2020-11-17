@@ -35,20 +35,16 @@ export default {
       audio: "stopped"
     }
   },
-  mounted() {
-    console.log("AUDIO BLOK", this.blok)
-  },
+  mounted() {},
   methods: {
     playAudio() {
       var audio = document.getElementById("audioPlayer")
       if (this.audio === "stopped" || this.audio === "paused") {
         audio.play()
         this.audio = "playing"
-        console.log("AUDIO PLAYING", this.audio)
       } else if (this.audio === "playing") {
         audio.pause()
         this.audio = "paused"
-        console.log("AUDIO PAUSED", this.audio)
       }
     }
   }

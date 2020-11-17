@@ -35,9 +35,7 @@ export default {
   props: {
     blok: Object
   },
-  mounted() {
-    console.log(this.blok, "BLOK")
-  },
+  mounted() {},
   methods: {
     transformImage(image, option) {
       if (!image) return ""
