@@ -4,14 +4,14 @@
       <nuxt-link
         v-for="(item, i) in filteredHerinneringen"
         :key="i"
-        :to="'/herinneringen/' + item.id"
+        :to="item.content.full_slug"
         tag="li"
         class="section-BlogHorizontal_Item"
       >
         <blok-item-door :image="item.cover_image" :alt="item.title" />
         <h2 v-if="item.title" class="typeTextCaps">{{ item.title }}</h2>
         <div class="button typeLink yellow">
-          <a rel="noreferrer">Lees meer</a>
+          <nuxt-link :to="item.content.full_slug">Lees meer</nuxt-link>
         </div>
       </nuxt-link>
       <li class="section-BlogHorizontal_Final"></li>
@@ -39,10 +39,11 @@ export default {
   },
   mounted() {
     this.filterHerinneringen()
+    console.log(this.filteredHerinneringen)
   },
   methods: {
     filterHerinneringen() {
-      var array = this.herinneringen.slice(1)
+      var array = this.herinneringen.slice(1, 6)
       this.filteredHerinneringen = array
     }
   }
