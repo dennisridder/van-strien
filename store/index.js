@@ -28,7 +28,8 @@ export default {
           id: bp.slug,
           title: bp.content.title,
           excerpt: bp.content.excerpt,
-          cover_image: bp.content.cover_image
+          cover_image: bp.content.cover_image,
+          content: bp
         }
       })
       commit("herinneringen/update", herinneringen)
