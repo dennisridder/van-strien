@@ -16,10 +16,10 @@ export default {
     ...mapState({
       popup: (state) => state.popup.list
     })
-  },
-  mounted() {
-    console.log(this.popup[0].content.display)
   }
+  // mounted() {
+  //   console.log(this.popup[0].content.display)
+  // }
 }
 </script>
 
