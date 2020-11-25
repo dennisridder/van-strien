@@ -21,9 +21,10 @@
       ></component>
     </div>
     <!-- prettier-ignore -->
+    <div v-lazy-container="{ selector: 'img' }" class="lazy">
     <img
-      v-lazy="`${transformImage(blok.background_image, '1680x0/filters:format(jpg):quality(50)')}`"
-      :data-srcset="
+    v-if="blok.background_image"
+      :srcset="
         `${transformImage(blok.background_image, '2880x0/filters:quality(50)')} 2880w,
         ${transformImage(blok.background_image, '2560x0/filters:quality(50)')} 2560w, 
         ${transformImage(blok.background_image, '1920x0/filters:quality(50)')} 1920w, 
@@ -33,7 +34,9 @@
         ${transformImage(blok.background_image, '768x0/filters:quality(50)')} 768w`"
       class="lazy scrollSlow-Landing"
       sizes="100w"
+      :data-src="`${transformImage(blok.background_image, '1680x0/filters:format(jpg):quality(50)')}`"
       :alt="blok.background_image" />
+    </div>
   </section>
 </template>
 

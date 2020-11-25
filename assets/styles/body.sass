@@ -3,11 +3,12 @@
 img
   user-select: none
 
-.lazy
+.lazy img
   opacity: 0
-  transition: opacity $trans-img
-  &[lazy="loaded"]
-    opacity: 1
+  transition: opacity .25s ease-in-out
+
+img[lazy="loaded"]
+  opacity: 1
 
 .section
   max-width: 100%
