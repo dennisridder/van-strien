@@ -143,6 +143,10 @@ table {
   /* prevent webkit from higlighting */
 }
 
+*:focus {
+  outline: none;
+}
+
 img {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
