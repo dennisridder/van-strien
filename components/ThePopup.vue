@@ -16,6 +16,9 @@ export default {
     ...mapState({
       popup: (state) => state.popup.list
     })
+  },
+  mounted() {
+    console.log(this.popup)
   }
 }
 </script>
@@ -29,15 +32,25 @@ export default {
   top: 0
   right: 0
   bottom: 0
-  display: flex
-  justify-content: space-around
-  align-items: center
+  height: 100%
+  width: 100%
+  display: inline-flex
+  flex-direction: column
+  justify-content: safe space-around
+  align-items: safe center
+  overflow: hidden
+  overflow-y: auto
   z-index: $zindex-header-popup
+  padding: var(--spacing-item-vertical) var(--spacing-section-horizontal)
   background: rgba(0,0,0,0.5)
-  user-select: none
+  @media screen and (max-width: $breakpoint-mobile)
+    padding-left: 1rem
+    padding-right: 1rem
   // Resets
   .section
     background: rgba(0,0,0,0)
+  .section-Feature
+    margin-top: auto
   .section-Feature_Item
     padding: var(--spacing-item-vertical) var(--spacing-section-horizontal)
     max-width: 100%
@@ -51,10 +64,8 @@ export default {
   // Actual
   &_Container
     position: relative
-    user-select: none
-    @media screen and (max-width: $breakpoint-mobile)
-      margin-left: 1rem
-      margin-right: 1rem
+    margin-top: auto
+    margin-bottom: auto
   &_Close
     position: absolute
     top: 0
