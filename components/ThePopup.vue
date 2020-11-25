@@ -41,8 +41,10 @@ export default {
   overflow: hidden
   overflow-y: auto
   z-index: $zindex-header-popup
-  padding: var(--spacing-item-vertical) var(--spacing-section-horizontal)
+  padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
   background: rgba(0,0,0,0.5)
+  &:focus
+    outline-width: 0
   @media screen and (max-width: $breakpoint-mobile)
     padding-left: 1rem
     padding-right: 1rem
@@ -52,15 +54,9 @@ export default {
   .section-Feature
     margin-top: auto
   .section-Feature_Item
-    padding: var(--spacing-item-vertical) var(--spacing-section-horizontal)
     max-width: 100%
-  .section-Feature_Item_Content > div
-    margin-bottom: calc(#{var(--spacing-item-vertical)} / 2)
   .item-Door
     max-width: calc(33vh / 1.25)
-    margin-top: 1rem
-  .typeDisplay
-    font-size: 2rem
   // Actual
   &_Container
     position: relative
@@ -70,7 +66,7 @@ export default {
     position: absolute
     top: 0
     left: 0
-    padding: var(--spacing-one)
+    padding: var(--spacing-item-vertical)
     display: flex
     justify-content: flex-start
     .icon

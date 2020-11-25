@@ -56,7 +56,7 @@ export default {
 
 .item
   &-AudioPlayer
-    width: 16.75%
+    width: 2.5rem
     &_Button
       cursor: pointer
       color: $white
