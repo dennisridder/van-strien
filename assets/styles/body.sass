@@ -12,6 +12,15 @@ img
 .section
   max-width: 100%
   background: $white
+  &.nodoor
+    .item-Door, .item-Podcast
+      border: 0
+      border-radius: 0
+      &_aspectRatioBox
+        border-radius: 0
+        border: 0
+    .shadow
+      display: none
   img
     width: 100%
     max-width: 100%

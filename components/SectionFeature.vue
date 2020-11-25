@@ -2,7 +2,7 @@
   <section
     v-editable="blok"
     class="section section-Feature"
-    :class="blok.background_color"
+    :class="[blok.background_color, { nodoor: blok.verwijder_deur_omtrek }]"
   >
     <component
       :is="blok.component | dashify"

@@ -103,13 +103,4 @@ export default {
         padding: var(--spacing-section-vertical) var(--spacing-section-horizontal)
         @media screen and (min-width: $breakpoint-laptop)
           padding-right: var(--spacing-five)
-    &.nodoor
-      .item-Door
-        border: 0
-        border-radius: 0
-        &_aspectRatioBox
-          border-radius: 0
-          border: 0
-      .shadow
-        display: none
 </style>
