@@ -1,5 +1,5 @@
 <template>
-  <div class="section-Popup">
+  <div v-if="popup[0].content.display" class="section-Popup">
     <component
       :is="popup[0].content.component | dashify"
       v-if="popup[0].content.component"
@@ -18,7 +18,7 @@ export default {
     })
   },
   mounted() {
-    console.log(this.popup)
+    console.log(this.popup[0].content.display)
   }
 }
 </script>
