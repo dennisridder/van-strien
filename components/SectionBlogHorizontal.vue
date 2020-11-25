@@ -62,7 +62,7 @@ export default {
         flex-wrap: nowrap
         background: $lightyellow
         li
-            margin-right: var(--spacing-five)
+            margin-right: var(--spacing-four)
             cursor: pointer
             .typeTextCaps
               margin-top: var(--spacing-item-vertical)
