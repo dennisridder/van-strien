@@ -146,12 +146,18 @@ export default {
     &_Mail, &_Community
       display: flex
       flex-direction: column
+      max-width: 100%
     &_Community
-      margin-right: var(--spacing-three)
+      @media screen and (min-width: $breakpoint-mobile)
+        padding-right: var(--spacing-three)
+      > div
+        max-width: 100%
       > div:first-child
         margin-bottom: 1em
       > div:last-child
         align-self: flex-end
+        hyphens: auto
+        text-align: right
     &_Mail
       width: 100%
       max-width: 400px
