@@ -4,8 +4,8 @@
       <div class="footer-Top_Content">
         <div class="footer-Top_Community">
           <div class="typeTextCaps">Meld je aan voor de nieuwsbrief</div>
-          <div class="typeTitle">Moon<br />Medicine</div>
-          <div class="typeTitleItalic">Letters</div>
+          <div class="typeTitle">Drops of</div>
+          <div class="typeTitleItalic">Consciousness</div>
         </div>
         <div class="footer-Top_Mail">
           <client-only>
