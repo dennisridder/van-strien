@@ -55,21 +55,25 @@ export default {
     padding: 0 var(--spacing-section-horizontal)
   ul
     display: flex
-    flex-wrap: wrap
+    flex-wrap: no-wrap
     justify-content: space-between
     @media screen and (max-width: $breakpoint-mobile)
       justify-content: flex-start
     li
-      margin-left: var(--spacing-section-horizontal)
-      margin-right: var(--spacing-section-horizontal)
+      margin-left: calc(#{var(--spacing-section-horizontal)} / 2)
+      margin-right: calc(#{var(--spacing-section-horizontal)} / 2)
       margin-bottom: var(--spacing-section-vertical-small)
       display: inline-block
-      width: auto
-      height: 100%
+      height: 6rem
+      flex: 1
+      @media screen and (min-width: $breakpoint-laptop)
+        height: 8vw
+      &:first-child
+        margin-left: var(--spacing-section-horizontal)
+      &:last-child
+        margin-right: var(--spacing-section-horizontal)
       img
         height: 100%
-        width: auto
-        height: 5.5rem
-        @media screen and (min-width: $breakpoint-laptop)
-          height: 8vw
+        width: 100%
+        object-fit: contain
 </style>
