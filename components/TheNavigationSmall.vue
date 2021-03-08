@@ -67,6 +67,7 @@ export default {
   display: flex
   flex-direction: column
   z-index: $zindex-header-small
+  pointer-events: none
   &-Logo
     width: 4rem
     height: 4rem
@@ -74,6 +75,7 @@ export default {
     margin-left: 0.75rem
     transform: translateX(-50%)
     cursor: pointer
+    pointer-events: initial
   &-Toggle
     position: relative
     height: calc(#{var(--spacing-header-vertical)} / 2)
@@ -81,4 +83,5 @@ export default {
       position: absolute
       left: 0
       top: 0
+      pointer-events: initial
 </style>
