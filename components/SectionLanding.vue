@@ -21,7 +21,7 @@
       ></component>
     </div>
     <!-- prettier-ignore -->
-    <div v-lazy-container="{ selector: 'img' }" class="lazy">
+    <div class="fade-In">
     <img
     v-if="blok.background_image"
       :srcset="
@@ -34,7 +34,7 @@
         ${transformImage(blok.background_image, '768x0/filters:quality(50)')} 768w`"
       class="lazy scrollSlow-Landing"
       sizes="100w"
-      :data-src="`${transformImage(blok.background_image, '1680x0/filters:format(jpg):quality(50)')}`"
+      :src="`${transformImage(blok.background_image, '1680x0/filters:format(jpg):quality(50)')}`"
       :alt="blok.background_image" />
     </div>
   </section>
@@ -71,6 +71,9 @@ export default {
   padding: var(--spacing-item-vertical) var(--spacing-section-horizontal)
   background: rgba(0,0,0,0)
   color: white
+  .fade-In
+    img
+      animation: fadeIn 1s ease-out;
   img
     position: absolute
     top: 0
@@ -99,4 +102,10 @@ export default {
       margin-bottom: 0
     .item-Button
       color: $darkbrown
+
+@keyframes fadeIn
+  0%
+    opacity: 0;
+  100%
+    opacity: 1;
 </style>
