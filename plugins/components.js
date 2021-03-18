@@ -17,6 +17,7 @@ import SectionMessage from "~/components/SectionMessage.vue"
 import SectionPassage from "~/components/SectionPassage.vue"
 import SectionWeken from "~/components/SectionWeken.vue"
 // ITEMS
+import ItemActivecampaignForm from "~/components/ItemActivecampaignForm.vue"
 import ItemAudioPlayer from "~/components/ItemAudioPlayer.vue"
 import ItemButton from "~/components/ItemButton.vue"
 import ItemCaption from "~/components/ItemCaption.vue"
@@ -54,6 +55,7 @@ Vue.component("blok-section-message", SectionMessage)
 Vue.component("blok-section-passage", SectionPassage)
 Vue.component("blok-section-weken", SectionWeken)
 // ITEMS
+Vue.component("blok-item-activecampaign-form", ItemActivecampaignForm)
 Vue.component("blok-item-audio-player", ItemAudioPlayer)
 Vue.component("blok-item-button", ItemButton)
 Vue.component("blok-item-caption", ItemCaption)

@@ -11,7 +11,7 @@
       >
         <input type="hidden" name="form-name" value="contact" />
         <input type="text" required name="name" placeholder="naam" />
-        <input type="text" required name="email" placeholder=" email adres" />
+        <input type="text" required name="email" placeholder="email adres" />
         <textarea
           type="textarea"
           required
