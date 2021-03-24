@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <div class="footer-Top">
+    <!-- <div class="footer-Top">
       <div class="footer-Top_Content">
         <div class="footer-Top_Community">
           <div class="typeTextCaps">Meld je aan voor de nieuwsbrief</div>
@@ -32,7 +32,7 @@
           </client-only>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="footer-Bottom">
       <div class="footer-Bottom_Content">
         <div class="footer-Bottom_Logo">
@@ -87,7 +87,17 @@
             linkedin
           </a>
         </div>
-        <div class="footer-Bottom_Item">
+        <div v-if="footerMenu" class="footer-Bottom_Item">
+          <nuxt-link
+            v-for="(item, index) in footerMenu.items"
+            :to="'/' + item.link.cached_url"
+            class="typeLink"
+            :title="item"
+            v-html="item.title"
+            :key="index"
+          ></nuxt-link>
+        </div>
+        <div v-else>
           <nuxt-link
             to="/algemene-voorwaarden"
             class="typeLink"
@@ -112,7 +122,12 @@ import { mapState } from "vuex"
 export default {
   computed: {
     ...mapState({
-      general: (state) => state.general.list
+      general: (state) => state.general.list,
+      menus: (state) => state.menus,
+      footerMenu: (state) =>
+        state.menus
+          ? state.menus.list.find((menu) => menu.slug == "footer-menu")
+          : false
     })
   }
 }

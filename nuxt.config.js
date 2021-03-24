@@ -180,5 +180,8 @@ module.exports = {
   // PWA OPTIONS
   pwa: {
     icon: false
-  }
+  },
+  serverMiddleware: [
+    { path: "/api/ac", handler: "~/server-middleware/activecampaign.js" },
+  ]
 }

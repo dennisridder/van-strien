@@ -1,18 +1,21 @@
 <template>
   <!-- Change if needed -->
-  <main lang="en-US" translate="no">
+  <main lang="nl-NL" translate="no">
     <the-navigation-slider
+      v-if="showHeader"
       :active="showSlide"
+      :show-menu="showMenu"
       @toggle-slide="toggleSlide"
       @toggle-slide-off="toggleSlideOff"
     />
     <the-navigation-large
-      v-if="whichHeader === true"
+      v-if="showHeader && whichHeader === true"
       :active="showHeaderLarge"
+      :show-menu="showMenu"
       @toggle-slide="toggleSlide"
     />
     <the-navigation-small
-      v-if="whichHeader === false"
+      v-if="showHeader && whichHeader === false"
       @toggle-slide="toggleSlide"
     />
     <transition name="pages" mode="out-in">
@@ -38,6 +41,8 @@ export default {
     return {
       whichHeader: true,
       showFooter: true,
+      showHeader: true,
+      showMenu: true,
       showHeaderLarge: false,
       showHeaderSmall: true,
       showSlide: false,
@@ -55,11 +60,13 @@ export default {
       this.toggleSlideOff()
       this.determineWhichHeader()
       this.toggleFooter()
+      this.conditionalDisplayElements()
     }
   },
   mounted() {
     this.determineWhichHeader()
     this.toggleFooter()
+    this.conditionalDisplayElements()
     window.addEventListener("scroll", this.toggleHeaderLarge)
     document.addEventListener("mouseleave", this.mouseLeftDocument)
   },
@@ -68,6 +75,25 @@ export default {
     document.removeEventListener("mouseleave", this.mouseLeftDocument)
   },
   methods: {
+    conditionalDisplayElements() {
+      if (document.querySelector(".section-Page").dataset.hideHeader) {
+        this.showHeader = false
+      } else {
+        this.showHeader = true
+      }
+
+      if (document.querySelector(".section-Page").dataset.hideFooter) {
+        this.showFooter = false
+      } else {
+        this.showFooter = true
+      }
+
+      if (document.querySelector(".section-Page").dataset.hideMenu) {
+        this.showMenu = false
+      } else {
+        this.showMenu = true
+      }
+    },
     determineWhichHeader() {
       if (
         this.$route.name == "index" ||

@@ -34,7 +34,7 @@
             required
             :class="'activecampaign-Input ' + (blok.color || '')"
             type="email"
-            placeholder="email"
+            placeholder="e-mailadres"
           />
           <ul v-if="errors.length" class="activecampaign-Notification hide">
             <li v-for="(error, i) in errors" :key="i">
@@ -47,6 +47,17 @@
         <button type="submit" :class="buttonClass" :disabled="invalid">
           <span>{{ blok.button_label }}</span>
         </button>
+      </div>
+      <p
+        v-if="blok.additional_text"
+        class="activecampaign-addText"
+        v-html="blok.additional_text"
+      ></p>
+      <div class="activecampaign-errorMessage" v-if="response.status >= 400">
+        {{ response.message }}
+      </div>
+      <div class="activecampaign-successMessage" v-if="response.status == 201">
+        {{ response.message }}
       </div>
     </div>
   </validation-observer>
@@ -66,7 +77,10 @@ export default {
   data() {
     return {
       form: {
-        email: ""
+        firstName: "",
+        lastName: "",
+        email: "",
+        listId: 1
       },
       response: {
         status: null,
@@ -94,13 +108,17 @@ export default {
   },
   methods: {
     async subscribe() {
-      const formData = { ...this.form }
+      const formData = { ...this.form, listId: this.blok.list_id }
       try {
-        const { data, status } = await axios.post("/api/subscribe-ac", formData)
+        const { status } = await axios.post("/api/ac/subscribe", formData)
         this.response.status = status
-        this.response.message = `Thanks, ${data.email_address} is subscribed!`
+        this.response.message = this.blok.success_message
         this.form = { ...this.cachedForm }
         this.$refs.subscribe.reset()
+
+        if (status == 201 && this.blok.success_redirect) {
+          window.location = this.blok.success_redirect.url
+        }
       } catch (e) {
         console.log(e)
       }
@@ -131,4 +149,23 @@ export default {
 
   .activecampaign-Notification
     display: none
+
+p.activecampaign-addText
+    font-size: 0.75em
+    line-height: 1.8em
+    padding-top: 1em
+
+.activecampaign-errorMessage
+    font-family: 'Artegra Sans Extended Medium'
+    font-size: 0.75em
+    line-height: 1.8em
+    padding-top: 1em
+    color: red
+
+.activecampaign-successMessage
+    font-family: 'Artegra Sans Extended Medium'
+    font-size: 0.875em
+    font-weight: bold
+    line-height: 1.8em
+    padding-top: 1em
 </style>

@@ -55,6 +55,19 @@ export default {
         }
       })
       commit("popup/update", popup)
+
+      let getMenus = await app.$storyapi.get("cdn/stories", {
+        version: process.env.NODE_ENV === "production" ? "published" : "draft",
+        starts_with: "menus/"
+      })
+      let menus = getMenus.data.stories.map((bp) => {
+        return {
+          name: bp.name,
+          slug: bp.slug,
+          items: bp.content.nav_menu_items
+        }
+      })
+      commit("menus/update", menus)
     }
   }
 }

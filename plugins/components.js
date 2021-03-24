@@ -14,6 +14,7 @@ import SectionContact from "~/components/SectionContact.vue"
 import SectionFeature from "~/components/SectionFeature.vue"
 import SectionLanding from "~/components/SectionLanding.vue"
 import SectionMessage from "~/components/SectionMessage.vue"
+import SectionNewsletter from "~/components/SectionNewsletter.vue"
 import SectionPassage from "~/components/SectionPassage.vue"
 import SectionWeken from "~/components/SectionWeken.vue"
 // ITEMS
@@ -52,6 +53,7 @@ Vue.component("blok-section-contact", SectionContact)
 Vue.component("blok-section-feature", SectionFeature)
 Vue.component("blok-section-landing", SectionLanding)
 Vue.component("blok-section-message", SectionMessage)
+Vue.component("blok-section-newsletter", SectionNewsletter)
 Vue.component("blok-section-passage", SectionPassage)
 Vue.component("blok-section-weken", SectionWeken)
 // ITEMS

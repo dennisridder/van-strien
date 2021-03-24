@@ -12,6 +12,7 @@
             title="Terug"
           >
             <div
+              v-if="showMenu"
               class="icon navIcon"
               v-html="require('~/assets/images/icon-arrow.svg?include')"
             />
@@ -23,6 +24,7 @@
             @click="emitToggleSlide"
           >
             <div
+              v-if="showMenu"
               class="icon navIcon"
               v-html="require('~/assets/images/icon-hamburger.svg?include')"
             />
@@ -46,6 +48,12 @@
 
 <script>
 export default {
+  props: {
+    showMenu: {
+      type: Boolean,
+      default: true
+    }
+  },
   methods: {
     emitToggleSlide() {
       this.$emit("toggle-slide")

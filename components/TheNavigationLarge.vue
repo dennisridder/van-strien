@@ -4,6 +4,7 @@
       <div class="headerLarge-Item headerLarge-Toggle">
         <div class="headerLarge-Toggle" @click="emitToggleSlide">
           <div
+            v-if="showMenu"
             class="icon navIcon"
             v-html="require('~/assets/images/icon-hamburger.svg?include')"
           />
@@ -45,7 +46,11 @@
 <script>
 export default {
   props: {
-    active: Boolean
+    active: Boolean,
+    showMenu: {
+      type: Boolean,
+      default: true
+    }
   },
   data() {
     return {

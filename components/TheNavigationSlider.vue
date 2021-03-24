@@ -9,7 +9,18 @@
             v-html="require('~/assets/images/icon-close.svg?include')"
           />
         </div>
-        <ul class="headerSlider-List typeSlider">
+        <ul class="headerSlider-List typeSlider" v-if="mainMenu">
+          <nuxt-link
+            v-for="(item, index) in mainMenu.items"
+            :to="item.link.url || '/' + item.link.cached_url"
+            tag="li"
+            :title="item.title"
+            :key="index"
+            v-html="item.title"
+            @click="emitSlideToFalse"
+          ></nuxt-link>
+        </ul>
+        <ul class="headerSlider-List typeSlider" v-else>
           <nuxt-link to="/" tag="li" @click="emitSlideToFalse">HOME</nuxt-link>
           <!-- <nuxt-link to="/moonlab" tag="li" @click="emitSlideToFalse"
             >MOON LAB PROGRAMMA</nuxt-link
@@ -42,9 +53,24 @@
 </template>
 
 <script>
+import { mapState } from "vuex"
+
 export default {
+  computed: {
+    ...mapState({
+      menus: (state) => state.menus,
+      mainMenu: (state) =>
+        state.menus
+          ? state.menus.list.find((menu) => menu.slug == "main-menu")
+          : false
+    })
+  },
   props: {
-    active: Boolean
+    active: Boolean,
+    showMenu: {
+      type: Boolean,
+      default: true
+    }
   },
   methods: {
     emitToggleSlide() {
