@@ -8,9 +8,11 @@
   >
     <div :class="'activecampaign-Container ' + (blok.color || '')">
       <input type="hidden" name="form-name" value="subscribe-ac" />
+      <input type="hidden" name="listId" :value="blok.list_id" />
       <div class="activecampaign-Input">
         <input
           type="text"
+          name="firstName"
           v-model="form.firstName"
           v-if="blok.show_first_name"
           :class="'activecampaign-Input ' + (blok.color || '')"
@@ -18,6 +20,7 @@
         />
         <input
           type="text"
+          name="lastName"
           v-model="form.lastName"
           v-if="blok.show_last_name"
           :class="'activecampaign-Input ' + (blok.color || '')"
@@ -25,6 +28,7 @@
         />
         <input
           id="grid-email"
+          name="email"
           v-model="form.email"
           required
           :class="'activecampaign-Input ' + (blok.color || '')"
