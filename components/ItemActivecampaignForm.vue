@@ -1,47 +1,34 @@
 <template>
-  <validation-observer
-    v-slot="{ invalid }"
-    ref="subscribe"
-    tag="form"
-    class="activecampaign"
-    @submit.prevent="!invalid && subscribe()"
-  >
+  <form ref="subscribe" class="activecampaign" @submit.prevent="subscribe">
     <div :class="'activecampaign-Container ' + (blok.color || '')">
       <div class="activecampaign-Input">
-        <validation-provider
-          v-slot="{ errors }"
-          :bails="false"
-          tag="div"
-          name="Email"
-        >
-          <input
-            type="text"
-            v-model="form.firstName"
-            v-if="blok.show_first_name"
-            :class="'activecampaign-Input ' + (blok.color || '')"
-            placeholder="voornaam"
-          />
-          <input
-            type="text"
-            v-model="form.lastName"
-            v-if="blok.show_last_name"
-            :class="'activecampaign-Input ' + (blok.color || '')"
-            placeholder="achternaam"
-          />
-          <input
-            id="grid-email"
-            v-model="form.email"
-            required
-            :class="'activecampaign-Input ' + (blok.color || '')"
-            type="email"
-            placeholder="e-mailadres"
-          />
-          <ul v-if="errors.length" class="activecampaign-Notification hide">
-            <li v-for="(error, i) in errors" :key="i">
-              <small>{{ error }}</small>
-            </li>
-          </ul>
-        </validation-provider>
+        <input
+          type="text"
+          v-model="form.firstName"
+          v-if="blok.show_first_name"
+          :class="'activecampaign-Input ' + (blok.color || '')"
+          placeholder="voornaam"
+        />
+        <input
+          type="text"
+          v-model="form.lastName"
+          v-if="blok.show_last_name"
+          :class="'activecampaign-Input ' + (blok.color || '')"
+          placeholder="achternaam"
+        />
+        <input
+          id="grid-email"
+          v-model="form.email"
+          required
+          :class="'activecampaign-Input ' + (blok.color || '')"
+          type="email"
+          placeholder="e-mailadres"
+        />
+        <ul v-if="errors.length" class="activecampaign-Notification hide">
+          <li v-for="(error, i) in errors" :key="i">
+            <small>{{ error }}</small>
+          </li>
+        </ul>
       </div>
       <div class="activecampaign-Submit">
         <button type="submit" :class="buttonClass" :disabled="invalid">
@@ -60,7 +47,7 @@
         {{ response.message }}
       </div>
     </div>
-  </validation-observer>
+  </form>
 </template>
 
 <script>
@@ -87,7 +74,8 @@ export default {
         message: ""
       },
       submitLabel: "Subscribe",
-      cachedForm: {}
+      cachedForm: {},
+      errors: []
     }
   },
   computed: {
@@ -98,6 +86,9 @@ export default {
         classList[this.blok.button_color] = true
       } else if (this.blok.color) {
         classList[this.blok.color] = true
+      } else {
+        // Default color = offwhite
+        classList["offwhite"] = true
       }
 
       return classList

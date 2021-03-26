@@ -12,7 +12,13 @@
         <ul class="headerSlider-List typeSlider" v-if="mainMenu">
           <nuxt-link
             v-for="(item, index) in mainMenu.items"
-            :to="item.link.url || '/' + item.link.cached_url"
+            :to="
+              item.link.cached_url === 'home'
+                ? '/'
+                : item.link.linktype === 'url'
+                ? item.link.url
+                : `/${item.link.cached_url}`
+            "
             tag="li"
             :title="item.title"
             :key="index"
