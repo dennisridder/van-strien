@@ -1,6 +1,7 @@
 <template>
   <form
     ref="subscribe"
+    name="subscribe-ac"
     method="POST"
     action="/succes"
     class="activecampaign"
