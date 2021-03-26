@@ -45,6 +45,7 @@ export default {
     background: $lightgrey
   &.backgroundYellow
     background: $yellow
+    color: $white
   &.backgroundDarkbrown
     background: $darkbrown
     color: $white
