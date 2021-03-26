@@ -1,6 +1,8 @@
 <template>
   <form
     ref="subscribe"
+    method="POST"
+    action="/succes"
     class="activecampaign"
     @data-submit.prevent="subscribe"
     data-netlify="true"
