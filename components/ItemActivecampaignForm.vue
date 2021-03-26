@@ -1,6 +1,13 @@
 <template>
-  <form ref="subscribe" class="activecampaign" @submit.prevent="subscribe">
+  <form
+    ref="subscribe"
+    class="activecampaign"
+    @data-submit.prevent="subscribe"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+  >
     <div :class="'activecampaign-Container ' + (blok.color || '')">
+      <input type="hidden" name="form-name" value="subscribe-ac" />
       <div class="activecampaign-Input">
         <input
           type="text"
