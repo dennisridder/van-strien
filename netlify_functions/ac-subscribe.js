@@ -46,25 +46,9 @@ export default async (req, context) => {
         }
     );
 
-    // console.log("contact/sync contact", contact);
-    // console.log("contact/sync response", response);
-
-    // // const contactListsResponse = await ac.api('contactLists', contactList)
-    // const contactListsResponse = await axios.post(
-    //   `${process.env.ACTIVECAMPAIGN_API_URL}/api/3/contactLists`,
-    //     contactList,
-    //     {
-    //       headers: {
-    //         "Api-Token" : process.env.ACTIVECAMPAIGN_API_KEY
-    //       }
-    //     }
-    // );
-
-    // console.log("EXPRESS RESPONSE", contactListsResponse)
-    // res.status(201).json(contactListsResponse)
-    return new Response({ success: true, contactListsResponse }, { status: 201 });
+    return new Response(JSON.stringify({ success: true, contactListsResponse }), { status: 201 });
   } catch (err) {
-    return new Response({ err }, { status: 400 });
+    return new Response(JSON.stringify({ err }), { status: 400 });
   }
 }
 
