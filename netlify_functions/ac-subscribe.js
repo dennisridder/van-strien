@@ -13,11 +13,11 @@ export default async (event, context) => {
   }
 
   try {
-    const body = JSON.parse(event.body);
-    // const body = {};
+    const body = event.body ? JSON.parse(event.body) : {};
 
-    // console.log('request', event);
-    // return new Response('');
+    if (!body.listId) {
+      return new Response('listId is required', { status: 400 });
+    }
   
     const listId = body.listId ?? '1';
     const email = body.email ?? '';
@@ -66,7 +66,7 @@ export default async (event, context) => {
 
     return new Response(JSON.stringify({ success: true, contactListsResponse }), { status: 201 });
   } catch (err) {
-    return new Response(JSON.stringify({ err }), { status: 400 });
+    return new Response(JSON.stringify(err), { status: 400 });
   }
 }
 
