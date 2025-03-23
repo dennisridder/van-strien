@@ -49,7 +49,7 @@ export default async (req, context) => {
 
     return new Response(JSON.stringify({ success: true, contactListsResponse }), { status: 201 });
   } catch (err) {
-    return new Response(JSON.stringify({ err, req }), { status: 400 });
+    return new Response(JSON.stringify({ err, body: req.body }), { status: 400 });
   }
 }
 
