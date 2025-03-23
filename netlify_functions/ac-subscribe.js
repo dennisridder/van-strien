@@ -1,10 +1,7 @@
 const axios = require('axios')
 
 export default async (req, context) => {
-  const listId = req.headers.get('listId');
-  const email = req.headers.get('email');
-  const firstName = req.headers.get('firstName');
-  const lastName = req.headers.get('lastName');
+  const { listId, email, firstName, lastName } = req.body;
   const apiUrl = Netlify.env.get('ACTIVECAMPAIGN_API_URL');
   const apiKey = Netlify.env.get('ACTIVECAMPAIGN_API_KEY');
 
