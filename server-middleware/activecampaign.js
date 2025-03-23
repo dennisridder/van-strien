@@ -1,11 +1,8 @@
 const bodyParser = require('body-parser');
-const { resolveConfig } = require('prettier');
+// const { resolveConfig } = require('prettier');
 const app = require('express')()
-const request = require('request');
+// const request = require('request');
 const axios = require('axios');
-
-// const ActiveCampaign = require("activecampaign")
-// const ac = new ActiveCampaign(process.env.ACTIVECAMPAIGN_API_URL, process.env.ACTIVECAMPAIGN_API_KEY);
 
 app.use(bodyParser.json())
 app.all('/test', (req, res) => {
@@ -50,16 +47,16 @@ app.post("/subscribe", async (req, res) => {
     // console.log("contact/sync contact", contact);
     // console.log("contact/sync response", response);
 
-    // const contactListsResponse = await ac.api('contactLists', contactList)
-    const contactListsResponse = await axios.post(
-      `${process.env.ACTIVECAMPAIGN_API_URL}/api/3/contactLists`,
-        contactList,
-        {
-          headers: {
-            "Api-Token" : process.env.ACTIVECAMPAIGN_API_KEY
-          }
-        }
-    );
+    // // const contactListsResponse = await ac.api('contactLists', contactList)
+    // const contactListsResponse = await axios.post(
+    //   `${process.env.ACTIVECAMPAIGN_API_URL}/api/3/contactLists`,
+    //     contactList,
+    //     {
+    //       headers: {
+    //         "Api-Token" : process.env.ACTIVECAMPAIGN_API_KEY
+    //       }
+    //     }
+    // );
 
     // console.log("EXPRESS RESPONSE", contactListsResponse)
     // res.status(201).json(contactListsResponse)

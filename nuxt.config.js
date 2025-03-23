@@ -183,5 +183,6 @@ module.exports = {
   },
   serverMiddleware: [
     { path: "/api/ac", handler: "~/server-middleware/activecampaign.js" },
+    { path: "/succes", handler: "~/server-middleware/activecampaign.js" },
   ]
 }
