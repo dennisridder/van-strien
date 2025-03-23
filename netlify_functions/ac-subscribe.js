@@ -1,7 +1,11 @@
 const axios = require('axios')
 
 export default async (req, context) => {
-  const { listId, email, firstName, lastName } = req.body;
+  // const { listId, email, firstName, lastName } = req.body;
+  const listId = req.headers.get('listId');
+  const email = req.headers.get('email');
+  const firstName = req.headers.get('firstName');
+  const lastName = req.headers.get('lastName');
   const apiUrl = Netlify.env.get('ACTIVECAMPAIGN_API_URL');
   const apiKey = Netlify.env.get('ACTIVECAMPAIGN_API_KEY');
 
@@ -45,7 +49,7 @@ export default async (req, context) => {
 
     return new Response(JSON.stringify({ success: true, contactListsResponse }), { status: 201 });
   } catch (err) {
-    return new Response(JSON.stringify({ err }), { status: 400 });
+    return new Response(JSON.stringify({ err, req }), { status: 400 });
   }
 }
 
