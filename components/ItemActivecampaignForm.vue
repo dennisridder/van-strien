@@ -5,7 +5,7 @@
     method="POST"
     action="/succes"
     class="activecampaign"
-    @data-submit.prevent="subscribe"
+    @submit.prevent="subscribe"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
   >
