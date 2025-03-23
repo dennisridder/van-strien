@@ -115,7 +115,11 @@ export default {
     async subscribe() {
       const formData = { ...this.form, listId: this.blok.list_id }
       try {
-        const { status } = await axios.post("/api/ac/subscribe", formData)
+        const { status } = await axios.post("/api/ac/subscribe", formData, {
+          headers: {
+            "Content-Type": "application/json"
+          }
+        })
         this.response.status = status
         this.response.message = this.blok.success_message
         this.form = { ...this.cachedForm }
