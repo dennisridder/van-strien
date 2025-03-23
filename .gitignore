@@ -123,6 +123,9 @@ public/
 # DynamoDB Local files
 .dynamodb/
 
+# Netlify CLI
+.netlify
+
 ### Nuxt ###
 # gitignore template for Nuxt.js projects
 #
