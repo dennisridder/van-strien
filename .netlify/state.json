@@ -1,0 +1,20 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "Haarlem",
+			"country": {
+				"code": "NL",
+				"name": "The Netherlands"
+			},
+			"subdivision": {
+				"code": "NH",
+				"name": "North Holland"
+			},
+			"timezone": "Europe/Amsterdam",
+			"latitude": 52.3803,
+			"longitude": 4.6422,
+			"postalCode": "2011"
+		},
+		"timestamp": 1742762719324
+	}
+}
