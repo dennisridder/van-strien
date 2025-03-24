@@ -13,16 +13,16 @@ export default async (event, context) => {
   }
 
   try {
-    const body = event.body ? JSON.parse(event.body) : {};
+    const formData = event.headers.get('X-Form-Data') ? JSON.parse(event.headers.get('X-Form-Data')) : {};
 
-    if (!body.listId) {
+    if (!formData.listId) {
       return new Response('listId is required', { status: 401 });
     }
   
-    const listId = body.listId ?? '1';
-    const email = body.email ?? '';
-    const firstName = body.firstName ?? '';
-    const lastName = body.lastName ?? '';
+    const listId = formData.listId ?? '1';
+    const email = formData.email ?? '';
+    const firstName = formData.firstName ?? '';
+    const lastName = formData.lastName ?? '';
   
     const apiUrl = Netlify.env.get('ACTIVECAMPAIGN_API_URL');
     const apiKey = Netlify.env.get('ACTIVECAMPAIGN_API_KEY');
