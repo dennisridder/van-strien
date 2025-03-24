@@ -66,9 +66,9 @@ export default async (event, context) => {
 
     return new Response(JSON.stringify({ success: true, contactListsResponse }), { status: 201 });
   } catch (err) {
-    // return new Response(JSON.stringify({err, headers: event.headers, formData: event.headers.get('X-Form-Data')}), { status: 400 });
+    // return new Response(JSON.stringify(err), { status: 400 });
   } finally {
-    return new Response(JSON.stringify({ success: true }), { status: 200 });
+    return new Response(JSON.stringify({ success: true, finally: true }), { status: 201 });
   }
 }
 
