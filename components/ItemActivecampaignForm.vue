@@ -118,7 +118,7 @@ export default {
         const { status } = await axios.post("/api/ac/subscribe", formData, {
           headers: {
             "Content-Type": "application/json",
-            "X-Form-Data": JSON.stringify(formData),
+            "X-Form-Data": JSON.stringify(formData)
           }
         })
         this.response.status = status
@@ -126,9 +126,12 @@ export default {
         this.form = { ...this.cachedForm }
         this.$refs.subscribe.reset()
 
-        console.log('Submitted > Blok', this.blok)
         if (status == 201 && this.blok.success_redirect) {
-          window.location = this.blok.success_redirect.url
+          window.location =
+            this.blok.success_redirect.url ||
+            (this.blok.success_redirect.cached_url
+              ? `/${this.blok.success_redirect.cached_url}`
+              : "/succes")
         }
       } catch (e) {
         console.log(e)
