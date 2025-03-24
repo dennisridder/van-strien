@@ -126,6 +126,7 @@ export default {
         this.form = { ...this.cachedForm }
         this.$refs.subscribe.reset()
 
+        console.log('Submitted > Blok', this.blok)
         if (status == 201 && this.blok.success_redirect) {
           window.location = this.blok.success_redirect.url
         }
