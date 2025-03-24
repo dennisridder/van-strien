@@ -117,7 +117,8 @@ export default {
       try {
         const { status } = await axios.post("/api/ac/subscribe", formData, {
           headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "X-Form-Data": JSON.stringify(formData),
           }
         })
         this.response.status = status
