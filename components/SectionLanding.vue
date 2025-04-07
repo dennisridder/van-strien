@@ -5,7 +5,7 @@
     :style="{
       backgroundColor: blok.background_color,
       color: blok.text_color,
-      verticalAlign: getVerticalAlign(blok.vertical_align)
+      justifyContent: getVerticalAlign(blok.vertical_align)
     }"
   >
     <div v-if="this.$route.name == 'index'" class="section-Landing_Logo">
@@ -108,8 +108,10 @@ export default {
   > div:last-child
     margin-bottom: 0
   &_Logo
+    position: relative
     flex-grow: 1
     text-align: center
+    z-index: 1
     .icon
       width: 10rem
       height: 10rem
