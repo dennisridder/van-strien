@@ -1,6 +1,9 @@
 <template>
   <div v-editable="blok" class="item-SubTitle">
-    <markdown class="typeTextCaps" :input="blok.subtitle" />
+    <markdown
+      :class="blok.serif_font ? 'typeSerifText' : 'typeTextCaps'"
+      :input="blok.subtitle"
+    />
   </div>
 </template>
 

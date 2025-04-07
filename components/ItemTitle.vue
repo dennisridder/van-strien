@@ -1,7 +1,10 @@
 <template>
   <div v-editable="blok" class="item-Title">
-    <!-- <h1 class="typeDisplay">{{ blok.title }}</h1> -->
-    <markdown class="typeDisplay" :input="blok.title" />
+    <markdown
+      class="typeDisplay"
+      :class="{ sizeSmall: blok.size_small }"
+      :input="blok.title"
+    />
   </div>
 </template>
 
@@ -37,4 +40,7 @@ export default {
     font-size: 16px
     letter-spacing: 5.6px
     text-align: center
+
+  .item-SubTitle + .item-Title
+    margin-top: -1.5rem
 </style>

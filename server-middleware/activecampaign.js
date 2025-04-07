@@ -1,35 +1,34 @@
-const bodyParser = require('body-parser');
+const bodyParser = require("body-parser")
 // const { resolveConfig } = require('prettier');
-const app = require('express')()
+const app = require("express")()
 // const request = require('request');
-const axios = require('axios');
+const axios = require("axios")
 
 app.use(bodyParser.json())
-app.all('/test', (req, res) => {
-  res.json({ data: 'blabla' })
+app.all("/test", (req, res) => {
+  res.json({ data: "blabla" })
 })
 
 app.post("/subscribe", async (req, res) => {
   const { listId } = req.body
   try {
     let contactObject = {
-      "contact": {
-          "email": req.body.email,
-          "firstName": req.body.firstName,
-          "lastName": req.body.lastName,
-          "phone": ''
+      contact: {
+        email: req.body.email,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        phone: ""
       }
-    };
+    }
     const response = await axios.post(
       `${process.env.ACTIVECAMPAIGN_API_URL}/api/3/contact/sync`,
-        contactObject,
-        {
-          headers: {
-            "Api-Token" : process.env.ACTIVECAMPAIGN_API_KEY
-          }
+      contactObject,
+      {
+        headers: {
+          "Api-Token": process.env.ACTIVECAMPAIGN_API_KEY
         }
-    );
-
+      }
+    )
 
     // const response = await ac.api('contact/sync', { contact: req.body })
     // console.log("contact/sync postdata", { contact: req.body })
@@ -38,9 +37,9 @@ app.post("/subscribe", async (req, res) => {
     const contactId = response.data.contact.id
     const contactList = {
       contactList: {
-          list: listId,
-          contact: contactId,
-          status: 1
+        list: listId,
+        contact: contactId,
+        status: 1
       }
     }
 

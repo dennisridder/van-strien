@@ -9,9 +9,10 @@
             v-html="require('~/assets/images/icon-close.svg?include')"
           />
         </div>
-        <ul class="headerSlider-List typeSlider" v-if="mainMenu">
+        <ul v-if="mainMenu" class="headerSlider-List typeSlider">
           <nuxt-link
             v-for="(item, index) in mainMenu.items"
+            :key="index"
             :to="
               item.link.cached_url === 'home'
                 ? '/'
@@ -21,12 +22,11 @@
             "
             tag="li"
             :title="item.title"
-            :key="index"
-            v-html="item.title"
             @click="emitSlideToFalse"
+            v-html="item.title"
           ></nuxt-link>
         </ul>
-        <ul class="headerSlider-List typeSlider" v-else>
+        <ul v-else class="headerSlider-List typeSlider">
           <nuxt-link to="/" tag="li" @click="emitSlideToFalse">HOME</nuxt-link>
           <!-- <nuxt-link to="/moonlab" tag="li" @click="emitSlideToFalse"
             >MOON LAB PROGRAMMA</nuxt-link

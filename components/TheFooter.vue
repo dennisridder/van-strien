@@ -90,11 +90,11 @@
         <div v-if="footerMenu" class="footer-Bottom_Item">
           <nuxt-link
             v-for="(item, index) in footerMenu.items"
+            :key="index"
             :to="'/' + item.link.cached_url"
             class="typeLink"
             :title="item"
             v-html="item.title"
-            :key="index"
           ></nuxt-link>
         </div>
         <div v-else>

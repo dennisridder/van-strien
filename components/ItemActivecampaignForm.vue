@@ -5,34 +5,34 @@
     method="POST"
     action="/succes"
     class="activecampaign"
-    @submit.prevent="subscribe"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
+    @submit.prevent="subscribe"
   >
     <div :class="'activecampaign-Container ' + (blok.color || '')">
       <input type="hidden" name="form-name" value="subscribe-ac" />
       <input type="hidden" name="listId" :value="blok.list_id" />
       <div class="activecampaign-Input">
         <input
+          v-if="blok.show_first_name"
+          v-model="form.firstName"
           type="text"
           name="firstName"
-          v-model="form.firstName"
-          v-if="blok.show_first_name"
           :class="'activecampaign-Input ' + (blok.color || '')"
           placeholder="voornaam"
         />
         <input
+          v-if="blok.show_last_name"
+          v-model="form.lastName"
           type="text"
           name="lastName"
-          v-model="form.lastName"
-          v-if="blok.show_last_name"
           :class="'activecampaign-Input ' + (blok.color || '')"
           placeholder="achternaam"
         />
         <input
           id="grid-email"
-          name="email"
           v-model="form.email"
+          name="email"
           required
           :class="'activecampaign-Input ' + (blok.color || '')"
           type="email"
@@ -54,10 +54,10 @@
         class="activecampaign-addText"
         v-html="blok.additional_text"
       ></p>
-      <div class="activecampaign-errorMessage" v-if="response.status >= 400">
+      <div v-if="response.status >= 400" class="activecampaign-errorMessage">
         {{ response.message }}
       </div>
-      <div class="activecampaign-successMessage" v-if="response.status == 201">
+      <div v-if="response.status == 201" class="activecampaign-successMessage">
         {{ response.message }}
       </div>
     </div>

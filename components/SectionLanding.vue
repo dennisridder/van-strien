@@ -1,5 +1,13 @@
 <template>
-  <section class="section section-Landing">
+  <section
+    class="section section-Landing"
+    :class="{ autoHeight: blok.auto_height, autoColor: blok.auto_color }"
+    :style="{
+      backgroundColor: blok.background_color,
+      color: blok.text_color,
+      verticalAlign: getVerticalAlign(blok.vertical_align)
+    }"
+  >
     <div v-if="this.$route.name == 'index'" class="section-Landing_Logo">
       <div
         class="icon rotate"
@@ -12,6 +20,23 @@
         v-html="require('~/assets/images/logo-moonlab-circle.svg?include')"
       />
     </div>
+    <!-- prettier-ignore -->
+    <div class="fade-In">
+      <img
+        v-if="blok.background_image"
+        :srcset="
+          `${transformImage(blok.background_image, '2880x0/filters:quality(50)')} 2880w,
+          ${transformImage(blok.background_image, '2560x0/filters:quality(50)')} 2560w, 
+          ${transformImage(blok.background_image, '1920x0/filters:quality(50)')} 1920w, 
+          ${transformImage(blok.background_image, '1680x0/filters:quality(50)')} 1680w, 
+          ${transformImage(blok.background_image, '1280x0/filters:quality(50)')} 1280w,
+          ${transformImage(blok.background_image, '1024x0/filters:quality(50)')} 1024w, 
+          ${transformImage(blok.background_image, '768x0/filters:quality(50)')} 768w`"
+        class="lazy scrollSlow-Landing fade-In-Image"
+        sizes="100w"
+        :src="`${transformImage(blok.background_image, '1680x0/filters:format(jpg):quality(50)')}`"
+        :alt="blok.background_image" />
+    </div>
     <div class="section-Landing_Content section-Content">
       <component
         :is="blok.component | dashify"
@@ -19,24 +44,6 @@
         :key="blok._uid"
         :blok="blok"
       ></component>
-    </div>
-    <!-- <div v-lazy-container="{ selector: 'img' }" class="lazy"> -->
-    <!-- prettier-ignore -->
-    <div class="fade-In">
-    <img
-    v-if="blok.background_image"
-      :srcset="
-        `${transformImage(blok.background_image, '2880x0/filters:quality(50)')} 2880w,
-        ${transformImage(blok.background_image, '2560x0/filters:quality(50)')} 2560w, 
-        ${transformImage(blok.background_image, '1920x0/filters:quality(50)')} 1920w, 
-        ${transformImage(blok.background_image, '1680x0/filters:quality(50)')} 1680w, 
-        ${transformImage(blok.background_image, '1280x0/filters:quality(50)')} 1280w,
-        ${transformImage(blok.background_image, '1024x0/filters:quality(50)')} 1024w, 
-        ${transformImage(blok.background_image, '768x0/filters:quality(50)')} 768w`"
-      class="lazy scrollSlow-Landing"
-      sizes="100w"
-      :src="`${transformImage(blok.background_image, '1680x0/filters:format(jpg):quality(50)')}`"
-      :alt="blok.background_image" />
     </div>
   </section>
 </template>
@@ -47,6 +54,12 @@ export default {
     blok: Object
   },
   methods: {
+    getVerticalAlign(verticalAlign) {
+      if (verticalAlign == "top") return "flex-start"
+      if (verticalAlign == "bottom") return "flex-end"
+      if (verticalAlign == "center") return "middle"
+      return "flex-end"
+    },
     transformImage(image, option) {
       if (!image) return ""
       if (!option) return ""
@@ -72,9 +85,14 @@ export default {
   padding: var(--spacing-item-vertical) var(--spacing-section-horizontal)
   background: rgba(0,0,0,0)
   color: white
-  .fade-In
-    img
-      animation: fadeIn 1s ease-out;
+
+  &.autoHeight
+    min-height: 25vh
+    padding: var(--spacing-item-vertical) var(--spacing-section-horizontal)
+
+  .fade-In-Image
+    animation: fadeIn 1s ease-out;
+
   img
     position: absolute
     top: 0
@@ -82,7 +100,7 @@ export default {
     width: 100%
     height: 100%
     object-fit: cover
-    z-index: -1
+    // z-index: -1
   > div
     display: flex
     justify-content: space-around
@@ -95,12 +113,31 @@ export default {
     .icon
       width: 10rem
       height: 10rem
+
+  &_ContentWrapper
+    display: flex
+    flex-direction: row
+    width: 100%
+    max-width: 1280px
+    margin-inline: auto
+    gap: 5%
+
   &_Content
+    position: relative
     flex-direction: column
     flex-shrink: 0
     text-align: center
     .item-Title
       margin-bottom: 0
+
+    .item-Spacer
+      margin-bottom: 0
+
+    .item-Title,
+    .item-SubTitle,
+    .item-Text
+      max-width: 1280px
+      margin-inline: auto
     .item-Button
       color: $darkbrown
 

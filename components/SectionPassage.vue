@@ -20,14 +20,14 @@
     <div class="section-Passage_Item section-Passage_Right section-Content">
       <div class="section-Passage_Item_Title item-Title">
         <div class="section-Passage_Item_Title_Top">
-          <h2 class="typeTitleItalic" v-if="blok.title_voor">
+          <h2 v-if="blok.title_voor" class="typeTitleItalic">
             {{ blok.title_voor }}
           </h2>
           <span class="spanOne"></span>
           <span class="spanTwo"></span>
         </div>
         <div class="section-Passage_Item_Title_Bottom">
-          <h2 class="typeTitle" v-if="blok.title_na">{{ blok.title_na }}</h2>
+          <h2 v-if="blok.title_na" class="typeTitle">{{ blok.title_na }}</h2>
         </div>
       </div>
       <component

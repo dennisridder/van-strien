@@ -1,5 +1,5 @@
 <template>
-  <div class="markdown" v-html="compiledMarkdown"></div>
+  <span class="markdown" v-html="compiledMarkdown" />
 </template>
 
 <script>
@@ -17,7 +17,7 @@ renderer.link = function (href, title, text) {
     '<a target="_blank" rel="noreferrer" href="' +
     href +
     '" title="' +
-    text +
+    title +
     '">' +
     text +
     "</a>"
@@ -27,11 +27,17 @@ renderer.link = function (href, title, text) {
 export default {
   name: "MarkdownItem",
   props: {
-    input: String
+    input: String,
+    skipTags: Array
   },
   computed: {
     compiledMarkdown: function () {
-      return marked(this.input, { renderer: renderer })
+      let html = marked(this.input, { renderer: renderer })
+
+      if (this.skipTags && this.skipTags.includes("p"))
+        html = html.replace(/<\/?p>/g, "")
+
+      return html
     }
   }
 }
